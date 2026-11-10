@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Consulta eléctrica</title>
+    <meta
+      name="description"
+      content="Chat de normativa eléctrica chilena: pregunta como en terreno y la respuesta trae el pliego RIC o el artículo del DS 8 con la frase exacta, verificada contra el texto oficial."
+    />
+    <meta property="og:title" content="Consulta eléctrica · chat con la norma" />
+    <meta
+      property="og:description"
+      content="Pregunta como en terreno. Responde con el pliego y la frase exacta de la norma."
+    />
+    <meta property="og:image" content="https://jsnn15.github.io/img/consulta.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0a0d12;
+        --panel: #11161d;
+        --panel2: #161d26;
+        --line: #232c36;
+        --fg: #e8edf2;
+        --muted: #94a1ad;
+        --acc: #ffc93c;
+        --acc-ink: #1d1500;
+        --ok: #3ccf7a;
+        --warn: #f5a524;
+        --display: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+        --sans: 'Work Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+      }
+      .wrap {
+        max-width: 46rem;
+        margin-inline: auto;
+        padding-inline: max(16px, env(safe-area-inset-left, 0px));
+      }
+      header.hero {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--line);
+      }
+      header.hero .wrap {
+        position: relative;
+        padding-block: 26px 62px;
+      }
+      @media (max-width: 600px) {
+        .sub {
+          font-size: 0.95rem;
+        }
+        header.hero .wrap {
+          padding-block: 18px 52px;
+        }
+      }
+      .wave {
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 70px;
+        width: 100%;
+        opacity: 0.55;
+        pointer-events: none;
+      }
+      .wave path {
+        fill: none;
+        stroke-width: 1.4;
+      }
+      .wave .w1 {
+        stroke: var(--acc);
+        stroke-dasharray: 6 10;
+        animation: corre 2.4s linear infinite;
+      }
+      .wave .w2 {
+        stroke: #3b4a5a;
+      }
+      @keyframes corre {
+        to {
+          stroke-dashoffset: -64;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .wave .w1,
+        .dots i {
+          animation: none !important;
+        }
+      }
+      h1 {
+        font-family: var(--display);
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: clamp(2.2rem, 6vw, 3.4rem);
+        line-height: 0.92;
+        margin: 0;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--acc);
+      }
+      .sub {
+        color: var(--muted);
+        margin: 8px 0 12px;
+        max-width: 40ch;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--muted);
+      }
+      .tags span {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 3px 9px;
+        background: rgba(10, 13, 18, 0.7);
+      }
+      .tags b {
+        color: var(--acc);
+        font-weight: 600;
+      }
+      main {
+        padding-bottom: 150px;
+      }
+      .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding-block: 14px 4px;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+      .bar button {
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+        cursor: pointer;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+      }
+      .bar button:hover {
+        border-color: var(--acc);
+        color: var(--acc);
+      }
+      .chat {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 10px;
+      }
+      .turno {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .u {
+        align-self: flex-end;
+        max-width: 85%;
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        border-radius: 16px 16px 4px 16px;
+        padding: 9px 14px;
+      }
+      .a {
+        align-self: stretch;
+        border-left: 2px solid var(--acc);
+        padding: 2px 0 2px 14px;
+      }
+      .a .lead {
+        margin: 0;
+        font-size: 1.04rem;
+      }
+      .a ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+        color: #cfd7de;
+      }
+      .a li {
+        margin: 4px 0;
+      }
+      .cn {
+        display: inline-grid;
+        place-items: center;
+        min-width: 1.35em;
+        height: 1.35em;
+        padding: 0 4px;
+        margin-left: 3px;
+        border-radius: 5px;
+        border: 0;
+        background: var(--acc);
+        color: var(--acc-ink);
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        font-weight: 600;
+        cursor: pointer;
+        vertical-align: 0.15em;
+      }
+      .cn.on {
+        outline: 2px solid #fff;
+      }
+      .aviso {
+        margin: 8px 0 0;
+        color: var(--warn);
+        font-size: 0.9rem;
+      }
+      .src {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+      }
+      .src button {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 4px 8px;
+        cursor: pointer;
+        text-align: left;
+      }
+      .src button b {
+        color: var(--acc);
+        margin-right: 4px;
+      }
+      .src button.on {
+        border-color: var(--acc);
+      }
+      .quote {
+        margin-top: 8px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 0.92rem;
+      }
+      .quote blockquote {
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .quote blockquote::before {
+        content: '«';
+        color: var(--acc);
+      }
+      .quote blockquote::after {
+        content: '»';
+        color: var(--acc);
+      }
+      .quote .pie {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 6px 12px;
+        margin-top: 8px;
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        color: var(--muted);
+      }
+      .ver.ok {
+        color: var(--ok);
+      }
+      .ver.tabla {
+        color: var(--warn);
+      }
+      .ver.no {
+        color: #ff8a7a;
+      }
+      .quote a {
+        color: var(--acc);
+      }
+      .quote details {
+        margin-top: 6px;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      .quote details p {
+        white-space: pre-line;
+        margin: 4px 0 0;
+      }
+      .sug {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 12px;
+      }
+      .sug button,
+      .ini button {
+        background: none;
+        border: 1px dashed #3a4654;
+        border-radius: 999px;
+        padding: 5px 12px;
+        font-size: 0.86rem;
+        color: #cfd7de;
+        cursor: pointer;
+      }
+      .sug button:hover,
+      .ini button:hover {
+        border-color: var(--acc);
+        color: var(--acc);
+      }
+      .ini {
+        padding-top: 22px;
+      }
+      .ini p {
+        color: var(--muted);
+        margin: 0 0 10px;
+        font-size: 0.92rem;
+      }
+      .ini div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .meta {
+        margin-top: 8px;
+        font-family: var(--mono);
+        font-size: 0.66rem;
+        color: #6b7783;
+      }
+      .pensando {
+        color: var(--muted);
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .dots {
+        display: inline-flex;
+        gap: 4px;
+      }
+      .dots i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--acc);
+        animation: late 1s infinite ease-in-out;
+      }
+      .dots i:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .dots i:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      @keyframes late {
+        50% {
+          opacity: 0.2;
+          transform: translateY(-3px);
+        }
+      }
+      form.comp {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(transparent, var(--bg) 28%);
+        padding-top: 26px;
+        padding-bottom: max(14px, env(safe-area-inset-bottom, 0px));
+      }
+      form.comp .wrap {
+        display: flex;
+        gap: 8px;
+        align-items: flex-end;
+      }
+      form.comp textarea {
+        flex: 1;
+        resize: none;
+        min-height: 48px;
+        max-height: 140px;
+        font: inherit;
+        color: var(--fg);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 14px;
+      }
+      form.comp textarea:focus {
+        outline: none;
+        border-color: var(--acc);
+      }
+      form.comp button {
+        height: 48px;
+        min-width: 48px;
+        border-radius: 14px;
+        border: 0;
+        background: var(--acc);
+        color: var(--acc-ink);
+        font-weight: 600;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+      form.comp button:disabled {
+        opacity: 0.5;
+      }
+      .nota {
+        font-size: 0.68rem;
+        color: #6b7783;
+        text-align: center;
+        margin-top: 6px;
+        font-family: var(--mono);
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        margin-top: 40px;
+        padding-block: 16px;
+        font-size: 0.76rem;
+        color: var(--muted);
+      }
+    </style>
+    <style id="jnbar-css">
+      .jnb {
+        position: relative;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px max(14px, env(safe-area-inset-left, 0px));
+        background: #0b0f13;
+        border-bottom: 1px solid #26313b;
+        font:
+          500 13px/1.2 system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+        color: #cfd8df;
+      }
+      .jnb a {
+        color: inherit;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .jnb .jnb-back {
+        background: #e9eef2;
+        color: #0b0f13;
+        font-weight: 700;
+        padding: 6px 13px 6px 10px;
+        box-shadow: 0 0 0 3px rgba(233, 238, 242, 0.12);
+      }
+      .jnb .jnb-back:hover {
+        background: #fff;
+      }
+      .jnb .jnb-who {
+        color: #8a98a5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .jnb .jnb-who b {
+        color: #cfd8df;
+        font-weight: 600;
+      }
+      .jnb .jnb-sp {
+        flex: 1;
+      }
+      .jnb .jnb-gh,
+      .jnb .jnb-in {
+        border: 1px solid #34414d;
+        padding: 5px 11px;
+        background: #121920;
+      }
+      .jnb .jnb-gh:hover,
+      .jnb .jnb-in:hover {
+        border-color: #8a98a5;
+        color: #fff;
+      }
+      @media (max-width: 640px) {
+        .jnb .jnb-who {
+          display: none;
+        }
+        .jnb .jnb-gh span,
+        .jnb .jnb-in span {
+          display: none;
+        }
+        .jnb .jnb-gh,
+        .jnb .jnb-in {
+          padding: 6px 8px;
+        }
+      }
+      @media print {
+        .jnb {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--jnbar-->
+    <div class="jnb" role="navigation" aria-label="Portafolio y código">
+      <a class="jnb-back" href="https://jsnn15.github.io/">← Portafolio</a
+      ><span class="jnb-who"><b>Consulta eléctrica</b> · DelaCruz · Julián Neira Nova</span
+      ><span class="jnb-sp"></span
+      ><a
+        class="jnb-gh"
+        href="https://github.com/JSNN15/consulta-electrica"
+        target="_blank"
+        rel="noopener"
+        title="Ver el código de esta máquina en GitHub"
+        ><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          /></svg
+        ><span>Código en GitHub</span></a
+      ><a
+        class="jnb-in"
+        href="https://www.linkedin.com/in/julian-neira-nova/"
+        target="_blank"
+        rel="noopener"
+        title="Julián Neira Nova en LinkedIn"
+        ><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+          <rect width="16" height="16" rx="3" fill="currentColor" />
+          <path
+            fill="#0b0f13"
+            d="M3.6 6.2h2v6.2h-2zM4.6 3.2a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3zM7 6.2h1.9v.85c.27-.5.93-1 1.9-1 2 0 2.4 1.3 2.4 3v3.35h-2V9.4c0-.73-.01-1.67-1.02-1.67-1.02 0-1.18.8-1.18 1.62v3.05H7z"
+          /></svg
+        ><span>LinkedIn</span></a
+      >
+    </div>
+    <!--/jnbar-->
+
+    <header class="hero">
+      <svg class="wave" viewBox="0 0 640 70" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          class="w2"
+          d="M0 35 Q 20 5 40 35 T 80 35 T 120 35 T 160 35 T 200 35 T 240 35 T 280 35 T 320 35 T 360 35 T 400 35 T 440 35 T 480 35 T 520 35 T 560 35 T 600 35 T 640 35"
+        />
+        <path
+          class="w1"
+          d="M0 35 Q 20 5 40 35 T 80 35 T 120 35 T 160 35 T 200 35 T 240 35 T 280 35 T 320 35 T 360 35 T 400 35 T 440 35 T 480 35 T 520 35 T 560 35 T 600 35 T 640 35"
+        />
+      </svg>
+      <div class="wrap">
+        <h1>Pregúntale <em>a la norma.</em></h1>
+        <p class="sub">
+          Como en terreno. La respuesta trae el pliego y la frase exacta, verificada contra el texto oficial.
+        </p>
+        <div class="tags">
+          <span>RIC 1–19 · <b>DS 8</b></span
+          ><span>1.121 fragmentos</span><span>NVIDIA <b>Nemotron</b></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="bar">
+        <span id="estado">Conversación de ejemplo · respuestas guardadas</span
+        ><span
+          ><button id="exportar" type="button" title="Descarga la conversación con sus citas">Guardar</button>
+          <button id="nueva" type="button" title="Nueva conversación">Nueva</button></span
+        >
+      </div>
+      <div class="chat" id="chat" aria-live="polite"></div>
+      <div class="ini" id="ini" hidden>
+        <p>Preguntas de ejemplo</p>
+        <div id="ini-q"></div>
+      </div>
+      <footer>
+        Consulta eléctrica · Servicio y Soluciones Tecnológicas DelaCruz SpA · Julián Neira Nova. Responde
+        solo con los pliegos RIC de la SEC y el DS 8/2019; cada cita se compara letra por letra con el texto
+        oficial. Es una ayuda de consulta: la responsabilidad del proyecto es del instalador autorizado.
+      </footer>
+    </main>
+
+    <form class="comp" id="f">
+      <div class="wrap">
+        <textarea
+          id="q"
+          rows="1"
+          maxlength="500"
+          placeholder="Escribe tu pregunta de terreno"
+          aria-label="Tu pregunta"
+        ></textarea>
+        <button id="send" type="submit" aria-label="Enviar">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </button>
+      </div>
+      <div class="wrap nota">Respuestas de IA sobre la norma: confirma en el pliego antes de ejecutar.</div>
+    </form>
+
+    <script src="samples.js"></script>
+    <script>
+      (() => {
+        const NV = ((location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:8787' : 'https://nv-portafolio.jneiranova.workers.dev');
+        const $ = (id) => document.getElementById(id);
+        const esc = (s) =>
+          String(s ?? '').replace(
+            /[&<>"]/g,
+            (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'})[c]
+          );
+        const INICIO = [
+          '¿Qué sección mínima de conductor uso para enchufes en una casa?',
+          '¿Qué protección diferencial pide el baño?',
+          '¿Puedo pasar enchufes y alumbrado por el mismo ducto?',
+          '¿Cuánto es la resistencia de la puesta a tierra de protección?',
+        ];
+
+        // ---------- índice: pliegos RIC (repositorio normativa) + DS 8 ----------
+        const STOP = new Set(
+          'a al con como cual de del desde donde el en entre es esa ese esta este hay la las le lo los mas más no o para pero por que se ser si sin sobre son su sus un una uno unos y debe deben deberá deberán será serán cada otro otra otros otras puede pueden según cuando todo toda todos todas'.split(
+            ' '
+          )
+        );
+        const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+        const stem = (w) => (w.length > 4 ? w.replace(/(es|s)$/, '') : w);
+        const toks = (s) =>
+          (norm(s).match(/[a-z0-9]+/g) || []).filter((w) => !STOP.has(w) && w.length > 2).map(stem);
+        let IDX = null;
+        const loadIdx = () =>
+          (IDX ??= (async () => {
+            const get = (u, t) =>
+              fetch(u).then((r) => {
+                if (!r.ok) throw new Error('no se pudo cargar ' + u);
+                return t === 'b' ? r.arrayBuffer() : r.json();
+              });
+            const [rj, rb, dj, db] = await Promise.all([
+              get('../normativa/s/ric.json'),
+              get('../normativa/s/vec.bin', 'b'),
+              get('s/ds8.json'),
+              get('s/vec.bin', 'b'),
+            ]);
+            const docs = rj.c
+              .map((c) => ({
+                ref: `RIC N°${c[0]} · ${c[1]}`,
+                pag: c[3],
+                h: `${rj.mat[c[0]]} › ${c[2]}`,
+                t: c[4],
+                url: rj.url[c[0]] + '#page=' + c[3],
+              }))
+              .concat(
+                dj.c.map((c) => ({
+                  ref: `DS 8 · art. ${c.a}${c.k ? ` (parte ${c.k})` : ''}`,
+                  h: c.h,
+                  t: c.t,
+                  url: c.u,
+                }))
+              );
+            const blocks = [
+              {V: new Int8Array(rb), scale: rj.scale, off: 0, n: rj.c.length, dim: rj.dim},
+              {V: new Int8Array(db), scale: dj.scale, off: rj.c.length, n: dj.c.length, dim: dj.dim},
+            ];
+            const inv = new Map(),
+              dl = new Float32Array(docs.length);
+            docs.forEach((d, i) => {
+              const t = toks(d.h + ' ' + d.t),
+                tf = new Map();
+              dl[i] = t.length;
+              t.forEach((w) => tf.set(w, (tf.get(w) || 0) + 1));
+              tf.forEach((f, w) => {
+                if (!inv.has(w)) inv.set(w, []);
+                inv.get(w).push([i, f]);
+              });
+            });
+            return {docs, blocks, inv, dl, avg: dl.reduce((a, b) => a + b, 0) / docs.length};
+          })());
+        const cosAll = (I, qv) => {
+          const s = new Float32Array(I.docs.length);
+          let n = 0;
+          for (const x of qv) n += x * x;
+          n = Math.sqrt(n) || 1;
+          for (const b of I.blocks) {
+            const k = 1 / (n * b.scale);
+            for (let i = 0; i < b.n; i++) {
+              let d = 0;
+              const o = i * b.dim;
+              for (let j = 0; j < b.dim; j++) d += b.V[o + j] * qv[j];
+              s[b.off + i] = d * k;
+            }
+          }
+          return s;
+        };
+        const bm25 = (I, q) => {
+          const N = I.docs.length,
+            s = new Float32Array(N);
+          new Set(toks(q)).forEach((w) => {
+            const L = I.inv.get(w);
+            if (!L) return;
+            const idf = Math.log(1 + (N - L.length + 0.5) / (L.length + 0.5));
+            L.forEach(([i, f]) => (s[i] += (idf * f * 2.2) / (f + 1.2 * (0.25 + (0.75 * I.dl[i]) / I.avg))));
+          });
+          return s;
+        };
+        // semántica + palabras, fusionadas por rango recíproco
+        const search = (I, q, qv, k = 8) => {
+          const rank = (s) =>
+            Array.from(s.keys())
+              .filter((i) => s[i] > 0)
+              .sort((a, b) => s[b] - s[a])
+              .slice(0, 60);
+          const f = new Map();
+          rank(cosAll(I, qv)).forEach((i, r) => f.set(i, (f.get(i) || 0) + 1 / (60 + r)));
+          rank(bm25(I, q)).forEach((i, r) => f.set(i, (f.get(i) || 0) + 0.7 / (60 + r)));
+          return [...f.entries()]
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, k)
+            .map(([i]) => i);
+        };
+
+        // ---------- verificación de la cita contra el texto oficial ----------
+        const plano = (s) => norm(s).replace(/[^a-z0-9]/g, '');
+        const verifica = (cita, texto) => {
+          const q = plano(cita);
+          if (q.length > 20 && plano(texto).includes(q)) return 'ok';
+          // el texto de tablas sale desordenado del PDF: se acepta si casi todas las palabras están
+          const qt = toks(cita),
+            et = new Set(toks(texto));
+          const cob = qt.filter((w) => et.has(w)).length / Math.max(1, qt.length);
+          return qt.length >= 5 && cob >= 0.9 ? 'tabla' : 'no';
+        };
+        const VER = {
+          ok: '✓ Frase exacta del texto oficial',
+          tabla: '≈ Coincide con una tabla del pliego',
+          no: '✗ No se pudo verificar: revisa el pliego',
+        };
+
+        // ---------- llamadas al intermediario ----------
+        const post = async (path, body) => {
+          const r = await fetch(NV + path, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(body),
+          });
+          const d = await r.json().catch(() => ({}));
+          if (!r.ok || !d.ok) throw new Error(d.error || 'sin respuesta del servidor');
+          return d;
+        };
+
+        // ---------- conversación ----------
+        let turnos = [];
+        let ocupado = false;
+        const historial = () =>
+          turnos
+            .filter((t) => t.res)
+            .slice(-3)
+            .map((t) => ({q: t.q, a: t.res.puntos.map((p) => p.texto).join(' ') || t.res.aviso}));
+
+        const render = (t, k) => {
+          const el = document.createElement('div');
+          el.className = 'turno';
+          el.innerHTML = `<div class="u">${esc(t.q)}</div>`;
+          const a = document.createElement('div');
+          a.className = 'a';
+          el.appendChild(a);
+          if (!t.res) {
+            a.innerHTML = t.error
+              ? `<p class="aviso">No pude responder: ${esc(t.error)}. Prueba de nuevo en un minuto.</p>`
+              : `<div class="pensando"><span class="dots"><i></i><i></i><i></i></span><span class="paso">${esc(t.paso || 'Pensando')}</span></div>`;
+            return el;
+          }
+          const r = t.res;
+          const fuentes = [...new Set(r.puntos.map((p) => p.doc.ref))];
+          const num = (p) => fuentes.indexOf(p.doc.ref) + 1;
+          const [p0, ...resto] = r.puntos;
+          a.innerHTML = `${p0 ? `<p class="lead">${esc(p0.texto)}<button class="cn" data-f="${num(p0) - 1}" aria-label="Ver cita ${num(p0)}">${num(p0)}</button></p>` : ''}
+            ${resto.length ? `<ul>${resto.map((p) => `<li>${esc(p.texto)}<button class="cn" data-f="${num(p) - 1}" aria-label="Ver cita ${num(p)}">${num(p)}</button></li>`).join('')}</ul>` : ''}
+            ${r.aviso ? `<p class="aviso">${esc(r.aviso)}</p>` : ''}
+            ${fuentes.length ? `<div class="src">${fuentes.map((f, i) => `<button data-f="${i}"><b>${i + 1}</b>${esc(f)}</button>`).join('')}</div><div class="qbox"></div>` : ''}
+            ${r.sugerencias && r.sugerencias.length && k === turnos.length - 1 ? `<div class="sug">${r.sugerencias.map((s) => `<button>${esc(s)}</button>`).join('')}</div>` : ''}
+            <div class="meta">${t.ms ? (t.ms / 1000).toFixed(1).replace('.', ',') + ' s · ' : ''}buscó: «${esc(t.consulta || '')}»</div>`;
+          const abrir = (i) => {
+            const box = a.querySelector('.qbox'),
+              ref = fuentes[i];
+            const ya = box.dataset.f === String(i);
+            a.querySelectorAll('.cn,.src button').forEach((b) =>
+              b.classList.toggle('on', !ya && b.dataset.f === String(i))
+            );
+            if (ya) {
+              box.innerHTML = '';
+              box.dataset.f = '';
+              return;
+            }
+            box.dataset.f = i;
+            const ps = r.puntos.filter((p) => p.doc.ref === ref),
+              d = ps[0].doc;
+            box.innerHTML = ps
+              .map(
+                (p) => `<div class="quote"><blockquote>${esc(p.textual)}</blockquote>
+              <div class="pie"><span class="ver ${p.ver}">${VER[p.ver]}</span><span>${esc(d.ref)}${d.pag ? ` · pág. ${d.pag}` : ''}</span><a href="${esc(d.url)}" target="_blank" rel="noopener">Abrir el texto oficial ↗</a></div>
+              <details><summary>Fragmento completo</summary><p>${esc(d.h)}\n\n${esc(d.t.length > 1500 ? d.t.slice(0, 1500) + '…' : d.t)}</p></details></div>`
+              )
+              .join('');
+          };
+          a.querySelectorAll('.cn,.src button').forEach((b) =>
+            b.addEventListener('click', () => abrir(+b.dataset.f))
+          );
+          a.querySelectorAll('.sug button').forEach((b) =>
+            b.addEventListener('click', () => preguntar(b.textContent))
+          );
+          return el;
+        };
+        const pintar = () => {
+          const c = $('chat');
+          c.innerHTML = '';
+          turnos.forEach((t, k) => c.appendChild(render(t, k)));
+          $('ini').hidden = turnos.length > 0;
+        };
+
+        const RESP_FUERA = {
+          saludo:
+            'Hola. Pregúntame sobre instalaciones eléctricas de consumo: conductores, protecciones, tableros, puesta a tierra, empalmes. Respondo con el pliego y la frase de la norma.',
+          fuera_de_alcance:
+            'Solo respondo sobre la normativa eléctrica chilena de instalaciones de consumo (pliegos RIC y DS 8). Prueba con una pregunta de terreno.',
+        };
+        async function preguntar(q) {
+          q = q.trim();
+          if (!q || ocupado) return;
+          if ($('estado').dataset.ej) {
+            turnos = [];
+            delete $('estado').dataset.ej;
+          }
+          $('estado').textContent = 'Conversación en vivo';
+          ocupado = true;
+          $('send').disabled = true;
+          const t = {q, paso: 'Entendiendo la pregunta'};
+          turnos.push(t);
+          pintar();
+          scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+          const t0 = performance.now();
+          const paso = (s) => ((t.paso = s), pintar());
+          try {
+            const idx = loadIdx();
+            const hist = historial();
+            const rf = (await post('/reformula', {historial: hist, pregunta: q})).result;
+            t.consulta = rf.consulta;
+            if (rf.ambito !== 'normativa_electrica') {
+              t.res = {
+                puntos: [],
+                aviso: RESP_FUERA[rf.ambito] || RESP_FUERA.fuera_de_alcance,
+                sugerencias: INICIO.slice(0, 2),
+              };
+            } else {
+              paso('Buscando en 1.121 fragmentos de la norma');
+              const I = await idx;
+              const e = await post('/embed', {text: rf.consulta, dim: 512});
+              const top = search(I, `${rf.consulta} ${q}`, e.vectors[0]);
+              paso('Leyendo los 8 fragmentos más cercanos');
+              const ext = top.map((i) => I.docs[i]);
+              const r = (
+                await post('/responde', {
+                  historial: hist,
+                  pregunta: q,
+                  extractos: ext.map((d) => ({ref: d.ref, texto: `${d.h}\n${d.t}`})),
+                })
+              ).result;
+              // solo se aceptan citas a extractos entregados, y cada frase se compara con el texto oficial
+              const puntos = (r.puntos || [])
+                .filter((p) => p.n >= 1 && p.n <= ext.length && p.texto)
+                .map((p) => {
+                  const d = ext[p.n - 1];
+                  return {
+                    texto: p.texto,
+                    textual: p.textual,
+                    doc: {ref: d.ref, pag: d.pag, h: d.h, t: d.t, url: d.url},
+                    ver: verifica(p.textual, `${d.h}\n${d.t}`),
+                  };
+                });
+              t.res = {
+                puntos,
+                aviso:
+                  r.aviso ||
+                  (r.sin_respaldo && !puntos.length ? 'Los fragmentos encontrados no responden esto.' : ''),
+                sugerencias: (r.sugerencias || []).slice(0, 3),
+              };
+            }
+            t.ms = performance.now() - t0;
+          } catch (err) {
+            t.error = err.message;
+          } finally {
+            ocupado = false;
+            $('send').disabled = false;
+            pintar();
+          }
+        }
+        $('f').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const q = $('q').value;
+          $('q').value = '';
+          $('q').style.height = '';
+          preguntar(q);
+        });
+        $('q').addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            $('f').requestSubmit();
+          }
+        });
+        $('q').addEventListener('input', (e) => {
+          e.target.style.height = '';
+          e.target.style.height = Math.min(140, e.target.scrollHeight) + 'px';
+        });
+        $('ini-q').innerHTML = INICIO.map((q) => `<button type="button">${esc(q)}</button>`).join('');
+        $('ini-q').addEventListener(
+          'click',
+          (e) => e.target.closest('button') && preguntar(e.target.textContent)
+        );
+        $('nueva').addEventListener('click', () => {
+          turnos = [];
+          delete $('estado').dataset.ej;
+          $('estado').textContent = 'Conversación nueva';
+          pintar();
+          $('q').focus();
+        });
+        $('exportar').addEventListener('click', () => {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(
+            new Blob(
+              [
+                JSON.stringify(
+                  turnos.filter((t) => t.res),
+                  null,
+                  2
+                ),
+              ],
+              {type: 'application/json'}
+            )
+          );
+          a.download = 'consulta-electrica.json';
+          a.click();
+        });
+        // al abrir: una conversación guardada, para ver el resultado sin gastar consultas
+        if (typeof SAMPLES !== 'undefined' && SAMPLES.length) {
+          turnos = structuredClone(SAMPLES);
+          $('estado').dataset.ej = '1';
+        } else {
+          $('estado').textContent = 'Conversación nueva';
+        }
+        pintar();
+      })();
+    </script>
+  </body>
+</html>
