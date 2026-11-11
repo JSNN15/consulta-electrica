@@ -48,6 +48,7 @@ La conversación se puede descargar con sus citas.
 | `samples.js` | Conversación de ejemplo con respuestas guardadas. |
 | `s/ds8.json`, `s/vec.bin` | DS 8/2019 por artículo con enlace a LeyChile, y sus vectores int8. Los pliegos RIC se leen del índice de [normativa](https://github.com/JSNN15/normativa). |
 | `tools/descargar.sh`, `tools/chunk.py`, `tools/embed.py` | Descarga el DS 8 desde LeyChile, lo corta por artículo y lo vectoriza (necesita `NVIDIA_API_KEY`). |
+| `tools/evaluar.py`, `tools/preguntas.json` | Corre las 12 preguntas por el flujo completo y cuenta cuántas citas existen en el texto oficial. Así se obtuvo `evaluacion.md`. |
 
 Las llamadas a NVIDIA pasan por [nv-gateway](https://github.com/JSNN15/nv-gateway) (`/reformula`, `/embed`, `/responde`); la clave no llega al navegador.
 
