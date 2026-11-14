@@ -1,0 +1,29 @@
+# Documentos oficiales de los que sale el corpus
+
+## Pliegos RPTD (PDF, Superintendencia de Electricidad y Combustibles)
+RPTD N°02	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°02-Clasificación-de-instalaciones.pdf
+RPTD N°03	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°03-Proyectos-y-estudios.pdf
+RPTD N°04	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°04-Conductores.pdf
+RPTD N°05	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°05-Aislación.pdf
+RPTD N°08	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°08-Proteccion-contra-incendios.pdf
+RPTD N°09	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°09-Señalización-de-Seguridad-de-Instalaciones.pdf
+RPTD N°10	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°10-Centrales-de-producción.pdf
+RPTD N°12	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°12-Líneas-eléctricas-de-diferente-tensión-en-estructura-común-multitensión.pdf
+RPTD N°13	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°13-Líneas-eléctricas-de-media-y-baja-tensión.pdf
+RPTD N°14	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°14-Apoyo-en-postes-por-terceros.pdf
+RPTD N°15	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°15-Operación-y-mantenimiento.pdf
+RPTD N°16	https://www.sec.cl/sitio-web/wp-content/uploads/2020/09/Pliego-Técnico-Normativo-RPTD-N°16-Puesta-en-servicio.pdf
+RPTD N°01	https://www.sec.cl/sitio-web/wp-content/uploads/2021/02/PLIEGO-TECNICO-NORMATIVO-RPTD-N01-TENSIONES-Y-FRECUENCIA-MODIFICACIONFINAL.pdf
+RPTD N°06	https://www.sec.cl/sitio-web/wp-content/uploads/2021/08/PLIEGO-TECNICO-NORMATIVO-RPTD-N°06-PUESTA-A-TIERRA-REV3-1-7.pdf
+RPTD N°07	https://www.sec.cl/sitio-web/wp-content/uploads/2022/04/Pliego-Tecnico-Normativo-RPTD-N07-Franja-y-distancia-seguridad_Modificacion-_Final_300322_PublicarSEC.pdf
+RPTD N°11	https://www.sec.cl/sitio-web/wp-content/uploads/2022/04/Pliego-Tecnico-Normativo-RPTD-N11-Lineas-de-Alta-y-Extra-Alta-Tension_Modificacion_Final_300322_PublicarSEC.pdf
+
+## Decretos (XML de LeyChile: https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=<id>)
+DS 8/2019	1143069
+DS 109/2017	1119451
+DS 92/1983	9058
+DS 57/2019	1149788
+DS 327/1997	124102
+
+## Pliegos RIC
+Ver https://github.com/JSNN15/normativa (tools/descargar.sh)
