@@ -1,0 +1,375 @@
+[
+ {
+  "id": "b01",
+  "q": "¿Qué sección mínima deben tener los conductores de un circuito de enchufes?",
+  "tema": "sección mínima de conductores",
+  "p": "La sección mínima de los conductores de un circuito de enchufes es de 2,5 mm².",
+  "f": [
+   "RIC N°4",
+   "5.4"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b02",
+  "q": "¿A qué altura va el tablero?",
+  "tema": "altura de montaje de tableros",
+  "p": "Los dispositivos de comando del tablero se instalan entre 0,45 m y 2,0 m de altura, medidos desde el piso terminado.",
+  "f": [
+   "RIC N°2",
+   "6.1.21.5"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b03",
+  "q": "¿Qué diferencial pongo? (Es para una casa.)",
+  "tema": "protector diferencial en una vivienda",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "Todo circuito de alumbrado, sea de iluminación o de enchufes, debe ir protegido por un protector diferencial de sensibilidad no superior a 30 mA.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.4"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b04",
+  "q": "¿De cuántos amperes?",
+  "tema": "protector diferencial en una vivienda: corriente nominal",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "La corriente nominal del diferencial debe ser igual o mayor a la de la protección termomagnética instalada aguas arriba.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.4"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b05",
+  "q": "¿Y si el tramo tiene 80 metros?",
+  "tema": "sección del conductor para un motor trifásico de 15 kW a 380 V",
+  "calculo": "Supuestos: sistema trifásico de 380 V; factor de potencia 0,9 (supuesto: no se indicó); conductor de cobre, tramo de 80 m.\nCorriente de la carga: 25,3 A para 15 kW.\n  4 mm²: 15,8 V = 4,2 % de 380 V\n  6 mm²: 10,5 V = 2,8 % de 380 V",
+  "p": "Con 4 mm² el cálculo da 4,2 %, sobre el 3 % que la norma admite en el alimentador; con 6 mm² da 2,8 % y cumple.",
+  "f": [
+   "RIC N°3",
+   "5–5.1.3"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b06",
+  "q": "Es una línea de 23 kV que pasa al lado de una casa.",
+  "tema": "distancia de seguridad a una línea de media tensión",
+  "p": "Para una línea de 23 kV la distancia de seguridad con que se determina la franja de seguridad es de 2,00 m, porque está en el rango sobre 1 y hasta 36 kV.",
+  "f": [
+   "RPTD N°07",
+   "4.5"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b07",
+  "q": "Soy instalador clase C. ¿Qué tipo de instalaciones puedo hacer?",
+  "tema": "alcance de la licencia clase C",
+  "p": "Con licencia clase C se pueden proyectar, ejecutar y dirigir instalaciones tipo D, E, F y G.",
+  "f": [
+   "DS 92",
+   "art. 7 (parte 1)"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b08",
+  "q": "¿Cuántos enchufes puedo colgar de un automático de 10?",
+  "tema": "cantidad de enchufes por circuito",
+  "p": "No hay un número fijo: la cantidad de centros se determina igualando la suma de las potencias de cada centro con el 90 % de la capacidad nominal del circuito.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.8"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b09",
+  "q": "¿Cuántos circuitos necesito como mínimo? (Es una casa de 80 m².)",
+  "tema": "cantidad mínima de circuitos",
+  "ficha": {
+   "recinto": "casa de 80 m²"
+  },
+  "p": "Una vivienda de 30 m² o más debe tener como mínimo 3 circuitos.",
+  "f": [
+   "RIC N°10",
+   "5.2"
+  ],
+  "con": "Se deberá proyectar como mínimo",
+  "bueno": true
+ },
+ {
+  "id": "b10",
+  "q": "¿Qué diferencial lleva una piscina?",
+  "tema": "protección diferencial en piscinas",
+  "p": "En el volumen 2 los enchufes e interruptores pueden protegerse con un protector diferencial de 30 mA máximo, ubicado fuera de los volúmenes 0, 1 y 2.",
+  "f": [
+   "RIC N°11",
+   "5.7.4.6"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b11",
+  "q": "¿Puedo poner el tablero en el baño?",
+  "tema": "ubicación de tableros",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "No: no se permite instalar tableros en dormitorios, baños, lavaderos ni lugares de difícil acceso.",
+  "f": [
+   "RIC N°10",
+   "5.1.2.12"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b12",
+  "q": "¿Cuál es la caída de tensión máxima en un alimentador?",
+  "tema": "caída de tensión",
+  "p": "La caída de tensión en el alimentador no debe exceder del 3 % de la tensión nominal, y la total en el punto más desfavorable no debe exceder del 5 %.",
+  "f": [
+   "RIC N°3",
+   "5–5.1.3"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b13",
+  "q": "Es una línea de 23 kV que pasa al lado de una casa.",
+  "tema": "distancia de seguridad a una línea de media tensión de 23 kV al lado de una casa",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "Dentro de la franja de seguridad de la línea no pueden existir construcciones de ninguna naturaleza.",
+  "f": [
+   "RPTD N°13",
+   "6.11"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "b14",
+  "q": "Es una línea de 23 kV que pasa al lado de una casa.",
+  "tema": "distancia de seguridad a una línea de media tensión de 23 kV al lado de una casa",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "La distancia de seguridad para una línea de 23 kV es de 2,00 m, porque cae en el rango sobre 1 kV y hasta 36 kV de la Tabla N° 3.",
+  "f": [
+   "RPTD N°07",
+   "4.5"
+  ],
+  "bueno": true
+ },
+ {
+  "id": "m01",
+  "clase": "valor cambiado",
+  "q": "¿Qué sección mínima deben tener los conductores de un circuito de enchufes?",
+  "tema": "sección mínima de conductores",
+  "p": "La sección mínima de los conductores de un circuito de enchufes es de 1,5 mm².",
+  "f": [
+   "RIC N°4",
+   "5.4"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m02",
+  "clase": "valor cambiado",
+  "q": "¿A qué altura va el tablero?",
+  "tema": "altura de montaje de tableros",
+  "p": "Los dispositivos de comando del tablero se instalan entre 0,45 m y 1,8 m de altura, medidos desde el piso terminado.",
+  "f": [
+   "RIC N°2",
+   "6.1.21.5"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m03",
+  "clase": "valor cambiado",
+  "q": "¿Cuántos circuitos puedo sacar de un diferencial?",
+  "tema": "protector diferencial en una vivienda",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "Desde un mismo protector diferencial se pueden derivar hasta 5 circuitos.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.4"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m04",
+  "clase": "valor cambiado",
+  "q": "¿Cuál es la caída de tensión máxima en un alimentador?",
+  "tema": "caída de tensión",
+  "p": "La caída de tensión en el alimentador no debe exceder del 5 % de la tensión nominal.",
+  "f": [
+   "RIC N°3",
+   "5–5.1.3"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m05",
+  "clase": "sentido invertido",
+  "q": "¿Puedo poner el tablero en el baño?",
+  "tema": "ubicación de tableros",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "Sí, se permite instalar tableros en baños y lavaderos.",
+  "f": [
+   "RIC N°10",
+   "5.1.2.12"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m06",
+  "clase": "sentido invertido",
+  "q": "Soy instalador clase C. ¿Puedo hacer instalaciones tipo A?",
+  "tema": "alcance de la licencia clase C",
+  "p": "Con licencia clase C se pueden proyectar y ejecutar instalaciones tipo A y B.",
+  "f": [
+   "DS 92",
+   "art. 7 (parte 1)"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m07",
+  "clase": "condición sacada de contexto",
+  "q": "¿Hasta qué potencia puedo instalar?",
+  "tema": "paneles solares conectados a la red para vender la energía",
+  "p": "En una instalación domiciliaria con empalme de hasta 10 kW, la potencia de generación no puede superar el 30 % de la capacidad del empalme.",
+  "f": [
+   "RIC N°9",
+   "6.6.8"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m08",
+  "clase": "condición sacada de contexto",
+  "q": "¿Hasta qué potencia puedo instalar?",
+  "tema": "paneles solares conectados a la red para vender la energía",
+  "p": "La potencia máxima del equipo de generación es de 300 kW y no puede superar el 10 % de la capacidad del empalme.",
+  "f": [
+   "RIC N°9",
+   "6.6.8"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m09",
+  "clase": "otra situación",
+  "q": "Es una línea de 23 kV que pasa al lado de una casa.",
+  "tema": "distancia de seguridad de una construcción a una línea de media tensión",
+  "p": "La distancia mínima a una línea de media tensión de más de 15 kV y hasta 23 kV es de 0,8 m.",
+  "f": [
+   "RPTD N°07",
+   "7–7.2"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m10",
+  "clase": "otra situación",
+  "q": "¿Qué distancia de seguridad hay que respetar a una línea de media tensión?",
+  "tema": "distancia de seguridad a una línea de media tensión",
+  "p": "La distancia mínima a una línea eléctrica de más de 1.000 V y menos de 33.000 V es de 4 m.",
+  "f": [
+   "RIC N°11",
+   "12.4.5"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m11",
+  "clase": "otra situación",
+  "q": "¿Qué diferencial pongo en el baño de una casa?",
+  "tema": "protección diferencial en un baño",
+  "ficha": {
+   "recinto": "casa, baño"
+  },
+  "p": "En el baño el protector diferencial debe ser de 10 mA máximo.",
+  "f": [
+   "RIC N°11",
+   "5.7.4.6"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m12",
+  "clase": "otro equipo",
+  "q": "¿De cuántos amperes?",
+  "tema": "protector diferencial en una vivienda: corriente nominal",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "La protección del empalme de una vivienda debe ser de 25 A como mínimo.",
+  "f": [
+   "RIC N°10",
+   "5.2"
+  ],
+  "con": "Se deberá proyectar como mínimo",
+  "bueno": false
+ },
+ {
+  "id": "m13",
+  "clase": "dato agregado",
+  "q": "¿Qué diferencial pongo? (Es para una casa.)",
+  "tema": "protector diferencial en una vivienda",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "En viviendas el protector diferencial debe ser tipo A superinmunizado, de 30 mA.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.4"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m14",
+  "clase": "dato agregado",
+  "q": "¿Cuántos enchufes puedo colgar de un automático de 10?",
+  "tema": "cantidad de enchufes por circuito",
+  "p": "En un circuito de 10 A se pueden conectar como máximo 8 enchufes.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.8"
+  ],
+  "bueno": false
+ },
+ {
+  "id": "m15",
+  "clase": "sujeto cambiado",
+  "q": "¿Y qué diferencial lleva?",
+  "tema": "alimentador de una casa: sección y protecciones",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "El alimentador de la casa debe llevar un protector diferencial con sensibilidad no superior a 30 mA.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.4"
+  ],
+  "bueno": false
+ }
+]

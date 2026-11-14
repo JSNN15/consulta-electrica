@@ -1,0 +1,682 @@
+{
+ "fecha": "2026-11-14",
+ "resumen": {
+  "errores_plantados": 15,
+  "errores_botados": 15,
+  "errores_mostrados_con_advertencia": 0,
+  "errores_que_pasan_limpios": 0,
+  "por_clase_de_error": {
+   "valor cambiado": {
+    "casos": 4,
+    "botados": 4
+   },
+   "sentido invertido": {
+    "casos": 2,
+    "botados": 2
+   },
+   "condición sacada de contexto": {
+    "casos": 2,
+    "botados": 2
+   },
+   "otra situación": {
+    "casos": 3,
+    "botados": 3
+   },
+   "otro equipo": {
+    "casos": 1,
+    "botados": 1
+   },
+   "dato agregado": {
+    "casos": 2,
+    "botados": 2
+   },
+   "sujeto cambiado": {
+    "casos": 1,
+    "botados": 1
+   }
+  },
+  "correctas": 14,
+  "correctas_botadas": 2,
+  "correctas_con_advertencia": 0
+ },
+ "casos": [
+  {
+   "id": "b01",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2234,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "5.4 La sección mínima de los conductores a utilizar serán las secciones milimétricas que se indican:",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "b02",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 6472,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la altura de montaje de dispositivos de comando o accionamiento colocados en un tablero",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+    "clase": "regla"
+   },
+   "pide": "se pregunta a qué altura se monta un tablero eléctrico y qué altura se quiere saber"
+  },
+  {
+   "id": "b03",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2986,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de uso general (interior de casas, locales e industrias): todo circuito de alumbrado (iluminación y enchufes) debe estar protegido por un protector diferencial de sensibilidad no superior a 30 mA",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "5.1.3.5 Todo circuito de alumbrado (iluminación y enchufes), deberá estar protegido por un protector diferencial, cuya sensibilidad no sea superior a 30 mA.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "b04",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 6552,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de uso general en baja tensión (interior de casas, locales e industrias)",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "5.1.3.6 Se deberá asegurar que todo protector diferencial quede protegido a la sobrecarga y al cortocircuito mediante una protección termomagnética. Para esto la corriente nominal de la protección diferencial deberá ser igual o mayor a la corriente nominal de la protección termomagnética instalada aguas arriba o se aceptará también, que la suma de las corrientes nominales de las protecciones termomagnéticas aguas abajo que dependan del diferencial, no sean mayor a la capacidad nominal de este.",
+    "clase": "regla"
+   },
+   "pide": "corriente nominal del protector diferencial en una vivienda"
+  },
+  {
+   "id": "b05",
+   "bueno": true,
+   "clase": "",
+   "botado": true,
+   "marcado": true,
+   "respalda": "si",
+   "aplica": "dudoso",
+   "responde": "no",
+   "motivo": "el extracto trata alimentadores de instalaciones de consumo, no específicamente la derivación a un motor trifásico de 15 kW, y no se sabe si el tramo de 80 m es alimentador o circuito de motor.",
+   "ms": 3767,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para alimentadores y subalimentadores de instalaciones de consumo en baja tensión",
+    "respalda": "si",
+    "aplica": "dudoso",
+    "motivo": "el extracto trata alimentadores de instalaciones de consumo, no específicamente la derivación a un motor trifásico de 15 kW, y no se sabe si el tramo de 80 m es alimentador o circuito de motor.",
+    "donde": "5.1.3 La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "b06",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2265,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para determinar la distancia de seguridad de la franja de seguridad en líneas y redes de media y alta tensión en calles y terrenos",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "4.5 La distancia de seguridad a considerar en la determinación de la franja de seguridad se obtiene de la Tabla N° 3, en función de la tensión máxima de la línea eléctrica:",
+    "clase": "regla"
+   },
+   "pide": "en una línea de 23 kV que pasa al lado de una casa, cuál es la distancia de seguridad para determinar la franja de seguridad"
+  },
+  {
+   "id": "b07",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2463,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones tipo D, E, F y G",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "3.- Instalaciones tipo \"D\",\"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase C o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "b08",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2800,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para determinar la cantidad de centros en circuitos de alumbrado (iluminación y enchufes) de instalaciones de uso general",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "5.1.4.4 La cantidad de centros que es posible instalar en un circuito se determinará igualando la suma de las potencias unitarias de cada centro conectado a él con el 90% del valor nominal de la capacidad del circuito.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "b09",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2152,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo de viviendas",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "b) Se deberá proyectar como mínimo 2 circuitos para la vivienda de superficie menor a 30 m2 y 3 circuitos para la vivienda de superficie iguales o superior a 30 m2.",
+    "clase": "regla"
+   },
+   "pide": "en una casa de 80 m², cuántos circuitos mínimos se requieren"
+  },
+  {
+   "id": "b10",
+   "bueno": true,
+   "clase": "",
+   "botado": true,
+   "marcado": true,
+   "respalda": "si",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto trata enchufes e interruptores en volumen 2, no la protección diferencial de una piscina en general.",
+   "ms": 3329,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla para enchufes e interruptores instalados en el volumen 2 de ambientes húmedos, mojados y sumergidos",
+    "respalda": "si",
+    "aplica": "no",
+    "motivo": "el extracto trata enchufes e interruptores en volumen 2, no la protección diferencial de una piscina en general.",
+    "donde": "5.7.4.6 En el volumen 2 se podrán instalar enchufes e interruptores siempre que estén protegidos por una de las siguientes medidas: b) Protecciones que permitan corte automático de la alimentación mediante un protector diferencial de 30 mA máximo y que ellas estén ubicadas fuera de los volúmenes 0, 1 y 2.",
+    "clase": "condicion"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "b11",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 3099,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de alumbrado de uso general en casas, locales e industrias",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "Tableros 5.1.3.2 No se permitirá la instalación de tableros en dormitorios, baños, lavaderos, closet no destinados para uso eléctrico y lugares de difícil acceso.",
+    "clase": "regla"
+   },
+   "pide": "en una casa, si se puede instalar un tablero eléctrico en el baño"
+  },
+  {
+   "id": "b12",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 4695,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para alimentadores y subalimentadores de instalaciones de consumo en baja tensión",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "5.1.3 La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+    "clase": "regla"
+   },
+   "pide": "en una alimentación, cuál es la caída de tensión máxima permitida en un alimentador"
+  },
+  {
+   "id": "b13",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2355,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para líneas aéreas de servicio público de media y alta tensión: dentro de la franja de seguridad no deberán existir anuncios, obstáculos ni construcciones de ninguna naturaleza",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "6.11.1 Para la protección del público y para la operación confiable de las líneas aéreas de servicio público, dentro del área que ocupa la franja de seguridad no deberán existir anuncios, obstáculos ni construcciones de ninguna naturaleza.",
+    "clase": "regla"
+   },
+   "pide": "en una línea de 23 kV al lado de una casa, qué dice la norma sobre construcciones dentro de la franja de seguridad"
+  },
+  {
+   "id": "b14",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2414,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la distancia de seguridad de líneas y redes de media y alta tensión en calles y terrenos, respecto a edificaciones y personas",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "4.5 La distancia de seguridad a considerar en la determinación de la franja de seguridad se obtiene de la Tabla N° 3, en función de la tensión máxima de la línea eléctrica:",
+    "clase": "regla"
+   },
+   "pide": "de una línea de 23 kV al lado de una casa, qué distancia de seguridad se requiere"
+  },
+  {
+   "id": "m01",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto fija 2,5 mm², no 1,5 mm², para circuitos de enchufes",
+   "ms": 2725,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto fija 2,5 mm², no 1,5 mm², para circuitos de enchufes",
+    "donde": "5.4 La sección mínima de los conductores a utilizar serán las secciones milimétricas que se indican: Circuitos de enchufes 2,5 mm2",
+    "clase": "regla"
+   },
+   "pide": "se trata de un circuito de enchufes y se quiere saber la sección mínima de sus conductores"
+  },
+  {
+   "id": "m02",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "parcial",
+   "aplica": "si",
+   "responde": "parcial",
+   "motivo": "el punto cita 1,8 m como máximo, pero el extracto establece 2,0 m como altura máxima; además, el punto omite que la medida se toma hasta la base inferior de cada dispositivo y no menciona las excepciones del extracto.",
+   "ms": 3737,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la altura mínima y máxima de montaje de dispositivos de comando o accionamiento colocados en un tablero, medida desde el nivel de piso terminado hasta la base inferior de cada dispositivo",
+    "respalda": "parcial",
+    "aplica": "si",
+    "motivo": "el punto cita 1,8 m como máximo, pero el extracto establece 2,0 m como altura máxima; además, el punto omite que la medida se toma hasta la base inferior de cada dispositivo y no menciona las excepciones del extracto.",
+    "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m03",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto fija el límite en 3 circuitos, no en 5, y solo exceptúa casos no especificados en el punto.",
+   "ms": 3067,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de uso general (interior de casas, locales e industrias): límite de circuitos derivados de una protección diferencial",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto fija el límite en 3 circuitos, no en 5, y solo exceptúa casos no especificados en el punto.",
+    "donde": "5.1.3.7 Desde una protección diferencial no se podrán derivar más de 3 circuitos, para lo cual deberá cumplirse con lo indicado en el punto 5.1.3.6 anterior.",
+    "clase": "regla"
+   },
+   "pide": "en una vivienda, cuántos circuitos se pueden derivar de un protector diferencial"
+  },
+  {
+   "id": "m04",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto establece 3 % para el alimentador, no 5 %; el 5 % corresponde a la caída total en el punto más desfavorable de la instalación",
+   "ms": 3284,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para alimentadores y subalimentadores en instalaciones de consumo en baja tensión",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto establece 3 % para el alimentador, no 5 %; el 5 % corresponde a la caída total en el punto más desfavorable de la instalación",
+    "donde": "5.1.3 La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+    "clase": "regla"
+   },
+   "pide": "se pregunta sobre un alimentador y se quiere saber la caída de tensión máxima permitida"
+  },
+  {
+   "id": "m05",
+   "bueno": false,
+   "clase": "sentido invertido",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto prohíbe expresamente instalar tableros en baños (5.1.3.2), por lo que no respalda que se permita.",
+   "ms": 2404,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de alumbrado de uso general en casas, locales e industrias",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto prohíbe expresamente instalar tableros en baños (5.1.3.2), por lo que no respalda que se permita.",
+    "donde": "5.1.3.2 No se permitirá la instalación de tableros en dormitorios, baños, lavaderos, closet no destinados para uso eléctrico y lugares de difícil acceso.",
+    "clase": "regla"
+   },
+   "pide": "en una casa, si se puede instalar un tablero eléctrico en el baño"
+  },
+  {
+   "id": "m06",
+   "bueno": false,
+   "clase": "sentido invertido",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto exige licencia clase A o título universitario para instalaciones tipo A; la licencia clase C no alcanza.",
+   "ms": 2455,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para proyectar, ejecutar y dirigir instalaciones tipo A y demás",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto exige licencia clase A o título universitario para instalaciones tipo A; la licencia clase C no alcanza.",
+    "donde": "ARTICULO 7° Para proyectar, ejecutar y dirigir la construcción de cada tipo de instalación eléctrica que se indica a continuación será necesario:",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga."
+  },
+  {
+   "id": "m07",
+   "bueno": false,
+   "clase": "condición sacada de contexto",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "La afirmación omite que el límite del 30 % es requisito para eximirse de la protección de potencia inversa y que se requiere inyección cero a la red.",
+   "ms": 3461,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "condición para acogerse a una excepción o exención de la protección de potencia inversa en sistemas de autogeneración con inyección cero a la red",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "La afirmación omite que el límite del 30 % es requisito para eximirse de la protección de potencia inversa y que se requiere inyección cero a la red.",
+    "donde": "6.6.8 Se eximirán de la protección inversa requerida en el punto 6.2.4, aquellos sistemas de autogeneración que cuenten con un sistema de inyección cero de potencia a la red y que cumplan con una de las siguientes condiciones: 6.6.8.2 Que en instalaciones domiciliarias con empalmes en baja tensión de hasta 10 kW, el o los equipos de generación tengan una potencia de generación que no supere el 30% de la capacidad del empalme de la instalación de consumo.",
+    "clase": "condicion"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m08",
+   "bueno": false,
+   "clase": "condición sacada de contexto",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto solo exime de una protección a sistemas con inyección cero que cumplen esos límites; no establece una potencia máxima general para instalar paneles solares conectados a la red para vender energía, ni la pregunta menciona inyección cero ni exenciones de protección inversa. · La afirmación omite que el dato es requisito para la exención de protección inversa y que se requiere inyección cero; lo presenta como obligación general.",
+   "ms": 3789,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "condición para acogerse a una excepción o exención de la protección de potencia inversa para sistemas de autogeneración con inyección cero a la red",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto solo exime de una protección a sistemas con inyección cero que cumplen esos límites; no establece una potencia máxima general para instalar paneles solares conectados a la red para vender energía, ni la pregunta menciona inyección cero ni exenciones de protección inversa. · La afirmación omite que el dato es requisito para la exención de protección inversa y que se requiere inyección cero; lo presenta como obligación general.",
+    "donde": "6.6.8 Se eximirán de la protección inversa requerida en el punto 6.2.4, aquellos sistemas de autogeneración que cuenten con un sistema de inyección cero de potencia a la red y que cumplan con una de las siguientes condiciones: 6.6.8.1 Que el o los equipos de generación tengan una potencia máxima menor o igual a 300 kW y que su potencia de generación no supere el 10% de la capacidad del empalme de la instalación de consumo.",
+    "clase": "condicion"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m09",
+   "bueno": false,
+   "clase": "otra situación",
+   "botado": true,
+   "marcado": true,
+   "respalda": "parcial",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto regula alumbrado público y luminarias, no la distancia de una casa a una línea de media tensión; además el valor 0,8 m corresponde a ese ámbito distinto.",
+   "ms": 3137,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para distancias mínimas de seguridad en instalaciones de alumbrado público entre luminarias en postes de empresas de distribución eléctrica y líneas de media tensión",
+    "respalda": "parcial",
+    "aplica": "no",
+    "motivo": "el extracto regula alumbrado público y luminarias, no la distancia de una casa a una línea de media tensión; además el valor 0,8 m corresponde a ese ámbito distinto.",
+    "donde": "7.2 Para luminarias instaladas en postes de empresas de distribución eléctrica, la distancia mínima del cabezal o cualquier parte de la luminaria, incluido el brazo de la misma, a líneas de media tensión, se determinará de acuerdo a la Tabla N° 9: TABLA N° 9. DISTANCIAS MÍNIMAS DE SEGURIDAD PARA INSTALACIONES DE ALUMBRADO PÚBLICO Y MEDIA TENSIÓN Rango de voltaje (kV) Distancia (m) Mayor a 15 kV hasta 23 kV 0,8",
+    "clase": "regla"
+   },
+   "pide": "de una línea de 23 kV que pasa al lado de una casa, qué distancia de seguridad se requiere a la construcción"
+  },
+  {
+   "id": "m10",
+   "bueno": false,
+   "clase": "otra situación",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto regula cercos eléctricos, no la distancia de seguridad general a una línea de media tensión; además no se sabe si la línea es aérea ni el contexto de la consulta.",
+   "ms": 4332,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla de cercos eléctricos de seguridad instalados cerca de una línea eléctrica aérea (ámbito: instalaciones de consumo en baja tensión)",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto regula cercos eléctricos, no la distancia de seguridad general a una línea de media tensión; además no se sabe si la línea es aérea ni el contexto de la consulta.",
+    "donde": "Tabla Nº 11.2: Distancias mínimas a líneas eléctricas para cercos eléctricos",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m11",
+   "bueno": false,
+   "clase": "otra situación",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto trata de piscinas, no de baños de casa, y el punto omite que el diferencial de 10 mA es solo para volúmenes 0 y 1 de piscinas, no para el baño en general. · El extracto exige 10 mA para instalaciones sumergidas, no para el baño en general.",
+   "ms": 2552,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla para instalaciones sumergidas en piscinas (volúmenes 0 y 1)",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto trata de piscinas, no de baños de casa, y el punto omite que el diferencial de 10 mA es solo para volúmenes 0 y 1 de piscinas, no para el baño en general. · El extracto exige 10 mA para instalaciones sumergidas, no para el baño en general.",
+    "donde": "b) Protegidas por corte automático de la alimentación mediante un protector diferencial de 10 mA máximo;",
+    "clase": "condicion"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m12",
+   "bueno": false,
+   "clase": "otro equipo",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto fija la capacidad mínima de la protección del empalme (25 A), no la corriente nominal del protector diferencial.",
+   "ms": 2983,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo de viviendas",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto fija la capacidad mínima de la protección del empalme (25 A), no la corriente nominal del protector diferencial.",
+    "donde": "Las instalaciones de consumo de viviendas deberán disponer de un empalme eléctrico cuya capacidad mínima de la protección será de 25 A y la sección de los conductores de su alimentador no podrá ser inferior a 4 mm2.",
+    "clase": "regla"
+   },
+   "pide": "corriente nominal del protector diferencial de una vivienda"
+  },
+  {
+   "id": "m13",
+   "bueno": false,
+   "clase": "dato agregado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "parcial",
+   "aplica": "si",
+   "responde": "parcial",
+   "motivo": "el extracto exige 30 mA pero no dice tipo A ni superinmunizado; el punto agrega exigencias que el extracto no trae.",
+   "ms": 2611,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para circuitos de alumbrado (iluminación y enchufes) en instalaciones de uso general de baja tensión (interior de casas, locales e industrias)",
+    "respalda": "parcial",
+    "aplica": "si",
+    "motivo": "el extracto exige 30 mA pero no dice tipo A ni superinmunizado; el punto agrega exigencias que el extracto no trae.",
+    "donde": "5.1.3.5 Todo circuito de alumbrado (iluminación y enchufes), deberá estar protegido por un protector diferencial, cuya sensibilidad no sea superior a 30 mA.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m14",
+   "bueno": false,
+   "clase": "dato agregado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto no fija un número máximo de enchufes por amperaje; solo exige igualar la suma de potencias unitarias con el 90% de la capacidad del circuito, y no especifica potencia unitaria de un enchufe ni aplica a un automático de 10 A sin más datos.",
+   "ms": 3536,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para determinar la cantidad de centros (puntos de consumo) en circuitos de alumbrado e instalaciones de uso general",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto no fija un número máximo de enchufes por amperaje; solo exige igualar la suma de potencias unitarias con el 90% de la capacidad del circuito, y no especifica potencia unitaria de un enchufe ni aplica a un automático de 10 A sin más datos.",
+    "donde": "5.1.4.4 La cantidad de centros que es posible instalar en un circuito se determinará igualando la suma de las potencias unitarias de cada centro conectado a él con el 90% del valor nominal de la capacidad del circuito.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "m15",
+   "bueno": false,
+   "clase": "sujeto cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "si",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto trata circuitos de alumbrado y enchufes, no el alimentador general de una casa; el punto invierte el sentido al presentar como obligación del alimentador una regla de circuito de consumo interior.",
+   "ms": 2911,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para todo circuito de alumbrado (iluminación y enchufes) en instalaciones de uso general",
+    "respalda": "si",
+    "aplica": "no",
+    "motivo": "el extracto trata circuitos de alumbrado y enchufes, no el alimentador general de una casa; el punto invierte el sentido al presentar como obligación del alimentador una regla de circuito de consumo interior.",
+    "donde": "5.1.3.5 Todo circuito de alumbrado (iluminación y enchufes), deberá estar protegido por un protector diferencial, cuya sensibilidad no sea superior a 30 mA.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  }
+ ]
+}

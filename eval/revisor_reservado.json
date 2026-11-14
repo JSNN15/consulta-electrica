@@ -1,0 +1,193 @@
+[
+ {
+  "id": "r01",
+  "bueno": true,
+  "q": "¿Cuándo me pueden cortar la luz por no pago?",
+  "tema": "corte de suministro por deuda",
+  "p": "La distribuidora puede suspender el suministro solo después de 45 días desde el vencimiento de la primera boleta impaga, y avisando con al menos 5 días de anticipación.",
+  "f": [
+   "DS 327",
+   "art. 147 (parte 1)"
+  ]
+ },
+ {
+  "id": "r02",
+  "bueno": true,
+  "q": "¿Qué sección mínima lleva el conductor de un motor de 5 HP?",
+  "tema": "conductores para motores",
+  "p": "Para motores fijos de más de 3 HP la sección mínima es de 2,5 mm², y la capacidad de transporte debe ser al menos 1,25 veces la corriente de plena carga.",
+  "f": [
+   "RIC N°7",
+   "5.5"
+  ]
+ },
+ {
+  "id": "r03",
+  "bueno": true,
+  "q": "¿Tengo que declarar la instalación en la SEC?",
+  "tema": "declaración de puesta en servicio",
+  "p": "Sí: el instalador eléctrico autorizado a cargo debe declararla una vez terminada, en el sistema e-declarador.",
+  "f": [
+   "RIC N°19",
+   "9–9.1.2"
+  ]
+ },
+ {
+  "id": "r04",
+  "bueno": true,
+  "q": "¿Hasta qué potencia puedo instalar paneles para inyectar excedentes a la red?",
+  "tema": "generación distribuida para autoconsumo",
+  "p": "El reglamento aplica a equipamientos de generación cuya capacidad instalada no supere los 300 kilowatts.",
+  "f": [
+   "DS 57",
+   "art. 2"
+  ]
+ },
+ {
+  "id": "r05",
+  "bueno": true,
+  "q": "¿Cuándo tengo que poner un tablero general?",
+  "tema": "tableros generales",
+  "p": "Se debe colocar un tablero general cuando el único tablero de distribución está a más de 30 m del equipo de medida del empalme.",
+  "f": [
+   "RIC N°2",
+   "6.5.2"
+  ]
+ },
+ {
+  "id": "r06",
+  "bueno": true,
+  "q": "¿Cuánto puede valer como máximo la puesta a tierra de servicio?",
+  "tema": "puesta a tierra de servicio",
+  "p": "La puesta a tierra de servicio no debe superar los 20 Ohm.",
+  "f": [
+   "RIC N°6",
+   "6–6.1"
+  ]
+ },
+ {
+  "id": "r07",
+  "bueno": true,
+  "q": "¿Puedo pasar cables de comunicaciones por el mismo shaft que los eléctricos?",
+  "tema": "canalizaciones compartidas",
+  "p": "Sí: en un mismo conducto, shaft o canal de la construcción solo se pueden instalar canalizaciones eléctricas y de comunicación o control.",
+  "f": [
+   "RIC N°4",
+   "7.1.4"
+  ]
+ },
+ {
+  "id": "x01",
+  "bueno": false,
+  "clase": "valor cambiado",
+  "q": "¿Cuándo me pueden cortar la luz por no pago?",
+  "tema": "corte de suministro por deuda",
+  "p": "La distribuidora puede suspender el suministro después de 30 días desde el vencimiento de la primera boleta impaga.",
+  "f": [
+   "DS 327",
+   "art. 147 (parte 1)"
+  ]
+ },
+ {
+  "id": "x02",
+  "bueno": false,
+  "clase": "valor cambiado",
+  "q": "¿Cuánto puede valer como máximo la puesta a tierra de servicio?",
+  "tema": "puesta a tierra de servicio",
+  "p": "La puesta a tierra de servicio no debe superar los 25 Ohm.",
+  "f": [
+   "RIC N°6",
+   "6–6.1"
+  ]
+ },
+ {
+  "id": "x03",
+  "bueno": false,
+  "clase": "valor cambiado",
+  "q": "¿Qué capacidad debe tener el conductor de un motor?",
+  "tema": "conductores para motores",
+  "p": "La capacidad de transporte del conductor debe ser al menos 1,5 veces la corriente de plena carga del motor.",
+  "f": [
+   "RIC N°7",
+   "5.5"
+  ]
+ },
+ {
+  "id": "x04",
+  "bueno": false,
+  "clase": "sentido invertido",
+  "q": "¿Puedo pasar cables de comunicaciones por el mismo shaft que los eléctricos?",
+  "tema": "canalizaciones compartidas",
+  "p": "No: no se permite instalar canalizaciones de comunicación en el mismo shaft que las eléctricas.",
+  "f": [
+   "RIC N°4",
+   "7.1.4"
+  ]
+ },
+ {
+  "id": "x05",
+  "bueno": false,
+  "clase": "sujeto cambiado",
+  "q": "¿Quién declara la instalación en la SEC?",
+  "tema": "declaración de puesta en servicio",
+  "p": "La declaración la hace el propietario del inmueble, antes de iniciar la obra.",
+  "f": [
+   "RIC N°19",
+   "9–9.1.2"
+  ]
+ },
+ {
+  "id": "x06",
+  "bueno": false,
+  "clase": "otro equipo",
+  "q": "¿Cuánto puede valer como máximo la puesta a tierra de protección de un tablero?",
+  "tema": "puesta a tierra de protección",
+  "p": "La puesta a tierra no debe superar los 20 Ohm.",
+  "f": [
+   "RIC N°6",
+   "6–6.1"
+  ]
+ },
+ {
+  "id": "x07",
+  "bueno": false,
+  "clase": "otra situación",
+  "q": "¿A qué altura van los enchufes de una casa?",
+  "tema": "altura de enchufes en viviendas",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "Deben instalarse entre 0,45 m y 2,0 m de altura, medidos desde el piso terminado.",
+  "f": [
+   "RIC N°2",
+   "6.1.21.5"
+  ]
+ },
+ {
+  "id": "x08",
+  "bueno": false,
+  "clase": "dato agregado",
+  "q": "¿Cuándo tengo que poner un tablero general?",
+  "tema": "tableros generales",
+  "p": "Se debe colocar un tablero general cuando el tablero de distribución está a más de 30 m del medidor, y debe llevar un supresor de sobretensiones tipo 2.",
+  "f": [
+   "RIC N°2",
+   "6.5.2"
+  ]
+ },
+ {
+  "id": "x09",
+  "bueno": false,
+  "clase": "condición sacada de contexto",
+  "q": "¿Qué diferencial pongo en los circuitos de una casa?",
+  "tema": "protector diferencial en una vivienda",
+  "ficha": {
+   "recinto": "casa"
+  },
+  "p": "En los circuitos de una vivienda se pueden usar diferenciales de 300 mA.",
+  "f": [
+   "RIC N°10",
+   "5.1.3.8"
+  ]
+ }
+]

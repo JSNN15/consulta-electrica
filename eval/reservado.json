@@ -1,0 +1,263 @@
+[
+ {
+  "id": "casa",
+  "cat": "memoria",
+  "turnos": [
+   {
+    "m": "Tengo una casa de 120 m², monofásica.",
+    "esp": {
+     "tipo": "dato",
+     "ficha": {
+      "recinto": "casa",
+      "sistema": "monof"
+     }
+    }
+   },
+   {
+    "m": "¿Cuántos circuitos necesito como mínimo?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°10 · 5.2"
+     ],
+     "contiene": [
+      "3|tres"
+     ]
+    }
+   },
+   {
+    "m": "¿Y para la cocina?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°10 · 5.2"
+     ],
+     "contiene": [
+      "16"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué superficie te dije que tenía?",
+    "esp": {
+     "contiene": [
+      "120"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "empalme",
+  "cat": "aclaración",
+  "turnos": [
+   {
+    "m": "¿Qué potencia de empalme tengo que pedir?",
+    "esp": {
+     "tipo": "pide"
+    }
+   },
+   {
+    "m": "Es una casa con cocina eléctrica y termo eléctrico, monofásica.",
+    "esp": {
+     "tipo": [
+      "respuesta",
+      "pide",
+      "sin_respaldo"
+     ],
+     "noCita": [
+      "RIC N°5"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "bano",
+  "cat": "vocabulario",
+  "turnos": [
+   {
+    "m": "¿A qué distancia de la tina puedo poner un enchufe?",
+    "esp": {
+     "tipo": "respuesta",
+     "recupera": [
+      "RIC N°11 · 6"
+     ],
+     "cita": [
+      "RIC N°11 · 6"
+     ]
+    }
+   },
+   {
+    "m": "¿Y el interruptor de la luz puede ir adentro del baño?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°11 · 6"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "remision",
+  "cat": "vocabulario",
+  "turnos": [
+   {
+    "m": "¿Qué exige la norma para la instalación eléctrica de una sala de baño en una vivienda?",
+    "esp": {
+     "tipo": "respuesta",
+     "recupera": [
+      "RIC N°11 · 6"
+     ],
+     "cita": [
+      "RIC N°11 · 6"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "caida",
+  "cat": "cálculo",
+  "turnos": [
+   {
+    "m": "Necesito alimentar un tablero a 60 metros con 40 A monofásico. ¿Qué sección me da por caída de tensión?",
+    "esp": {
+     "tipo": "respuesta",
+     "calculo": true,
+     "cita": [
+      "RIC N°3 · 5"
+     ],
+     "contiene": [
+      "3 ?%"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "franja",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "¿Se pueden plantar árboles debajo de una línea eléctrica?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RPTD N°07"
+     ]
+    }
+   },
+   {
+    "m": "¿Y construir una bodega dentro de la franja?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RPTD N°07"
+     ],
+     "contiene": [
+      "no "
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "clase_d",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "¿Qué instalaciones puede hacer un instalador clase D?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 92"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "excedentes",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "Quiero poner paneles solares en mi casa e inyectar lo que sobre. ¿Cómo me pagan los excedentes?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 57"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "auto",
+  "cat": "dato simple",
+  "turnos": [
+   {
+    "m": "¿Qué protección diferencial necesita un cargador de auto eléctrico?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°15"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué sensibilidad debe tener el diferencial de los enchufes de una casa?",
+    "esp": {
+     "tipo": "respuesta",
+     "contiene": [
+      "30"
+     ],
+     "citaAlguna": [
+      "RIC N°10",
+      "RIC N°5"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "fuera2",
+  "cat": "fuera de las normas",
+  "turnos": [
+   {
+    "m": "¿Cuál es el precio del cobre hoy?",
+    "esp": {
+     "tipo": "fuera"
+    }
+   },
+   {
+    "m": "¿Cuánto cobra la SEC por inscribir una declaración TE1?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué dice la norma NCh 2369 sobre el anclaje sísmico de los tableros?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué marca de interruptores recomienda la norma?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   }
+  ]
+ }
+]

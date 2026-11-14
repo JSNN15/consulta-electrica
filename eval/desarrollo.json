@@ -1,0 +1,530 @@
+[
+ {
+  "id": "deriva",
+  "cat": "memoria",
+  "turnos": [
+   {
+    "m": "¿Qué sección mínima deben tener los conductores de un circuito de enchufes?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°4 · 5.4"
+     ],
+     "contiene": [
+      "2,5"
+     ]
+    }
+   },
+   {
+    "m": "¿y para alumbrado?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°4 · 5.4"
+     ],
+     "contiene": [
+      "1,5"
+     ]
+    }
+   },
+   {
+    "m": "¿y en un baño qué cambia?",
+    "esp": {
+     "tipo": "respuesta",
+     "recupera": [
+      "RIC N°11 · 6"
+     ],
+     "cita": [
+      "RIC N°11 · 6"
+     ]
+    }
+   },
+   {
+    "m": "¿y la protección?",
+    "esp": {
+     "tipo": "respuesta",
+     "contiene": [
+      "diferencial|30 ?mA"
+     ]
+    }
+   },
+   {
+    "m": "Volviendo a lo primero, ¿entonces puedo usar 1,5 mm² en los enchufes?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°4 · 5.4"
+     ],
+     "contiene": [
+      "2,5"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "proyecto",
+  "cat": "memoria",
+  "turnos": [
+   {
+    "m": "Estoy haciendo la instalación de un local comercial, trifásico, de 30 kW.",
+    "esp": {
+     "tipo": "dato",
+     "ficha": {
+      "recinto": "local",
+      "sistema": "trif",
+      "potencia": "30"
+     }
+    }
+   },
+   {
+    "m": "¿Qué tipo de empalme me corresponde?",
+    "esp": {
+     "tipo": "respuesta",
+     "recupera": [
+      "RIC N°1 "
+     ],
+     "cita": [
+      "RIC N°1 "
+     ],
+     "noCita": [
+      "RIC N°5"
+     ]
+    }
+   },
+   {
+    "m": "¿Y el tablero general qué debe llevar?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°2"
+     ]
+    }
+   },
+   {
+    "m": "¿Tengo que declararla en la SEC?",
+    "esp": {
+     "tipo": "respuesta",
+     "citaAlguna": [
+      "RIC N°19",
+      "RIC N°18",
+      "DS 8"
+     ],
+     "contiene": [
+      "declar"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué potencia te dije que tenía el local?",
+    "esp": {
+     "contiene": [
+      "30"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "circuitos",
+  "cat": "aclaración",
+  "turnos": [
+   {
+    "m": "¿Cuántos circuitos necesito como mínimo?",
+    "esp": {
+     "tipo": "pide"
+    }
+   },
+   {
+    "m": "Es una casa de 80 m².",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°10 · 5.2"
+     ],
+     "contiene": [
+      "3|tres"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "alimentador",
+  "cat": "aclaración",
+  "turnos": [
+   {
+    "m": "¿Qué sección de cable uso para el alimentador?",
+    "esp": {
+     "tipo": "pide"
+    }
+   },
+   {
+    "m": "Es monofásico, 6 kW, a 25 metros del medidor.",
+    "esp": {
+     "tipo": "respuesta",
+     "calculo": true,
+     "citaAlguna": [
+      "RIC N°3",
+      "RIC N°4"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "diferencial",
+  "cat": "aclaración",
+  "turnos": [
+   {
+    "m": "¿Qué diferencial pongo?",
+    "esp": {
+     "tipo": [
+      "pide",
+      "respuesta"
+     ]
+    }
+   },
+   {
+    "m": "Es para una casa.",
+    "esp": {
+     "tipo": "respuesta",
+     "contiene": [
+      "30"
+     ],
+     "citaAlguna": [
+      "RIC N°10",
+      "RIC N°5"
+     ]
+    }
+   },
+   {
+    "m": "¿De cuántos amperes?",
+    "esp": {
+     "tipo": "respuesta",
+     "citaAlguna": [
+      "RIC N°10 · 5.1",
+      "RIC N°2 · 6.2"
+     ],
+     "contiene": [
+      "igual o mayor|mayor o igual|aguas arriba"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "terreno",
+  "cat": "vocabulario",
+  "turnos": [
+   {
+    "m": "¿Cuántos enchufes puedo colgar de un automático de 10?",
+    "esp": {
+     "tipo": "respuesta",
+     "recupera": [
+      "RIC N°10 · 5.1"
+     ],
+     "cita": [
+      "RIC N°10 · 5.1"
+     ]
+    }
+   },
+   {
+    "m": "¿A qué altura va el tablero?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°2 · 6.1"
+     ],
+     "contiene": [
+      "0,45",
+      "2,0"
+     ]
+    }
+   },
+   {
+    "m": "¿Puedo pasar el cable de internet por el mismo tubo que los de fuerza?",
+    "esp": {
+     "tipo": [
+      "respuesta",
+      "sin_respaldo"
+     ],
+     "noCita": [
+      "RIC N°15"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "motor",
+  "cat": "cálculo",
+  "turnos": [
+   {
+    "m": "Tengo un motor trifásico de 15 kW a 380 V. ¿Qué sección de conductor necesito?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°7"
+     ],
+     "contiene": [
+      "1,25"
+     ]
+    }
+   },
+   {
+    "m": "¿Y si el tramo tiene 80 metros?",
+    "esp": {
+     "tipo": "respuesta",
+     "calculo": true,
+     "recupera": [
+      "RIC N°3 · 5"
+     ],
+     "cita": [
+      "RIC N°3 · 5"
+     ],
+     "contiene": [
+      "3 ?%"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "correccion",
+  "cat": "memoria",
+  "turnos": [
+   {
+    "m": "¿A qué altura se instala un tablero?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°2 · 6.1"
+     ],
+     "contiene": [
+      "0,45",
+      "2,0"
+     ]
+    }
+   },
+   {
+    "m": "No, eso no puede ser, yo siempre los he puesto a 1,8 m. ¿Estás seguro?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°2 · 6.1"
+     ],
+     "contiene": [
+      "2,0"
+     ]
+    }
+   },
+   {
+    "m": "¿En qué pliego y punto sale eso exactamente?",
+    "esp": {
+     "contiene": [
+      "RIC N°\\s*0?2",
+      "6\\.1\\.22"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "meta",
+  "cat": "conversación",
+  "turnos": [
+   {
+    "m": "Hola",
+    "esp": {
+     "tipo": "saludo"
+    }
+   },
+   {
+    "m": "¿Qué puedes hacer?",
+    "esp": {
+     "tipo": "saludo"
+    }
+   },
+   {
+    "m": "¿Qué diferencial lleva una piscina?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "RIC N°11 · 5.7"
+     ],
+     "contiene": [
+      "10 ?mA"
+     ]
+    }
+   },
+   {
+    "m": "Resume lo que hemos visto hasta ahora",
+    "esp": {
+     "tipo": "resumen",
+     "contiene": [
+      "piscina"
+     ]
+    }
+   },
+   {
+    "m": "Gracias",
+    "esp": {
+     "tipo": "saludo"
+    }
+   }
+  ]
+ },
+ {
+  "id": "linea",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "¿Qué distancia de seguridad hay que respetar a una línea de media tensión?",
+    "esp": {
+     "tipo": [
+      "respuesta",
+      "pide"
+     ],
+     "noCita": [
+      "RIC N°11 · 12"
+     ]
+    }
+   },
+   {
+    "m": "Es una línea de 23 kV que pasa al lado de una casa.",
+    "esp": {
+     "tipo": "respuesta",
+     "citaAlguna": [
+      "RPTD N°07",
+      "RPTD N°13"
+     ],
+     "noCita": [
+      "RIC N°11 · 12"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "licencia",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "Soy instalador clase C. ¿Qué tipo de instalaciones puedo hacer?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 92"
+     ]
+    }
+   },
+   {
+    "m": "¿Y qué necesito para sacar la clase B?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 92"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "solar",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "¿Qué necesito para conectar paneles solares a la red y vender la energía?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 57"
+     ]
+    }
+   },
+   {
+    "m": "¿Hasta qué potencia puedo instalar?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 57"
+     ],
+     "contiene": [
+      "300"
+     ],
+     "noContiene": [
+      "30 ?%",
+      "10 ?%"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "corte",
+  "cat": "normas nuevas",
+  "turnos": [
+   {
+    "m": "La compañía me quiere cortar la luz por una boleta atrasada. ¿Cuándo pueden cortar?",
+    "esp": {
+     "tipo": "respuesta",
+     "cita": [
+      "DS 327 · art. 147"
+     ],
+     "contiene": [
+      "45"
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "id": "fuera",
+  "cat": "fuera de las normas",
+  "turnos": [
+   {
+    "m": "¿Cuál es la tarifa BT1 vigente por kWh?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué torque de apriete llevan los bornes de un interruptor termomagnético de 32 A?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   },
+   {
+    "m": "¿Cada cuántos años hay que certificar un ascensor?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   },
+   {
+    "m": "¿Qué categoría de ropa contra arco eléctrico exige la NFPA 70E para maniobrar un tablero de 380 V?",
+    "esp": {
+     "tipo": [
+      "sin_respaldo",
+      "fuera"
+     ]
+    }
+   },
+   {
+    "m": "¿Quién ganó el partido de ayer?",
+    "esp": {
+     "tipo": "fuera"
+    }
+   }
+  ]
+ }
+]

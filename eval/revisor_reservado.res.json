@@ -1,0 +1,396 @@
+{
+ "fecha": "2026-11-14",
+ "resumen": {
+  "errores_plantados": 9,
+  "errores_botados": 8,
+  "errores_mostrados_con_advertencia": 0,
+  "errores_que_pasan_limpios": 1,
+  "por_clase_de_error": {
+   "valor cambiado": {
+    "casos": 3,
+    "botados": 3
+   },
+   "sentido invertido": {
+    "casos": 1,
+    "botados": 1
+   },
+   "sujeto cambiado": {
+    "casos": 1,
+    "botados": 1
+   },
+   "otro equipo": {
+    "casos": 1,
+    "botados": 0
+   },
+   "otra situación": {
+    "casos": 1,
+    "botados": 1
+   },
+   "dato agregado": {
+    "casos": 1,
+    "botados": 1
+   },
+   "condición sacada de contexto": {
+    "casos": 1,
+    "botados": 1
+   }
+  },
+  "correctas": 7,
+  "correctas_botadas": 0,
+  "correctas_con_advertencia": 0
+ },
+ "casos": [
+  {
+   "id": "r01",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 14657,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para suspensión de suministro por servicio impago en la relación entre clientes y empresa distribuidora",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "Artículo 147.- El concesionario podrá suspender el suministro en caso que un servicio se encuentre impago, previa notificación al usuario con, al menos, 5 días de anticipación. Este derecho sólo podrá ejercerse después de haber transcurrido 45 días desde el vencimiento de la primera boleta o factura impaga.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "r02",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2582,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la sección mínima de conductores que alimentan motores fijos de potencia nominal mayor a 3 HP",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "5.5 Dimensionamiento de conductores",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "r03",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2349,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para toda instalación de consumo de energía eléctrica nueva, ampliada o modificada en baja tensión",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "9.1.2 El instalador eléctrico autorizado, a cargo de la ejecución de la instalación eléctrica, deberá declarar la instalación una vez que ésta se encuentre completamente terminada. La declaración se realizará de manera digital, ingresándola al sistema de trámites en línea e-declarador, en el portal dispuesto por la Superintendencia.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "r04",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2766,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para el alcance del Reglamento de generación distribuida para autoconsumo (netbilling)",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "Artículo 2º.- Las disposiciones del presente reglamento se aplicarán a: a) Los usuarios finales sujetos a fijación de precios, que dispongan para su propio consumo de equipamiento de generación de energía eléctrica por medios renovables no convencionales o de instalaciones de cogeneración eficiente de manera individual o colectiva, que hagan uso de su derecho a inyectar los excedentes de energía que de esta forma generen a la red de distribución a través de los respectivos empalmes, cuya capacidad instalada no supere los 300 kilowatts y cumplan los demás requisitos establecidos en la ley y en el presente reglamento;",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "r05",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 5745,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión con un único tablero de distribución",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "6.5.2 También se deberá colocar un tablero general en aquellas instalaciones en que, existiendo un único tablero de distribución, este último esté separado más de 30 m del equipo de medida del empalme.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "r06",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 3279,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la puesta a tierra de servicio en instalaciones de consumo en baja tensión",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "6.1 Las puestas a tierra de servicio deben ser diseñadas de forma que aseguren el funcionamiento correcto de los equipos y de la instalación. El diseño deberá garantizar que, en el caso de circulación de una corriente de falla permanente, la tensión de cualquier conductor activo con respecto a tierra no sobrepase los 250 V y el valor resultante de la puesta a tierra de servicio no debe superar los 20 Ohm.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "r07",
+   "bueno": true,
+   "clase": "",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2300,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "7.1.6 En un mismo conducto, shaft o canal de una construcción, solo se podrán instalar canalizaciones eléctricas y de comunicación o control.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x01",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el punto dice 30 días, pero el extracto exige 45 días desde el vencimiento de la primera boleta impaga y además notificación con al menos 5 días de anticipación, que el punto omite.",
+   "ms": 2888,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para suspensión del suministro por servicio impago en la relación entre clientes y empresa distribuidora",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el punto dice 30 días, pero el extracto exige 45 días desde el vencimiento de la primera boleta impaga y además notificación con al menos 5 días de anticipación, que el punto omite.",
+    "donde": "Artículo 147.- El concesionario podrá suspender el suministro en caso que un servicio se encuentre impago, previa notificación al usuario con, al menos, 5 días de anticipación. Este derecho sólo podrá ejercerse después de haber transcurrido 45 días desde el vencimiento de la primera boleta o factura impaga.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x02",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto fija el límite en 20 Ohm, no en 25 Ohm como afirma el punto",
+   "ms": 2959,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para puestas a tierra de servicio en instalaciones de consumo en baja tensión",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto fija el límite en 20 Ohm, no en 25 Ohm como afirma el punto",
+    "donde": "6.1 Las puestas a tierra de servicio deben ser diseñadas de forma que aseguren el funcionamiento correcto de los equipos y de la instalación. El diseño deberá garantizar que, en el caso de circulación de una corriente de falla permanente, la tensión de cualquier conductor activo con respecto a tierra no sobrepase los 250 V y el valor resultante de la puesta a tierra de servicio no debe superar los 20 Ohm.",
+    "clase": "regla"
+   },
+   "pide": "se pregunta sobre la puesta a tierra de servicio y se quiere saber su valor máximo permitido"
+  },
+  {
+   "id": "x03",
+   "bueno": false,
+   "clase": "valor cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el punto dice 1,5 veces la corriente de plena carga, pero el extracto exige 1,25 veces.",
+   "ms": 2783,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para el dimensionamiento de conductores que alimentan a un motor de régimen permanente",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el punto dice 1,5 veces la corriente de plena carga, pero el extracto exige 1,25 veces.",
+    "donde": "5.5.2 La sección de los conductores que alimenten a un motor de régimen permanente será tal que permita asegurar una capacidad de transporte, por lo menos, igual a 1,25 veces la corriente de plena carga del motor.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga: Se pregunta sobre la capacidad que debe tener el conductor de un motor."
+  },
+  {
+   "id": "x04",
+   "bueno": false,
+   "clase": "sentido invertido",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el punto dice que no se permite, pero el extracto 7.1.6 permite canalizaciones eléctricas y de comunicación en un mismo shaft, y el 7.1.7 solo exige separación y distanciamiento adecuados.",
+   "ms": 2976,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el punto dice que no se permite, pero el extracto 7.1.6 permite canalizaciones eléctricas y de comunicación en un mismo shaft, y el 7.1.7 solo exige separación y distanciamiento adecuados.",
+    "donde": "7.1.6 En un mismo conducto, shaft o canal de una construcción, solo se podrán instalar canalizaciones eléctricas y de comunicación o control.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x05",
+   "bueno": false,
+   "clase": "sujeto cambiado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "si",
+   "responde": "no",
+   "motivo": "el extracto declara que la instalación la declara el instalador eléctrico autorizado, no el propietario, y la declara una vez terminada, no antes de iniciar la obra.",
+   "ms": 2716,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la declaración de puesta en servicio de instalaciones de consumo en baja tensión",
+    "respalda": "no",
+    "aplica": "si",
+    "motivo": "el extracto declara que la instalación la declara el instalador eléctrico autorizado, no el propietario, y la declara una vez terminada, no antes de iniciar la obra.",
+    "donde": "9.1.2 El instalador eléctrico autorizado, a cargo de la ejecución de la instalación eléctrica, deberá declarar la instalación una vez que ésta se encuentre completamente terminada.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x06",
+   "bueno": false,
+   "clase": "otro equipo",
+   "botado": false,
+   "marcado": false,
+   "respalda": "si",
+   "aplica": "si",
+   "responde": "si",
+   "motivo": "",
+   "ms": 2513,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la puesta a tierra de servicio en instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+    "respalda": "si",
+    "aplica": "si",
+    "motivo": "",
+    "donde": "6.1 Las puestas a tierra de servicio deben ser diseñadas de forma que aseguren el funcionamiento correcto de los equipos y de la instalación. El diseño deberá garantizar que, en el caso de circulación de una corriente de falla permanente, la tensión de cualquier conductor activo con respecto a tierra no sobrepase los 250 V y el valor resultante de la puesta a tierra de servicio no debe superar los 20 Ohm.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x07",
+   "bueno": false,
+   "clase": "otra situación",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto regula dispositivos de comando o accionamiento de tableros, no enchufes de vivienda, y el punto omite que se trata de tableros y de la base inferior del dispositivo, presentándolo como regla general para enchufes de casa.",
+   "ms": 3083,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para la altura mínima y máxima de montaje de dispositivos de comando o accionamiento colocados en un tablero eléctrico, medida desde el nivel de piso terminado hasta la base inferior de cada dispositivo",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto regula dispositivos de comando o accionamiento de tableros, no enchufes de vivienda, y el punto omite que se trata de tableros y de la base inferior del dispositivo, presentándolo como regla general para enchufes de casa.",
+    "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x08",
+   "bueno": false,
+   "clase": "dato agregado",
+   "botado": true,
+   "marcado": true,
+   "respalda": "parcial",
+   "aplica": "si",
+   "responde": "parcial",
+   "motivo": "el extracto solo exige el tablero general; el supresor de sobretensiones tipo 2 no aparece en el extracto citado.",
+   "ms": 2849,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión con un único tablero de distribución separado más de 30 m del equipo de medida del empalme",
+    "respalda": "parcial",
+    "aplica": "si",
+    "motivo": "el extracto solo exige el tablero general; el supresor de sobretensiones tipo 2 no aparece en el extracto citado.",
+    "donde": "6.5.2 También se deberá colocar un tablero general en aquellas instalaciones en que, existiendo un único tablero de distribución, este último esté separado más de 30 m del equipo de medida del empalme.",
+    "clase": "regla"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  },
+  {
+   "id": "x09",
+   "bueno": false,
+   "clase": "condición sacada de contexto",
+   "botado": true,
+   "marcado": true,
+   "respalda": "no",
+   "aplica": "no",
+   "responde": "no",
+   "motivo": "el extracto solo menciona diferenciales de 300 mA asociados a la protección general del tablero, no a los circuitos de la vivienda, y no especifica el diferencial que se debe poner en esos circuitos. · el extracto solo los menciona como acompañantes de la protección general del tablero, no como permiso para circuitos de una vivienda.",
+   "ms": 3231,
+   "veredicto": {
+    "i": 1,
+    "caso_del_extracto": "regla general para instalaciones de uso general (interior de casas, locales e industrias) sobre diferenciales de 300 mA que acompañan a la protección general del tablero",
+    "respalda": "no",
+    "aplica": "no",
+    "motivo": "el extracto solo menciona diferenciales de 300 mA asociados a la protección general del tablero, no a los circuitos de la vivienda, y no especifica el diferencial que se debe poner en esos circuitos. · el extracto solo los menciona como acompañantes de la protección general del tablero, no como permiso para circuitos de una vivienda.",
+    "donde": "los diferenciales de 300 mA que acompañan a la protección general del tablero,",
+    "clase": "condicion"
+   },
+   "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga"
+  }
+ ]
+}
