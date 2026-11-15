@@ -108,14 +108,14 @@ Parte del texto de cada documento oficial que quedó dentro de algún fragmento 
 
 - Las pruebas comprueban tipo de respuesta, norma citada y datos clave. No comprueban que la respuesta sea suficiente para ejecutar. Esa lectura la tiene que hacer un instalador autorizado, pregunta por pregunta.
 - Los sets son chicos (62 turnos, 45 casos del revisor) y los escribió quien construyó el sistema. Faltan preguntas de instaladores reales.
-- El error de la clase D se corrigió el 15 de noviembre de 2026 (ver «Segunda corrida»).
+- El error de la clase D no está resuelto: mejoró el fragmento, pero la respuesta todavía puede salir mal (ver «Segunda corrida»).
 - El revisor es más débil cuando el punto habla de otro equipo que el preguntado, y bota entre 0 y 2 de cada 14 respuestas correctas.
 - No están el RPTD N°17 (el PDF es una imagen), las instrucciones técnicas RGR, los oficios de la SEC ni las normas NCh.
 - Los tiempos se midieron en local contra la API, sin el intermediario de Cloudflare. La clave de prueba admite pocas consultas por minuto y la comparten todas las demos: una evaluación completa la agota.
 
 ## Segunda corrida (15 de noviembre de 2026)
 
-**Qué cambió.** En 91 fragmentos de artículos largos partidos en varias partes: los cortes que caían en medio de una palabra se corrieron al inicio del numeral, y cada continuación parte ahora con el encabezado de su artículo. El corpus sigue teniendo 2.064 fragmentos, con los mismos rótulos. La pregunta por la clase D, que antes salía mal, ahora responde bien: la clase D puede proyectar, ejecutar y dirigir instalaciones tipo F y G.
+**Qué cambió.** En 91 fragmentos de artículos largos partidos en varias partes: los cortes que caían en medio de una palabra se corrieron al inicio del numeral, y cada continuación parte ahora con el encabezado de su artículo. El corpus sigue teniendo 2.064 fragmentos, con los mismos rótulos. La pregunta por la clase D, que antes salía mal, quedó a medias. En la corrida local respondió bien: la clase D puede proyectar, ejecutar y dirigir instalaciones tipo F y G. En una prueba en producción el mismo día dio ese punto correcto junto con uno incorrecto, que le atribuye a la clase D las instalaciones tipo D, E, F y G; ese alcance es de la clase C. El modelo confunde «instalación tipo D» con «instalador clase D» y el revisor no siempre lo detiene.
 
 **Qué dio.** Las mismas conversaciones, una corrida:
 
