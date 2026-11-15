@@ -507,6 +507,27 @@ export function crearMotor({corpus, vec, post}) {
         n: `${p.doc.n} · ${p.doc.r}`,
         motivo: 'la frase citada no está escrita así en el extracto',
       }));
+      // Clases de licencia: «instalación tipo D» no es «instalador clase D», y el modelo las confunde. Si el punto
+      // nombra una clase, la frase citada tiene que nombrar esa misma clase. Si no la nombra pero la pregunta es por
+      // una clase y la frase habla de otra, tampoco sirve. Es una regla del código: no depende del revisor.
+      const clasesDe = (t) => new Set([...String(t || '').matchAll(/\b[Cc]lases?\s+([A-E])\b/g)].map((m) => m[1]));
+      const dePregunta = clasesDe(pregunta || mensaje);
+      const otraClase = (p) => {
+        const enFrase = clasesDe(p.frase || p.textual);
+        const enPunto = clasesDe(p.texto);
+        if (enPunto.size) {
+          const faltan = [...enPunto].filter((x) => !enFrase.has(x));
+          return faltan.length
+            ? `la frase citada no nombra la clase ${faltan.join(' ni la ')}${enFrase.size ? ` (habla de la clase ${[...enFrase].join(', ')})` : ''}`
+            : '';
+        }
+        if (dePregunta.size === 1 && enFrase.size && ![...dePregunta].some((x) => enFrase.has(x)))
+          return `la pregunta es por la clase ${[...dePregunta][0]} y la frase citada habla de la clase ${[...enFrase].join(', ')}`;
+        return '';
+      };
+      for (const p of pts) p.otraClase = otraClase(p);
+      fuera.push(...pts.filter((p) => p.otraClase).map((p) => ({texto: p.texto, textual: p.textual, n: `${p.doc.n} · ${p.doc.r}`, motivo: p.otraClase})));
+      pts = pts.filter((p) => !p.otraClase);
       let j = null;
       const omitidos = [];
       if (pts.length) {
@@ -579,6 +600,8 @@ export function crearMotor({corpus, vec, post}) {
         : 'No encontré en las normas cargadas una regla que responda eso con respaldo. ' +
           (red.aviso || 'Puede estar en una norma que no está en este corpus.')
       : red.aviso || '';
+    // si la revisión botó el punto que venía antes, el primero que queda no puede partir con «También»
+    if (puntos.length) puntos[0].texto = puntos[0].texto.replace(/^(También|Además|Asimismo|Por otra parte),?\s+(\p{L})/u, (_, __, c) => c.toUpperCase());
     const texto = sin ? aviso : puntos.map((p) => p.texto).join(' ');
     estado.memoria.push(
       sin

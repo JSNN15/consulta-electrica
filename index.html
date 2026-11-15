@@ -531,6 +531,53 @@
       .quote.frag .pie {
         margin-top: 0;
       }
+      .b-simple {
+        margin-top: 12px;
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 14px;
+        font-size: 0.86rem;
+        color: var(--muted);
+        cursor: pointer;
+      }
+      .b-simple:hover:not(:disabled) {
+        border-color: var(--acc);
+        color: var(--acc);
+      }
+      .simple {
+        margin-top: 12px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+      }
+      .simple p {
+        margin: 6px 0 0;
+      }
+      .simple dl {
+        margin: 10px 0 0;
+        display: grid;
+        gap: 4px;
+        font-size: 0.88rem;
+      }
+      .simple dt {
+        display: inline;
+        font-weight: 600;
+      }
+      .simple dt::after {
+        content: ': ';
+      }
+      .simple dd {
+        display: inline;
+        margin: 0;
+        color: var(--muted);
+      }
+      .nota-simple,
+      .simple-no {
+        margin-top: 8px;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
       .como {
         margin-top: 10px;
         font-size: 0.78rem;
@@ -727,6 +774,10 @@
         <ul class="alcance">
           <li><b>Solo texto.</b> No lee fotos ni planos.</li>
           <li>
+            <b>Responde con las palabras de la norma.</b> Si no trabajas en esto, cada respuesta trae un botón
+            «Explícamelo en simple».
+          </li>
+          <li>
             <b>Recuerda tu caso mientras dure la conversación.</b> Al cerrar o recargar la página se borra;
             con «Guardar» la descargas.
           </li>
@@ -922,6 +973,17 @@
           ${calc}
           ${r.aviso ? `<p class="aviso">${esc(r.aviso)}</p>` : ''}
           <div class="src">${fuentes.map((f, i) => `<button data-f="${i}"><b>${i + 1}</b>${esc(f)}</button>`).join('')}</div><div class="qbox"></div>
+          ${
+            t.simple
+              ? t.simple.error
+                ? `<p class="simple-no">${esc(t.simple.error)}</p>`
+                : `<div class="simple"><span class="eti">En simple</span><p>${esc(t.simple.explicacion)}</p>${
+                    t.simple.terminos.length
+                      ? `<dl>${t.simple.terminos.map((x) => `<div><dt>${esc(x.termino)}</dt><dd>${esc(x.significado)}</dd></div>`).join('')}</dl>`
+                      : ''
+                  }<p class="nota-simple">La respuesta que vale es la de arriba, con sus citas. Esto solo la dice con otras palabras.</p></div>`
+              : `<button class="b-simple" type="button"${t.simplificando ? ' disabled' : ''}>${t.simplificando ? 'Escribiéndola en simple…' : 'Explícamelo en simple'}</button>`
+          }
           ${r.sugerencias && r.sugerencias.length && ultimo ? `<div class="sug">${r.sugerencias.map((s) => `<button>${esc(s)}</button>`).join('')}</div>` : ''}
           ${traza(r)}`;
         const abrir = (i) => {
@@ -960,6 +1022,30 @@
         a.querySelectorAll('.sug button').forEach((b) =>
           b.addEventListener('click', () => preguntar(b.textContent))
         );
+        // La versión en simple no puede traer datos nuevos: cada número que diga tiene que estar en la respuesta
+        // original, en el cálculo o en la pregunta. Si trae otro, no se muestra.
+        const bs = a.querySelector('.b-simple');
+        if (bs)
+          bs.addEventListener('click', async () => {
+            t.simplificando = true;
+            pintar();
+            const nums = (x) => (String(x).match(/\d+(?:[.,]\d+)?/g) || []).map((n) => String(parseFloat(n.replace(',', '.'))));
+            try {
+              const d = await post('/simple', {pregunta: t.q, puntos: r.puntos.map((p) => p.texto)});
+              const s = d.result || {};
+              const terminos = (Array.isArray(s.terminos) ? s.terminos : []).filter((x) => x && x.termino && x.significado).slice(0, 4);
+              const dados = new Set(nums([t.q, r.calc ? r.calc.texto : '', ...r.puntos.map((p) => p.texto)].join(' ')));
+              const nuevos = nums([s.explicacion, ...terminos.map((x) => x.significado)].join(' ')).filter((n) => !dados.has(n));
+              t.simple =
+                !s.explicacion || nuevos.length
+                  ? {error: 'No pude decirla en simple sin cambiar los datos. La respuesta de arriba es la que vale.'}
+                  : {explicacion: s.explicacion, terminos};
+            } catch (e) {
+              t.simple = {error: `No pude escribirla en simple: ${e.message}. La respuesta de arriba es la que vale.`};
+            }
+            t.simplificando = false;
+            pintar();
+          });
         return el;
       };
       const pintar = () => {
