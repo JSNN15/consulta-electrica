@@ -6,12 +6,12 @@
     <title>Consulta eléctrica</title>
     <meta
       name="description"
-      content="Chat de normativa eléctrica chilena: pregunta como en terreno y la respuesta trae el pliego RIC o el artículo del DS 8 con la frase exacta, verificada contra el texto oficial."
+      content="Asistente de normativa eléctrica chilena: recuerda tu caso, pide el dato que falta, calcula y responde con la frase exacta de la norma, comprobada contra el texto oficial y revisada antes de mostrarse."
     />
     <meta property="og:title" content="Consulta eléctrica · chat con la norma" />
     <meta
       property="og:description"
-      content="Pregunta como en terreno. Responde con el pliego y la frase exacta de la norma."
+      content="Pregunta como en terreno. Recuerda tu caso, calcula y cita la frase exacta de la norma."
     />
     <meta property="og:image" content="https://jsnn15.github.io/img/consulta.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -125,7 +125,7 @@
       .sub {
         color: var(--muted);
         margin: 8px 0 12px;
-        max-width: 40ch;
+        max-width: 46ch;
       }
       .tags {
         display: flex;
@@ -430,6 +430,107 @@
         margin-top: 6px;
         font-family: var(--mono);
       }
+      .ficha {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding-top: 8px;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+      .ficha span {
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 3px 8px;
+        background: var(--panel);
+        color: var(--fg);
+      }
+      .ficha span i {
+        font-style: normal;
+        color: var(--muted);
+      }
+      .ficha .ft {
+        border: 0;
+        background: none;
+        color: var(--acc);
+        padding-left: 0;
+      }
+      .eti {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+      .a.pide {
+        border-left-color: #6fb3ff;
+      }
+      .a.sin {
+        border-left-color: var(--warn);
+      }
+      .calc {
+        margin-top: 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+      .calc b {
+        font-family: var(--mono);
+        color: var(--acc);
+        font-weight: 600;
+      }
+      .calc i {
+        color: var(--muted);
+        font-style: normal;
+        font-size: 0.74rem;
+      }
+      .calc pre {
+        margin: 6px 0 0;
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        color: #cfd7de;
+      }
+      .quote + .quote {
+        margin-top: 6px;
+      }
+      .quote.frag {
+        font-size: 0.8rem;
+      }
+      .quote.frag .pie {
+        margin-top: 0;
+      }
+      .como {
+        margin-top: 10px;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+      .como summary {
+        cursor: pointer;
+        font-family: var(--mono);
+        font-size: 0.7rem;
+      }
+      .como p {
+        margin: 6px 0 0;
+      }
+      .como ul {
+        margin: 4px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      .como i {
+        color: #ffb199;
+        font-style: normal;
+      }
+      footer a {
+        color: var(--acc);
+      }
       footer {
         border-top: 1px solid var(--line);
         margin-top: 40px;
@@ -568,11 +669,12 @@
       <div class="wrap">
         <h1>Pregúntale <em>a la norma.</em></h1>
         <p class="sub">
-          Como en terreno. La respuesta trae el pliego y la frase exacta, verificada contra el texto oficial.
+          Como en terreno. Recuerda tu caso, pide el dato que falta, calcula y cita la frase exacta de la
+          norma. Lo que no se puede comprobar no se muestra.
         </p>
         <div class="tags">
-          <span>RIC 1–19 · <b>DS 8</b></span
-          ><span>1.121 fragmentos</span><span>NVIDIA <b>Nemotron</b></span>
+          <span>RIC 1–19 · RPTD 1–16 · <b>DS 8, 57, 92, 109, 327</b></span
+          ><span>2.064 fragmentos</span><span>NVIDIA <b>Nemotron</b></span>
         </div>
       </div>
     </header>
@@ -585,6 +687,7 @@
           <button id="nueva" type="button" title="Nueva conversación">Nueva</button></span
         >
       </div>
+      <div class="ficha" id="ficha" hidden></div>
       <div class="chat" id="chat" aria-live="polite"></div>
       <div class="ini" id="ini" hidden>
         <p>Preguntas de ejemplo</p>
@@ -592,8 +695,10 @@
       </div>
       <footer>
         Consulta eléctrica · Servicio y Soluciones Tecnológicas DelaCruz SpA · Julián Neira Nova. Responde
-        solo con los pliegos RIC de la SEC y el DS 8/2019; cada cita se compara letra por letra con el texto
-        oficial. Es una ayuda de consulta: la responsabilidad del proyecto es del instalador autorizado.
+        solo con los pliegos RIC y RPTD de la SEC y los decretos 8, 57, 92, 109 y 327. Cada cita se busca en
+        el texto oficial y un segundo revisor comprueba cada punto antes de mostrarlo; los cálculos los hace
+        el código. Es una ayuda de consulta: la responsabilidad del proyecto es del instalador autorizado.
+        <a href="https://github.com/JSNN15/consulta-electrica/blob/main/evaluacion.md">Cómo se validó</a>.
       </footer>
     </main>
 
@@ -623,353 +728,307 @@
     </form>
 
     <script src="samples.js"></script>
-    <script>
-      (() => {
-        const NV = ((location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:8787' : 'https://nv-portafolio.jneiranova.workers.dev');
-        const $ = (id) => document.getElementById(id);
-        const esc = (s) =>
-          String(s ?? '').replace(
-            /[&<>"]/g,
-            (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'})[c]
-          );
-        const INICIO = [
-          '¿Qué sección mínima de conductor uso para enchufes en una casa?',
-          '¿Qué protección diferencial pide el baño?',
-          '¿Puedo pasar enchufes y alumbrado por el mismo ducto?',
-          '¿Cuánto es la resistencia de la puesta a tierra de protección?',
-        ];
-
-        // ---------- índice: pliegos RIC (repositorio normativa) + DS 8 ----------
-        const STOP = new Set(
-          'a al con como cual de del desde donde el en entre es esa ese esta este hay la las le lo los mas más no o para pero por que se ser si sin sobre son su sus un una uno unos y debe deben deberá deberán será serán cada otro otra otros otras puede pueden según cuando todo toda todos todas'.split(
-            ' '
-          )
+    <script type="module">
+      import {crearMotor} from './motor.js';
+      const NV = ((location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:8787' : 'https://nv-portafolio.jneiranova.workers.dev');
+      const $ = (id) => document.getElementById(id);
+      const esc = (s) =>
+        String(s ?? '').replace(
+          /[&<>"]/g,
+          (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'})[c]
         );
-        const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-        const stem = (w) => (w.length > 4 ? w.replace(/(es|s)$/, '') : w);
-        const toks = (s) =>
-          (norm(s).match(/[a-z0-9]+/g) || []).filter((w) => !STOP.has(w) && w.length > 2).map(stem);
-        let IDX = null;
-        const loadIdx = () =>
-          (IDX ??= (async () => {
-            const get = (u, t) =>
-              fetch(u).then((r) => {
-                if (!r.ok) throw new Error('no se pudo cargar ' + u);
-                return t === 'b' ? r.arrayBuffer() : r.json();
-              });
-            const [rj, rb, dj, db] = await Promise.all([
-              get('../normativa/s/ric.json'),
-              get('../normativa/s/vec.bin', 'b'),
-              get('s/ds8.json'),
-              get('s/vec.bin', 'b'),
-            ]);
-            const docs = rj.c
-              .map((c) => ({
-                ref: `RIC N°${c[0]} · ${c[1]}`,
-                pag: c[3],
-                h: `${rj.mat[c[0]]} › ${c[2]}`,
-                t: c[4],
-                url: rj.url[c[0]] + '#page=' + c[3],
-              }))
-              .concat(
-                dj.c.map((c) => ({
-                  ref: `DS 8 · art. ${c.a}${c.k ? ` (parte ${c.k})` : ''}`,
-                  h: c.h,
-                  t: c.t,
-                  url: c.u,
-                }))
-              );
-            const blocks = [
-              {V: new Int8Array(rb), scale: rj.scale, off: 0, n: rj.c.length, dim: rj.dim},
-              {V: new Int8Array(db), scale: dj.scale, off: rj.c.length, n: dj.c.length, dim: dj.dim},
-            ];
-            const inv = new Map(),
-              dl = new Float32Array(docs.length);
-            docs.forEach((d, i) => {
-              const t = toks(d.h + ' ' + d.t),
-                tf = new Map();
-              dl[i] = t.length;
-              t.forEach((w) => tf.set(w, (tf.get(w) || 0) + 1));
-              tf.forEach((f, w) => {
-                if (!inv.has(w)) inv.set(w, []);
-                inv.get(w).push([i, f]);
-              });
-            });
-            return {docs, blocks, inv, dl, avg: dl.reduce((a, b) => a + b, 0) / docs.length};
-          })());
-        const cosAll = (I, qv) => {
-          const s = new Float32Array(I.docs.length);
-          let n = 0;
-          for (const x of qv) n += x * x;
-          n = Math.sqrt(n) || 1;
-          for (const b of I.blocks) {
-            const k = 1 / (n * b.scale);
-            for (let i = 0; i < b.n; i++) {
-              let d = 0;
-              const o = i * b.dim;
-              for (let j = 0; j < b.dim; j++) d += b.V[o + j] * qv[j];
-              s[b.off + i] = d * k;
-            }
-          }
-          return s;
-        };
-        const bm25 = (I, q) => {
-          const N = I.docs.length,
-            s = new Float32Array(N);
-          new Set(toks(q)).forEach((w) => {
-            const L = I.inv.get(w);
-            if (!L) return;
-            const idf = Math.log(1 + (N - L.length + 0.5) / (L.length + 0.5));
-            L.forEach(([i, f]) => (s[i] += (idf * f * 2.2) / (f + 1.2 * (0.25 + (0.75 * I.dl[i]) / I.avg))));
-          });
-          return s;
-        };
-        // semántica + palabras, fusionadas por rango recíproco
-        const search = (I, q, qv, k = 8) => {
-          const rank = (s) =>
-            Array.from(s.keys())
-              .filter((i) => s[i] > 0)
-              .sort((a, b) => s[b] - s[a])
-              .slice(0, 60);
-          const f = new Map();
-          rank(cosAll(I, qv)).forEach((i, r) => f.set(i, (f.get(i) || 0) + 1 / (60 + r)));
-          rank(bm25(I, q)).forEach((i, r) => f.set(i, (f.get(i) || 0) + 0.7 / (60 + r)));
-          return [...f.entries()]
-            .sort((a, b) => b[1] - a[1])
-            .slice(0, k)
-            .map(([i]) => i);
-        };
+      const INICIO = [
+        '¿Qué sección mínima de conductor uso para enchufes en una casa?',
+        'Tengo un motor trifásico de 15 kW a 380 V con un tramo de 80 metros. ¿Qué sección necesito?',
+        '¿Qué distancia de seguridad hay que respetar a una línea de 23 kV?',
+        'Soy instalador clase C. ¿Qué instalaciones puedo hacer?',
+      ];
 
-        // ---------- verificación de la cita contra el texto oficial ----------
-        const plano = (s) => norm(s).replace(/[^a-z0-9]/g, '');
-        const verifica = (cita, texto) => {
-          const q = plano(cita);
-          if (q.length > 20 && plano(texto).includes(q)) return 'ok';
-          // el texto de tablas sale desordenado del PDF: se acepta si casi todas las palabras están
-          const qt = toks(cita),
-            et = new Set(toks(texto));
-          const cob = qt.filter((w) => et.has(w)).length / Math.max(1, qt.length);
-          return qt.length >= 5 && cob >= 0.9 ? 'tabla' : 'no';
-        };
-        const VER = {
-          ok: '✓ Frase exacta del texto oficial',
-          tabla: '≈ Coincide con una tabla del pliego',
-          no: '✗ No se pudo verificar: revisa el pliego',
-        };
-
-        // ---------- llamadas al intermediario ----------
-        const post = async (path, body) => {
-          const r = await fetch(NV + path, {
+      // ---------- llamadas al intermediario (nv.js agrega la sesión) ----------
+      // La clave de prueba admite pocas consultas por minuto: si el servidor dice que está ocupado,
+      // se espera y se repite una vez antes de darle el error a la persona.
+      const post = async (ruta, cuerpo) => {
+        for (let k = 0; ; k++) {
+          const r = await fetch(NV + ruta, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(body),
+            body: JSON.stringify(cuerpo),
           });
           const d = await r.json().catch(() => ({}));
-          if (!r.ok || !d.ok) throw new Error(d.error || 'sin respuesta del servidor');
-          return d;
-        };
+          if (r.ok && d.ok) return d;
+          const msg = String(d.error || 'sin respuesta del servidor').replace(/\.$/, '');
+          if (k || !/demanda|Demasiadas/.test(msg)) throw new Error(msg);
+          const p = document.querySelector('.turno:last-child .paso');
+          if (p) p.textContent = 'La IA está ocupada: reintento en unos segundos';
+          await new Promise((s) => setTimeout(s, 9000));
+        }
+      };
 
-        // ---------- conversación ----------
-        let turnos = [];
-        let ocupado = false;
-        const historial = () =>
-          turnos
-            .filter((t) => t.res)
-            .slice(-3)
-            .map((t) => ({q: t.q, a: t.res.puntos.map((p) => p.texto).join(' ') || t.res.aviso}));
+      // ---------- motor: se carga con la primera pregunta (normas + vectores, unos 3 MB) ----------
+      let motor = null;
+      const cargar = () =>
+        (motor ??= (async () => {
+          const pide = (u) =>
+            fetch(u).then((r) => {
+              if (!r.ok) throw new Error('no se pudieron cargar las normas');
+              return r;
+            });
+          const [c, v] = await Promise.all([
+            pide('s/corpus.json').then((r) => r.json()),
+            pide('s/corpus.bin').then((r) => r.arrayBuffer()),
+          ]);
+          return crearMotor({corpus: c, vec: new Int8Array(v), post});
+        })());
 
-        const render = (t, k) => {
-          const el = document.createElement('div');
-          el.className = 'turno';
-          el.innerHTML = `<div class="u">${esc(t.q)}</div>`;
-          const a = document.createElement('div');
-          a.className = 'a';
-          el.appendChild(a);
-          if (!t.res) {
-            a.innerHTML = t.error
-              ? `<p class="aviso">No pude responder: ${esc(t.error)}. Prueba de nuevo en un minuto.</p>`
-              : `<div class="pensando"><span class="dots"><i></i><i></i><i></i></span><span class="paso">${esc(t.paso || 'Pensando')}</span></div>`;
-            return el;
-          }
-          const r = t.res;
-          const fuentes = [...new Set(r.puntos.map((p) => p.doc.ref))];
-          const num = (p) => fuentes.indexOf(p.doc.ref) + 1;
-          const [p0, ...resto] = r.puntos;
-          a.innerHTML = `${p0 ? `<p class="lead">${esc(p0.texto)}<button class="cn" data-f="${num(p0) - 1}" aria-label="Ver cita ${num(p0)}">${num(p0)}</button></p>` : ''}
-            ${resto.length ? `<ul>${resto.map((p) => `<li>${esc(p.texto)}<button class="cn" data-f="${num(p) - 1}" aria-label="Ver cita ${num(p)}">${num(p)}</button></li>`).join('')}</ul>` : ''}
-            ${r.aviso ? `<p class="aviso">${esc(r.aviso)}</p>` : ''}
-            ${fuentes.length ? `<div class="src">${fuentes.map((f, i) => `<button data-f="${i}"><b>${i + 1}</b>${esc(f)}</button>`).join('')}</div><div class="qbox"></div>` : ''}
-            ${r.sugerencias && r.sugerencias.length && k === turnos.length - 1 ? `<div class="sug">${r.sugerencias.map((s) => `<button>${esc(s)}</button>`).join('')}</div>` : ''}
-            <div class="meta">${t.ms ? (t.ms / 1000).toFixed(1).replace('.', ',') + ' s · ' : ''}buscó: «${esc(t.consulta || '')}»</div>`;
-          const abrir = (i) => {
-            const box = a.querySelector('.qbox'),
-              ref = fuentes[i];
-            const ya = box.dataset.f === String(i);
-            a.querySelectorAll('.cn,.src button').forEach((b) =>
-              b.classList.toggle('on', !ya && b.dataset.f === String(i))
-            );
-            if (ya) {
-              box.innerHTML = '';
-              box.dataset.f = '';
-              return;
-            }
-            box.dataset.f = i;
-            const ps = r.puntos.filter((p) => p.doc.ref === ref),
-              d = ps[0].doc;
-            box.innerHTML = ps
+      // ---------- conversación ----------
+      let turnos = []; // {q, r} con r = resultado del motor; o {q, paso} mientras trabaja; o {q, error}
+      let estado = null; // memoria del motor: ficha, tema, lo ya conversado
+      let ocupado = false;
+
+      const VER = {
+        ok: ['ok', '✓ Frase exacta del texto oficial'],
+        aprox: [
+          'ok',
+          '✓ Ubicada en el texto oficial (el asistente la copió con diferencias; se muestra la original)',
+        ],
+        tabla: ['tabla', '≈ Datos de una tabla o lista del texto oficial'],
+      };
+      const FICHA = [
+        ['recinto', 'Recinto'],
+        ['sistema', 'Sistema'],
+        ['tension', 'Tensión'],
+        ['potencia', 'Potencia'],
+        ['otros', 'Otros'],
+      ];
+      const pintarFicha = (f) => {
+        const x = FICHA.filter(([k]) => f && f[k]);
+        $('ficha').hidden = !x.length;
+        $('ficha').innerHTML = x.length
+          ? `<span class="ft">Tu caso</span>${x.map(([k, n]) => `<span><i>${n}</i> ${esc(f[k])}</span>`).join('')}`
+          : '';
+      };
+      const refDe = (d) => `${d.n} · ${d.r}`;
+      const seg = (ms) => (ms / 1000).toFixed(1).replace('.', ',') + ' s';
+
+      const traza = (r) => {
+        const t = r.traza || {};
+        const L = [];
+        if (t.consultas && t.consultas.length)
+          L.push(`Buscó: ${t.consultas.map((c) => `«${esc(c)}»`).join(' · ')}`);
+        if (t.ids) L.push(`Leyó ${t.ids.length} fragmentos de norma.`);
+        if (t.segunda)
+          L.push('La primera lectura no encontró respaldo: buscó de otra forma y leyó de nuevo.');
+        if (t.saltos) L.push(`Siguió una remisión de la norma: «${esc(t.buscar_mas || '')}».`);
+        const d = t.descartados || [];
+        if (d.length)
+          L.push(
+            `No mostró ${d.length} ${d.length === 1 ? 'punto' : 'puntos'} que no ${d.length === 1 ? 'pasó' : 'pasaron'} la comprobación:<ul>${d
               .map(
-                (p) => `<div class="quote"><blockquote>${esc(p.textual)}</blockquote>
-              <div class="pie"><span class="ver ${p.ver}">${VER[p.ver]}</span><span>${esc(d.ref)}${d.pag ? ` · pág. ${d.pag}` : ''}</span><a href="${esc(d.url)}" target="_blank" rel="noopener">Abrir el texto oficial ↗</a></div>
-              <details><summary>Fragmento completo</summary><p>${esc(d.h)}\n\n${esc(d.t.length > 1500 ? d.t.slice(0, 1500) + '…' : d.t)}</p></details></div>`
+                (x) =>
+                  `<li>${esc(x.texto)}<br /><i>${esc(x.motivo || 'sin respaldo en el extracto')}</i></li>`
               )
-              .join('');
-          };
-          a.querySelectorAll('.cn,.src button').forEach((b) =>
-            b.addEventListener('click', () => abrir(+b.dataset.f))
+              .join('')}</ul>`
           );
-          a.querySelectorAll('.sug button').forEach((b) =>
-            b.addEventListener('click', () => preguntar(b.textContent))
+        if (t.revisionParcial)
+          L.push('El segundo revisor no respondió en este turno: los puntos pasaron una sola revisión.');
+        if (t.reintento)
+          L.push('Como la revisión rechazó la primera redacción, se redactó de nuevo con ese motivo.');
+        const o = t.omitidos || [];
+        if (o.length)
+          L.push(
+            `Dejó fuera ${o.length} ${o.length === 1 ? 'punto' : 'puntos'} que podían no aplicar a este caso.`
           );
-          return el;
-        };
-        const pintar = () => {
-          const c = $('chat');
-          c.innerHTML = '';
-          turnos.forEach((t, k) => c.appendChild(render(t, k)));
-          $('ini').hidden = turnos.length > 0;
-        };
+        if (t.llamadas) L.push(`${t.llamadas} llamadas al modelo · ${seg(t.ms || 0)}`);
+        return L.length
+          ? `<details class="como"><summary>Cómo se obtuvo</summary>${L.map((x) => `<p>${x}</p>`).join('')}</details>`
+          : '';
+      };
 
-        const RESP_FUERA = {
-          saludo:
-            'Hola. Pregúntame sobre instalaciones eléctricas de consumo: conductores, protecciones, tableros, puesta a tierra, empalmes. Respondo con el pliego y la frase de la norma.',
-          fuera_de_alcance:
-            'Solo respondo sobre la normativa eléctrica chilena de instalaciones de consumo (pliegos RIC y DS 8). Prueba con una pregunta de terreno.',
-        };
-        async function preguntar(q) {
-          q = q.trim();
-          if (!q || ocupado) return;
-          if ($('estado').dataset.ej) {
-            turnos = [];
-            delete $('estado').dataset.ej;
-          }
-          $('estado').textContent = 'Conversación en vivo';
-          ocupado = true;
-          $('send').disabled = true;
-          const t = {q, paso: 'Entendiendo la pregunta'};
-          turnos.push(t);
-          pintar();
-          scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-          const t0 = performance.now();
-          const paso = (s) => ((t.paso = s), pintar());
-          try {
-            const idx = loadIdx();
-            const hist = historial();
-            const rf = (await post('/reformula', {historial: hist, pregunta: q})).result;
-            t.consulta = rf.consulta;
-            if (rf.ambito !== 'normativa_electrica') {
-              t.res = {
-                puntos: [],
-                aviso: RESP_FUERA[rf.ambito] || RESP_FUERA.fuera_de_alcance,
-                sugerencias: INICIO.slice(0, 2),
-              };
-            } else {
-              paso('Buscando en 1.121 fragmentos de la norma');
-              const I = await idx;
-              const e = await post('/embed', {text: rf.consulta, dim: 512});
-              const top = search(I, `${rf.consulta} ${q}`, e.vectors[0]);
-              paso('Leyendo los 8 fragmentos más cercanos');
-              const ext = top.map((i) => I.docs[i]);
-              const r = (
-                await post('/responde', {
-                  historial: hist,
-                  pregunta: q,
-                  extractos: ext.map((d) => ({ref: d.ref, texto: `${d.h}\n${d.t}`})),
-                })
-              ).result;
-              // solo se aceptan citas a extractos entregados, y cada frase se compara con el texto oficial
-              const puntos = (r.puntos || [])
-                .filter((p) => p.n >= 1 && p.n <= ext.length && p.texto)
-                .map((p) => {
-                  const d = ext[p.n - 1];
-                  return {
-                    texto: p.texto,
-                    textual: p.textual,
-                    doc: {ref: d.ref, pag: d.pag, h: d.h, t: d.t, url: d.url},
-                    ver: verifica(p.textual, `${d.h}\n${d.t}`),
-                  };
-                });
-              t.res = {
-                puntos,
-                aviso:
-                  r.aviso ||
-                  (r.sin_respaldo && !puntos.length ? 'Los fragmentos encontrados no responden esto.' : ''),
-                sugerencias: (r.sugerencias || []).slice(0, 3),
-              };
-            }
-            t.ms = performance.now() - t0;
-          } catch (err) {
-            t.error = err.message;
-          } finally {
-            ocupado = false;
-            $('send').disabled = false;
-            pintar();
-          }
+      const render = (t, k) => {
+        const el = document.createElement('div');
+        el.className = 'turno';
+        el.innerHTML = `<div class="u">${esc(t.q)}</div>`;
+        const a = document.createElement('div');
+        a.className = 'a';
+        el.appendChild(a);
+        if (!t.r) {
+          a.innerHTML = t.error
+            ? `<p class="aviso">No pude responder: ${esc(t.error)}. Prueba de nuevo en un minuto.</p>`
+            : `<div class="pensando"><span class="dots"><i></i><i></i><i></i></span><span class="paso">${esc(t.paso || 'Pensando')}</span></div>`;
+          return el;
         }
-        $('f').addEventListener('submit', (e) => {
-          e.preventDefault();
-          const q = $('q').value;
-          $('q').value = '';
-          $('q').style.height = '';
-          preguntar(q);
-        });
-        $('q').addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            $('f').requestSubmit();
-          }
-        });
-        $('q').addEventListener('input', (e) => {
-          e.target.style.height = '';
-          e.target.style.height = Math.min(140, e.target.scrollHeight) + 'px';
-        });
-        $('ini-q').innerHTML = INICIO.map((q) => `<button type="button">${esc(q)}</button>`).join('');
-        $('ini-q').addEventListener(
-          'click',
-          (e) => e.target.closest('button') && preguntar(e.target.textContent)
-        );
-        $('nueva').addEventListener('click', () => {
-          turnos = [];
-          delete $('estado').dataset.ej;
-          $('estado').textContent = 'Conversación nueva';
-          pintar();
-          $('q').focus();
-        });
-        $('exportar').addEventListener('click', () => {
-          const a = document.createElement('a');
-          a.href = URL.createObjectURL(
-            new Blob(
-              [
-                JSON.stringify(
-                  turnos.filter((t) => t.res),
-                  null,
-                  2
-                ),
-              ],
-              {type: 'application/json'}
-            )
+        const r = t.r;
+        const ultimo = k === turnos.length - 1;
+        const calc = r.calc
+          ? `<div class="calc"><b>Cálculo</b> <i>hecho por código, no por el modelo</i><pre>${esc(r.calc.texto)}</pre></div>`
+          : '';
+        if (r.tipo !== 'respuesta') {
+          a.classList.toggle('pide', r.tipo === 'pide');
+          a.classList.toggle('sin', r.tipo === 'sin_respaldo');
+          a.innerHTML = `${r.tipo === 'pide' ? '<span class="eti">Falta un dato</span>' : r.tipo === 'sin_respaldo' ? '<span class="eti">Sin respaldo en las normas cargadas</span>' : ''}
+            <p class="lead">${esc(r.texto)}</p>${calc}${r.tipo === 'sin_respaldo' ? traza(r) : ''}`;
+          return el;
+        }
+        const fuentes = [...new Set(r.puntos.map((p) => refDe(p.doc)))];
+        const num = (p) => fuentes.indexOf(refDe(p.doc)) + 1;
+        const cn = (p) =>
+          `<button class="cn" data-f="${num(p) - 1}" aria-label="Ver cita ${num(p)}">${num(p)}</button>`;
+        const [p0, ...resto] = r.puntos;
+        a.innerHTML = `<p class="lead">${esc(p0.texto)}${cn(p0)}</p>
+          ${resto.length ? `<ul>${resto.map((p) => `<li>${esc(p.texto)}${cn(p)}</li>`).join('')}</ul>` : ''}
+          ${calc}
+          ${r.aviso ? `<p class="aviso">${esc(r.aviso)}</p>` : ''}
+          <div class="src">${fuentes.map((f, i) => `<button data-f="${i}"><b>${i + 1}</b>${esc(f)}</button>`).join('')}</div><div class="qbox"></div>
+          ${r.sugerencias && r.sugerencias.length && ultimo ? `<div class="sug">${r.sugerencias.map((s) => `<button>${esc(s)}</button>`).join('')}</div>` : ''}
+          ${traza(r)}`;
+        const abrir = (i) => {
+          const box = a.querySelector('.qbox');
+          const ya = box.dataset.f === String(i);
+          a.querySelectorAll('.cn,.src button').forEach((b) =>
+            b.classList.toggle('on', !ya && b.dataset.f === String(i))
           );
-          a.download = 'consulta-electrica.json';
-          a.click();
-        });
-        // al abrir: una conversación guardada, para ver el resultado sin gastar consultas
-        if (typeof SAMPLES !== 'undefined' && SAMPLES.length) {
-          turnos = structuredClone(SAMPLES);
-          $('estado').dataset.ej = '1';
-        } else {
-          $('estado').textContent = 'Conversación nueva';
+          box.dataset.f = ya ? '' : i;
+          if (ya) return void (box.innerHTML = '');
+          const ps = r.puntos.filter((p) => refDe(p.doc) === fuentes[i]);
+          const d = ps[0].doc;
+          box.innerHTML =
+            ps
+              .map((p) => {
+                const [cls, txt] = VER[p.cita] || VER.tabla;
+                const v = p.veredicto || {};
+                const rev =
+                  v.aplica === 'si'
+                    ? 'Revisión independiente: el extracto lo respalda y trata este caso.'
+                    : `Revisión independiente: el extracto lo respalda; puede no aplicar a tu caso${v.motivo ? ` (${esc(v.motivo)})` : ''}.`;
+                const nf = (p.numerosFuera || []).length
+                  ? `<span class="ver tabla">Números que no están en este extracto ni en el cálculo: ${esc(p.numerosFuera.join(', ').replace(/\./g, ','))}. Son cuentas del asistente: revísalas.</span>`
+                  : '';
+                return `<div class="quote"><blockquote>${esc(p.frase || p.textual)}</blockquote>
+                  <div class="pie"><span class="ver ${cls}">${txt}</span><span>${esc(refDe(d))}${p.numeral && !String(d.r).includes(p.numeral) ? ` · ${esc(p.numeral)}` : ''}</span></div>
+                  <div class="pie"><span>${rev}</span>${nf}</div></div>`;
+              })
+              .join('') +
+            `<div class="quote frag"><div class="pie"><span>${esc(d.h || '')}</span><a href="${esc(d.u)}" target="_blank" rel="noopener">Abrir el texto oficial ↗</a></div>
+              <details><summary>Fragmento completo</summary><p>${esc(d.t.length > 1800 ? d.t.slice(0, 1800) + '…' : d.t)}</p></details></div>`;
+        };
+        a.querySelectorAll('.cn,.src button').forEach((b) =>
+          b.addEventListener('click', () => abrir(+b.dataset.f))
+        );
+        a.querySelectorAll('.sug button').forEach((b) =>
+          b.addEventListener('click', () => preguntar(b.textContent))
+        );
+        return el;
+      };
+      const pintar = () => {
+        const c = $('chat');
+        c.innerHTML = '';
+        turnos.forEach((t, k) => c.appendChild(render(t, k)));
+        $('ini').hidden = turnos.length > 0;
+        const u = [...turnos].reverse().find((t) => t.r);
+        pintarFicha(u ? u.r.ficha : null);
+      };
+
+      async function preguntar(q) {
+        q = q.trim();
+        if (!q || ocupado) return;
+        if ($('estado').dataset.ej) {
+          turnos = [];
+          estado = null;
+          delete $('estado').dataset.ej;
         }
+        $('estado').textContent = 'Conversación en vivo';
+        ocupado = true;
+        $('send').disabled = true;
+        const t = {q, paso: 'Cargando las normas'};
+        turnos.push(t);
         pintar();
-      })();
+        scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+        try {
+          const m = await cargar();
+          estado ??= m.nuevoEstado();
+          t.r = await m.turno(q, estado, (s) => {
+            t.paso = s;
+            const p = document.querySelector('.turno:last-child .paso');
+            if (p) p.textContent = s;
+          });
+        } catch (err) {
+          t.error = err.message;
+        } finally {
+          ocupado = false;
+          $('send').disabled = false;
+          pintar();
+        }
+      }
+      $('f').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const q = $('q').value;
+        $('q').value = '';
+        $('q').style.height = '';
+        preguntar(q);
+      });
+      $('q').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          $('f').requestSubmit();
+        }
+      });
+      $('q').addEventListener('input', (e) => {
+        e.target.style.height = '';
+        e.target.style.height = Math.min(140, e.target.scrollHeight) + 'px';
+      });
+      $('ini-q').innerHTML = INICIO.map((q) => `<button type="button">${esc(q)}</button>`).join('');
+      $('ini-q').addEventListener(
+        'click',
+        (e) => e.target.closest('button') && preguntar(e.target.textContent)
+      );
+      $('nueva').addEventListener('click', () => {
+        turnos = [];
+        estado = null;
+        delete $('estado').dataset.ej;
+        $('estado').textContent = 'Conversación nueva';
+        pintar();
+        $('q').focus();
+      });
+      $('exportar').addEventListener('click', () => {
+        const a = document.createElement('a');
+        // se guarda lo que se mostró y cómo se obtuvo, sin repetir el texto completo de cada fragmento
+        const limpio = turnos
+          .filter((t) => t.r)
+          .map((t) => ({
+            pregunta: t.q,
+            tipo: t.r.tipo,
+            respuesta: t.r.texto,
+            aviso: t.r.aviso,
+            ficha: t.r.ficha,
+            calculo: t.r.calc ? t.r.calc.texto : '',
+            puntos: (t.r.puntos || []).map((p) => ({
+              texto: p.texto,
+              norma: refDe(p.doc),
+              numeral: p.numeral,
+              cita: p.frase || p.textual,
+              comprobacion: p.cita,
+              revision: p.veredicto,
+              enlace: p.doc.u,
+            })),
+            traza: t.r.traza && {
+              consultas: t.r.traza.consultas,
+              descartados: t.r.traza.descartados,
+              llamadas: t.r.traza.llamadas,
+              ms: t.r.traza.ms,
+            },
+          }));
+        a.href = URL.createObjectURL(new Blob([JSON.stringify(limpio, null, 2)], {type: 'application/json'}));
+        a.download = 'consulta-electrica.json';
+        a.click();
+      });
+      // al abrir: una conversación guardada, para ver el resultado sin gastar consultas
+      if (typeof SAMPLES !== 'undefined' && SAMPLES.length) {
+        turnos = structuredClone(SAMPLES);
+        $('estado').dataset.ej = '1';
+      } else {
+        $('estado').textContent = 'Conversación nueva';
+      }
+      pintar();
     </script>
   </body>
 </html>

@@ -1,61 +1,88 @@
 # Consulta eléctrica
 
-**Un chat de normativa eléctrica chilena. Preguntas como en terreno, sigues la conversación ("¿y si es de alumbrado?") y cada respuesta trae el pliego RIC o el artículo del DS 8 con la frase exacta, comparada letra por letra con el texto oficial.**
+**Asistente de normativa eléctrica chilena. Recuerda el caso, pide el dato que falta, calcula por código y responde con la frase de la norma. Un punto se muestra solo si su cita está en el texto oficial y pasa una revisión independiente.**
 
-[![Abrir la máquina](https://img.shields.io/badge/Probar-jsnn15.github.io%2Fconsulta--electrica-ffc93c?style=for-the-badge)](https://jsnn15.github.io/consulta-electrica/)
+[![Abrir](https://img.shields.io/badge/Probar-jsnn15.github.io%2Fconsulta--electrica-ffc93c?style=for-the-badge)](https://jsnn15.github.io/consulta-electrica/)
 ![NVIDIA Nemotron](https://img.shields.io/badge/NVIDIA-Nemotron%20Embed%20%2B%20Super-76b900?style=flat-square&logo=nvidia&logoColor=white)
-![Normas](https://img.shields.io/badge/normas-RIC%201%E2%80%9319%20%C2%B7%20DS%208%2F2019-555?style=flat-square)
+![Normas](https://img.shields.io/badge/normas-RIC%20%C2%B7%20RPTD%20%C2%B7%20DS%208%2C%2057%2C%2092%2C%20109%2C%20327-555?style=flat-square)
 ![Licencia](https://img.shields.io/badge/c%C3%B3digo-Apache--2.0-blue?style=flat-square)
 
-<a href="https://jsnn15.github.io/consulta-electrica/"><img src="docs/captura.jpg" alt="Conversación: sección mínima para enchufes, luego para alumbrado y la protección diferencial, cada respuesta con su cita del RIC verificada" width="100%"></a>
+<a href="https://jsnn15.github.io/consulta-electrica/"><img src="docs/captura.jpg" alt="Conversación: el asistente pide el recinto, responde cuántos circuitos necesita una casa de 80 m² y calcula la sección de un alimentador por caída de tensión, con las citas del RIC" width="100%"></a>
 
-## Por qué existe
-
-[Consulta RIC](https://github.com/JSNN15/normativa), la primera versión, era un buscador muy bueno: pregunta, fragmentos, respuesta. Pero en terreno uno no hace una pregunta, hace tres seguidas, y la segunda depende de la primera. Y una cita que dice "RIC N°4" no basta: hay que ver la frase.
-
-## Cómo funciona
+## Qué hace en cada turno
 
 ```mermaid
 flowchart LR
-    P["Pregunta<br/>«¿y si es de alumbrado?»"] --> R["1 · Reformular<br/>con la conversación<br/>→ «sección mínima circuito alumbrado vivienda»"]
-    R --> B["2 · Buscar en el navegador<br/>1.121 fragmentos<br/>coseno int8 + BM25"]
-    B --> A["3 · Responder<br/>solo con 8 fragmentos<br/>cada punto con su frase textual"]
-    A --> V["4 · Verificar<br/>la frase existe en el<br/>texto oficial"]
+    M["Mensaje"] --> P["1 · Planificar<br/>tipo de mensaje, ficha del caso,<br/>búsquedas, cálculo"]
+    P -->|falta un dato| Q["Pregunta<br/>a la persona"]
+    P --> B["2 · Buscar<br/>varias consultas, vectores + palabras,<br/>remisiones y alcance"]
+    B --> R["3 · Redactar<br/>cada punto con su<br/>frase textual"]
+    R --> C["4 · Comprobar<br/>la frase en el texto,<br/>el numeral, los números"]
+    C --> J["5 · Revisar<br/>dos revisores<br/>independientes"]
+    J -->|todo rechazado| R
+    J --> S["Respuesta<br/>+ cómo se obtuvo"]
 ```
 
-1. **Reformular.** Nemotron Super convierte la pregunta en una consulta autónoma usando las últimas tres vueltas de la conversación. Si no trata de normativa eléctrica, lo dice sin buscar.
-2. **Buscar.** La consulta se vectoriza con Nemotron Embed y se compara en el navegador con los 1.095 fragmentos de los pliegos RIC 1 a 19 y los 26 del DS 8/2019, más búsqueda por palabras, fusionadas por rango recíproco.
-3. **Responder.** El modelo recibe solo los 8 fragmentos más cercanos. Responde en uno a cuatro puntos y **cada punto trae obligatoriamente el número del fragmento y una copia textual** de la frase que lo respalda (esquema JSON estricto). El campo "no hay respaldo" va al final del esquema: el modelo primero intenta citar y recién después decide si faltó información. Con ese campo al principio, contestaba "no encontré" a preguntas que sí tenían respuesta.
-4. **Verificar.** El navegador busca la frase citada, letra por letra, en el fragmento oficial. Muestra **✓ frase exacta**, **≈ coincide con una tabla** (el PDF desordena las columnas) o **✗ no se pudo verificar**. Cada cita abre el PDF de la SEC en la página o el artículo en LeyChile.
+1. **Planificar.** Clasifica el mensaje (pregunta, dato del caso, aclaración, cálculo, resumen, fuera de tema), actualiza la ficha del caso (recinto, sistema, tensión, potencia) y escribe hasta tres búsquedas con el vocabulario de la norma. Si la respuesta depende de un dato que no tiene, lo pide y guarda la pregunta.
+2. **Buscar.** 2.064 fragmentos, en el navegador: similitud de vectores más palabras, cada búsqueda con cupos asegurados. Sigue las remisiones ("según la sección 6 del RIC N°11") y agrega el artículo de alcance de la norma dominante.
+3. **Redactar.** Uno a cuatro puntos; cada uno con el número del fragmento y una copia textual de la frase que lo respalda.
+4. **Comprobar, sin modelo.** La frase se busca en el fragmento citado y en los demás del turno; lo que se muestra es el texto oficial, no lo que escribió el modelo. Un punto cuya frase no aparece no se muestra. El numeral se muestra solo si está escrito en el fragmento. Los números que no están en el extracto ni en el cálculo se marcan.
+5. **Revisar.** Un revisor ve la pregunta y dice si el extracto respalda el punto y si trata la misma situación. Otro, sin ver la pregunta, dice si el extracto da el dato como regla o como condición de una excepción. Si rechazan todo, se redacta una vez más con el motivo; si vuelve a fallar, la respuesta es "no encontré respaldo".
 
-La conversación se puede descargar con sus citas.
+Los cálculos (corriente, caída de tensión) los hace el código con los datos que dio la persona; lo que se supone se declara. Cada respuesta trae "cómo se obtuvo": qué buscó, cuántos fragmentos leyó y qué puntos descartó y por qué.
 
-## Evaluación
+## Normas cargadas
 
-12 preguntas de maestro eléctrico ([detalle](evaluacion.md)): las 12 con respuesta citada; de 29 citas, 25 con frase exacta, 3 que coinciden con tablas y 1 sin verificar. La verificación prueba que la cita existe, no que la respuesta sea la correcta: esa revisión, pregunta por pregunta, está pendiente con un instalador autorizado.
+| Norma | Materia | Fragmentos |
+|---|---|---|
+| Pliegos RIC N°1 a 19 | Instalaciones de consumo | 1.095 |
+| DS 8/2019 | Reglamento de instalaciones de consumo | 26 |
+| Pliegos RPTD N°1 a 16 | Líneas, redes y subestaciones | 417 |
+| DS 109/2017 | Reglamento de seguridad de instalaciones de producción, transporte y distribución | 22 |
+| DS 92/1983 | Instaladores eléctricos y sus clases | 26 |
+| DS 57/2019 | Generación distribuida para autoconsumo | 108 |
+| DS 327/1997 | Reglamento de la Ley General de Servicios Eléctricos | 370 |
+
+## Validación
+
+[evaluacion.md](evaluacion.md) tiene el detalle y lo que salió mal.
+
+- **Conversaciones**: 40 de 42 turnos en el set de desarrollo y 20 de 20 en el set reservado, corrido una vez. Ninguna respuesta con dato a preguntas que están fuera de las normas (0 de 9). Las 86 citas mostradas están en el texto oficial. Mediana de 8 a 9 segundos por turno.
+- **Lectura a mano del set reservado**: 16 respuestas correctas, 3 incompletas y 1 incorrecta que las pruebas automáticas no detectaron.
+- **El revisor**, con respuestas que llevan un error plantado: bloquea 17 de 18 en el set reservado y no bota ninguna de las 14 correctas.
+
+No reemplaza la revisión de un instalador autorizado.
 
 ## Límites
 
-- Solo instalaciones de consumo: pliegos RIC y DS 8. No están la generación distribuida (Ley 21.118), el DS 109 ni los oficios de interpretación de la SEC.
-- Las tablas de los PDF se extraen desordenadas; por eso existe el estado "coincide con una tabla".
-- Es una ayuda de consulta. La responsabilidad del proyecto y la ejecución es del instalador autorizado.
+- No están el RPTD N°17, las instrucciones técnicas RGR, los oficios de la SEC ni las normas NCh.
+- Los artículos largos se cortan en partes y una parte puede empezar sin su encabezado. De ahí salió la respuesta incorrecta del set reservado.
+- El texto de las tablas sale desordenado de los PDF.
+- La clave de prueba de NVIDIA admite pocas consultas por minuto, compartidas entre todas las demos.
 
 ## Archivos
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | Chat, búsqueda híbrida, verificación de citas y exportación. |
-| `samples.js` | Conversación de ejemplo con respuestas guardadas. |
-| `s/ds8.json`, `s/vec.bin` | DS 8/2019 por artículo con enlace a LeyChile, y sus vectores int8. Los pliegos RIC se leen del índice de [normativa](https://github.com/JSNN15/normativa). |
-| `tools/descargar.sh`, `tools/chunk.py`, `tools/embed.py` | Descarga el DS 8 desde LeyChile, lo corta por artículo y lo vectoriza (necesita `NVIDIA_API_KEY`). |
-| `tools/evaluar.py`, `tools/preguntas.json` | Corre las 12 preguntas por el flujo completo y cuenta cuántas citas existen en el texto oficial. Así se obtuvo `evaluacion.md`. |
+| `index.html` | La página: conversación, ficha del caso, citas, cálculo y traza. |
+| `motor.js` | El agente. Lo usan igual la página y el evaluador. |
+| `s/corpus.json`, `s/corpus.bin` | Fragmentos con norma, numerales, materia, ámbito y enlace; vectores int8 de 512 dimensiones. |
+| `s/t/*.json` | El mismo texto en tramos de 256 fragmentos, para el intermediario. |
+| `samples.js` | La conversación de ejemplo, generada con `eval/muestra.mjs`. |
+| `eval/evaluar.mjs`, `eval/desarrollo.json`, `eval/reservado.json` | Conversaciones de prueba y su evaluador. |
+| `eval/revisor.mjs`, `eval/revisor.json`, `eval/revisor_reservado.json` | Respuestas correctas y con error plantado para medir al revisor. |
+| `eval/*.res.json` | Resultados de las corridas publicadas. |
+| `eval/busca.mjs` | Muestra qué fragmentos llegan al redactor para una consulta. |
+| `tools/build_corpus.py`, `tools/embed_corpus.py`, `tools/unir_corpus.py` | Fragmentan los RPTD (PDF de la SEC) y los decretos (XML de LeyChile), los vectorizan (`NVIDIA_API_KEY`) y arman el corpus junto al índice RIC de [normativa](https://github.com/JSNN15/normativa). |
+| `tools/cobertura_ric.py` | Mide cuánto del texto de cada PDF quedó en el corpus. |
+| `tools/fuentes.txt` | Direcciones de los documentos oficiales. |
 
-Las llamadas a NVIDIA pasan por [nv-gateway](https://github.com/JSNN15/nv-gateway) (`/reformula`, `/embed`, `/responde`); la clave no llega al navegador.
+Las llamadas al modelo pasan por [nv-gateway](https://github.com/JSNN15/nv-gateway) (`/plan`, `/embed`, `/redacta`, `/juez`). La página envía números de fragmento; el texto de la norma lo pone el servidor.
 
 ## Fuentes
 
-- [Pliegos técnicos RIC N°1 a 19](https://www.sec.cl/reglamento-de-seguridad-de-las-instalaciones-de-consumo-de-energia-electrica-decreto-08/), Superintendencia de Electricidad y Combustibles.
-- [DS 8/2019, Reglamento de seguridad de las instalaciones de consumo de energía eléctrica](https://www.bcn.cl/leychile/navegar?idNorma=1143069), LeyChile.
+- [Pliegos técnicos RIC](https://www.sec.cl/reglamento-de-seguridad-de-las-instalaciones-de-consumo-de-energia-electrica-decreto-08/) y [pliegos técnicos RPTD](https://www.sec.cl/decreto-n109-aprueba-reglamento-de-seguridad-de-las-instalaciones-electricas/), Superintendencia de Electricidad y Combustibles.
+- Decretos [8/2019](https://www.bcn.cl/leychile/navegar?idNorma=1143069), [109/2017](https://www.bcn.cl/leychile/navegar?idNorma=1119451), [92/1983](https://www.bcn.cl/leychile/navegar?idNorma=9058), [57/2019](https://www.bcn.cl/leychile/navegar?idNorma=1149788) y [327/1997](https://www.bcn.cl/leychile/navegar?idNorma=124102), LeyChile.
 
 ---
 
