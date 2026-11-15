@@ -332,10 +332,35 @@
       .ini {
         padding-top: 22px;
       }
+      .ini h2 {
+        margin: 0 0 6px;
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
       .ini p {
         color: var(--muted);
         margin: 0 0 10px;
         font-size: 0.92rem;
+      }
+      .ini .otra {
+        margin: 14px 0 0;
+      }
+      .ini .otra button {
+        border-style: solid;
+      }
+      .alcance {
+        list-style: none;
+        margin: 22px 0 0;
+        padding: 14px 0 0;
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 8px;
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+      .alcance b {
+        color: var(--fg, #e6eaee);
+        font-weight: 600;
       }
       .ini div {
         display: flex;
@@ -681,7 +706,7 @@
 
     <main class="wrap">
       <div class="bar">
-        <span id="estado">Conversación de ejemplo · respuestas guardadas</span
+        <span id="estado">Conversación nueva</span
         ><span
           ><button id="exportar" type="button" title="Descarga la conversación con sus citas">Guardar</button>
           <button id="nueva" type="button" title="Nueva conversación">Nueva</button></span
@@ -690,8 +715,26 @@
       <div class="ficha" id="ficha" hidden></div>
       <div class="chat" id="chat" aria-live="polite"></div>
       <div class="ini" id="ini" hidden>
-        <p>Preguntas de ejemplo</p>
+        <h2>Escribe tu pregunta abajo</h2>
+        <p>
+          Con tus palabras, como la harías en terreno. Si falta un dato para responder, te lo pido. También
+          puedes partir con una de estas:
+        </p>
         <div id="ini-q"></div>
+        <p class="otra">
+          <button type="button" id="ver-ej">Ver una conversación de ejemplo</button>
+        </p>
+        <ul class="alcance">
+          <li><b>Solo texto.</b> No lee fotos ni planos.</li>
+          <li>
+            <b>Recuerda tu caso mientras dure la conversación.</b> Al cerrar o recargar la página se borra;
+            con «Guardar» la descargas.
+          </li>
+          <li>
+            <b>Demo de portafolio.</b> Usa una API gratuita compartida, con cupo diario: una respuesta toma
+            entre 10 y 30 segundos y a veces no hay cupo.
+          </li>
+        </ul>
       </div>
       <footer>
         Consulta eléctrica · Servicio y Soluciones Tecnológicas DelaCruz SpA · Julián Neira Nova. Responde
@@ -708,7 +751,7 @@
           id="q"
           rows="1"
           maxlength="500"
-          placeholder="Escribe tu pregunta de terreno"
+          placeholder="Escribe tu pregunta aquí"
           aria-label="Tu pregunta"
         ></textarea>
         <button id="send" type="submit" aria-label="Enviar">
@@ -1021,14 +1064,20 @@
         a.download = 'consulta-electrica.json';
         a.click();
       });
-      // al abrir: una conversación guardada, para ver el resultado sin gastar consultas
-      if (typeof SAMPLES !== 'undefined' && SAMPLES.length) {
+      // La página abre lista para preguntar. La conversación guardada se ve solo si la persona la pide,
+      // y la primera pregunta propia la reemplaza.
+      const hayEjemplo = typeof SAMPLES !== 'undefined' && SAMPLES.length > 0;
+      $('ver-ej').hidden = !hayEjemplo;
+      $('ver-ej').addEventListener('click', () => {
         turnos = structuredClone(SAMPLES);
+        estado = null;
         $('estado').dataset.ej = '1';
-      } else {
-        $('estado').textContent = 'Conversación nueva';
-      }
+        $('estado').textContent = 'Conversación de ejemplo · respuestas guardadas. Escribe abajo para empezar la tuya';
+        pintar();
+      });
       pintar();
+      // en computador el cursor queda en la caja; en teléfono no, para no abrir el teclado encima
+      if (matchMedia('(pointer: fine)').matches) $('q').focus();
     </script>
   </body>
 </html>
