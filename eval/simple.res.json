@@ -1,0 +1,131 @@
+[
+ {
+  "pregunta": "¿Cuántos circuitos necesito como mínimo?",
+  "puntos": [
+   "Necesitas como mínimo 3 circuitos, porque tu casa tiene 120 m², que es igual o superior a 30 m².",
+   "Uno de esos circuitos debe ser exclusivo para enchufes de cocina y/o lavadero, con capacidad mínima de 16 A."
+  ],
+  "explicacion": "Necesitas al menos 3 circuitos eléctricos. Uno de ellos debe ser solo para los enchufes de la cocina o el lavadero, con capacidad mínima de 16 A.",
+  "terminos": [],
+  "nuevos": [],
+  "ms": 1783
+ },
+ {
+  "pregunta": "¿A qué distancia de la tina puedo poner un enchufe?",
+  "puntos": [
+   "El enchufe debe quedar fuera del volumen 2, que se extiende 0,6 m desde el borde de la bañera y hasta 2,25 m de altura.",
+   "Si se instala en volumen 2, el enchufe debe estar protegido con diferencial de 30 mA máximo o con transformador de aislamiento o tensión extra baja."
+  ],
+  "explicacion": "El enchufe debe quedar fuera del área de 0,6 m desde el borde de la tina y hasta 2,25 m de altura. Si lo pones dentro de esa zona, debe tener protección diferencial de 30 mA máximo, transformador de aislamiento o tensión extra baja.",
+  "terminos": [
+   {
+    "termino": "volumen 2",
+    "significado": "zona alrededor de la tina hasta 0,6 m de borde y 2,25 m de alto"
+   },
+   {
+    "termino": "diferencial",
+    "significado": "dispositivo que corta la luz si hay fuga de corriente"
+   },
+   {
+    "termino": "transformador de aislamiento",
+    "significado": "aparato que separa la instalación eléctrica de la red"
+   },
+   {
+    "termino": "tensión extra baja",
+    "significado": "voltaje muy bajo para reducir el riesgo de descarga"
+   }
+  ],
+  "nuevos": [],
+  "ms": 3488
+ },
+ {
+  "pregunta": "Necesito alimentar un tablero a 60 metros con 40 A monofásico. ¿Qué sección me da por caída de tensión?",
+  "puntos": [
+   "Para 40 A a 60 metros en monofásico, la sección mínima por caída de tensión es 16 mm², que da 2,5 % de caída sobre 220 V y cumple el límite del 3 % para alimentadores.",
+   "La sección mínima permisible para un alimentador es 4 mm², por lo que 16 mm² también cumple este piso."
+  ],
+  "explicacion": "Para 40 A a 60 metros en monofásico, necesitas un cable de 16 mm². Eso genera una caída de tensión del 2,5 % sobre 220 V, que está dentro del límite del 3 % para alimentadores. Además, el mínimo permitido para un alimentador es 4 mm², así que 16 mm² cumple.",
+  "terminos": [],
+  "nuevos": [],
+  "ms": 2063
+ },
+ {
+  "pregunta": "¿Qué instalaciones puede hacer un instalador clase D?",
+  "puntos": [
+   "Puede proyectar, ejecutar y dirigir instalaciones tipo F y G con licencia clase D."
+  ],
+  "explicacion": "Puede proyectar, ejecutar y dirigir instalaciones tipo F y G con su licencia clase D.",
+  "terminos": [],
+  "nuevos": [],
+  "ms": 1600
+ },
+ {
+  "pregunta": "¿Qué sensibilidad debe tener el diferencial de los enchufes de una casa?",
+  "puntos": [
+   "Todos los circuitos de una vivienda, incluidos los de enchufes, deben tener protección diferencial.",
+   "La sensibilidad del diferencial que protege los enchufes de la casa no debe superar los 30 mA."
+  ],
+  "explicacion": "Todos los circuitos de tu casa, incluidos los de enchufes, deben tener protección diferencial. La sensibilidad del diferencial que protege los enchufes no debe superar los 30 mA.",
+  "terminos": [
+   {
+    "termino": "protección diferencial",
+    "significado": "dispositivo que corta la luz si hay una fuga de corriente"
+   },
+   {
+    "termino": "sensibilidad",
+    "significado": "nivel de fuga de corriente que hace que el dispositivo corte la luz"
+   },
+   {
+    "termino": "mA",
+    "significado": "unidad que mide la intensidad de la corriente eléctrica"
+   }
+  ],
+  "nuevos": [],
+  "ms": 2191
+ },
+ {
+  "pregunta": "¿y en un baño qué cambia?",
+  "puntos": [
+   "La sección mínima del conductor para el circuito de alumbrado no cambia por estar en un baño: sigue siendo 1,5 mm² de cobre."
+  ],
+  "explicacion": "En el baño el cable de la luz sigue siendo igual: 1,5 mm² de cobre.",
+  "terminos": [],
+  "nuevos": [],
+  "ms": 1674
+ },
+ {
+  "pregunta": "¿Qué tipo de empalme me corresponde?",
+  "puntos": [
+   "Para 30 kW trifásicos corresponde un empalme normalizado AR-48 o SR-48, con interruptor termomagnético de 50 A y potencia máxima de 32,91 kVA.",
+   "La capacidad del empalme se ajusta a valores normalizados del anexo 1.3 y nunca puede ser superior a la potencia total instalada."
+  ],
+  "explicacion": "Para 30 kW trifásicos te corresponde un empalme normalizado AR-48 o SR-48. Este incluye un interruptor termomagnético de 50 A y soporta hasta 32,91 kVA. La capacidad del empalme se ajusta a valores normalizados y nunca puede ser superior a la potencia total instalada.",
+  "terminos": [
+   {
+    "termino": "Empalme normalizado",
+    "significado": "Conexión estándar entre la red y tu instalación"
+   },
+   {
+    "termino": "Interruptor termomagnético",
+    "significado": "Protección que corta la luz si hay sobrecarga o cortocircuito"
+   },
+   {
+    "termino": "Potencia instalada",
+    "significado": "Suma de la potencia de todos los equipos de la casa"
+   }
+  ],
+  "nuevos": [],
+  "ms": 2609
+ },
+ {
+  "pregunta": "Es una casa de 80 m².",
+  "puntos": [
+   "Para tu casa de 80 m² necesitas como mínimo 3 circuitos, porque la superficie es igual o superior a 30 m².",
+   "Además debes incluir un circuito exclusivo para enchufes de cocina y/o lavadero, con capacidad mínima de 16 A."
+  ],
+  "explicacion": "Tu casa de 80 m² necesita al menos 3 circuitos eléctricos. También debes tener un circuito solo para enchufes de cocina y/o lavadero, con capacidad mínima de 16 A.",
+  "terminos": [],
+  "nuevos": [],
+  "ms": 1921
+ }
+]

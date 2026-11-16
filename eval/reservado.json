@@ -173,6 +173,14 @@
      "tipo": "respuesta",
      "cita": [
       "DS 92"
+     ],
+     "contiene": [
+      "F"
+     ],
+     "noContiene": [
+      "D, E",
+      "D\\\"",
+      "[Ss][oó]lo (puede )?ejecutar"
      ]
     }
    }
