@@ -1,0 +1,4318 @@
+{
+ "fecha": "2026-11-16",
+ "turnos": [
+  {
+   "conv": "deriva",
+   "cat": "memoria",
+   "m": "¿Qué sección mínima deben tener los conductores de un circuito de enchufes?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°4 · 5.4"
+    ],
+    "contiene": [
+     "2,5"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "La sección mínima de los conductores de un circuito de enchufes es de 2,5 mm².",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°4 · 5.4",
+     "cita": "ok",
+     "numeral": "5.4",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "sección mínima conductores circuito enchufes",
+    "cantidad de centros que es posible instalar en un circuito de enchufes"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Si el circuito es mixto, también debe tener como mínimo 2,5 mm².",
+     "textual": "Circuitos mixtos  2,5 mm2",
+     "n": "RIC N°10 · 5.1.4.5–5.1.5.3",
+     "motivo": "la frase citada no está escrita así en el extracto"
+    }
+   ],
+   "sinCita": 1,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 6163,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "sección mínima de los conductores de un circuito de enchufes",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.4 La sección mínima de los conductores a utilizar serán las secciones milimétricas que se indican: Circuitos de enchufes 2,5 mm2",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "sección mínima de conductores para circuitos de enchufes",
+   "puntos": [
+    {
+     "texto": "La sección mínima de los conductores de un circuito de enchufes es de 2,5 mm².",
+     "ref": "RIC N°4 · 5.4",
+     "numeral": "5.4",
+     "cita": "ok",
+     "frase": "Circuitos de enchufes  2,5 mm2.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°4 · 5.4",
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°7 · 7.3–7.3.4",
+    "RIC N°11 · 8.5–8.5.1.3",
+    "RIC N°4 · 4.20.2–4.26",
+    "RIC N°10 · 5.1.3.8–5.1.4.4",
+    "RIC N°10 · 4.4–4.6",
+    "RIC N°6 · 6.6–6.6.4",
+    "RIC N°10 · 5.2",
+    "RIC N°10 · 5.2"
+   ]
+  },
+  {
+   "conv": "deriva",
+   "cat": "memoria",
+   "m": "¿y para alumbrado?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°4 · 5.4"
+    ],
+    "contiene": [
+     "1,5"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Para circuitos de alumbrado la sección mínima del conductor es 1,5 mm², mientras que los circuitos de enchufes y mixtos exigen 2,5 mm².",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°4 · 5.4",
+     "cita": "ok",
+     "numeral": "5.4",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "sección mínima conductores circuito alumbrado punto 5.4",
+    "cantidad de centros posible instalar en un circuito de alumbrado punto 5.4"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 9160,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "El RIC N°11 confirma el mismo mínimo para alumbrado: 1,5 mm² o 14 AWG de cobre.",
+     "motivo": "el extracto es de instalaciones especiales (cables viajeros), no de alumbrado general de consumo"
+    }
+   ],
+   "juez": {
+    "pide": "sección mínima de conductores para circuitos de alumbrado",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.4 La sección mínima de los conductores a utilizar serán las secciones milimétricas que se indican: Circuitos de iluminación 1,5 mm2 Circuitos de enchufes 2,5 mm2 Circuitos mixtos 2,5 mm2",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de instalaciones especiales: cables viajeros (ámbito: instalaciones de consumo en baja tensión)",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "el extracto es de instalaciones especiales (cables viajeros), no de alumbrado general de consumo",
+      "donde": "8.5.1.1 Circuitos de iluminación. En circuitos de iluminación el calibre mínimo será 1,5 mm2 o 14 AWG de cobre.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "sección mínima de conductores para circuitos de alumbrado",
+   "puntos": [
+    {
+     "texto": "Para circuitos de alumbrado la sección mínima del conductor es 1,5 mm², mientras que los circuitos de enchufes y mixtos exigen 2,5 mm².",
+     "ref": "RIC N°4 · 5.4",
+     "numeral": "5.4",
+     "cita": "ok",
+     "frase": "Circuitos de iluminación 1,5 mm2 Circuitos de enchufes 2,5 mm2 Circuitos mixtos 2,5 mm2 Subalimentadores 2,5 mm2 Alimentadores 4,0 mm2 El dimensionamiento de alimentadores y subalimentadores se debe efectuar en conformidad al Pliego Técnico Normativo RIC N°03 “Alimentadores y demanda de una instalación”.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°11 · 8.5–8.5.1.3",
+    "RIC N°4 · 5.4",
+    "RIC N°10 · 5.2",
+    "RIC N°12 · 12.2.2.4.10–12.3.6",
+    "RIC N°10 · 5.1.3.8–5.1.4.4",
+    "RIC N°10 · 5.1.2.1–5.1.2.5",
+    "RIC N°11 · 20.1–20.3.3",
+    "RIC N°12 · 12.6.3–12.7.3",
+    "RIC N°10 · 4.4–4.6"
+   ]
+  },
+  {
+   "conv": "deriva",
+   "cat": "memoria",
+   "m": "¿y en un baño qué cambia?",
+   "esp": {
+    "tipo": "respuesta",
+    "recupera": [
+     "RIC N°11 · 6"
+    ],
+    "cita": [
+     "RIC N°11 · 6"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "La sección 6 del RIC N°11 aplica a viviendas y otros locales que contengan bañera o ducha. En el baño se clasifican los volúmenes 0, 1, 2 y 3 para determinar qué aparatos y protecciones se pueden instalar en cada zona.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°11 · 6–6.1.2",
+     "cita": "ok",
+     "numeral": "6.1.1",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°11 · 6.4.1–6.4.1.2",
+     "cita": "ok",
+     "numeral": "6.4.1",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "baño",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "sección mínima de conductores para circuitos de alumbrado en instalaciones en salas de baño",
+    "instalaciones en salas de baño: volúmenes y protecciones"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "En los volúmenes del baño se permiten luces y enchufes solo con protección por diferencial de no más de 30 mA, transformador de aislamiento o tensiones extra bajas.",
+     "textual": "Se permiten centros como luces y enchufes solo si están protegidos bien por un transformador de aislamiento; o por sistema de tensiones extra baja; o si su alimentación está protegida por un interruptor automático bipolar de alimentación con un dispositivo de protección de corriente diferencial de valor no superior a los 30 mA.",
+     "n": "RIC N°10 · 5.2",
+     "motivo": "la frase citada no está escrita así en el extracto"
+    },
+    {
+     "texto": "En un baño cambia la exigencia de instalación: debe cumplir con la sección 6 del RIC N°11 para locales con bañera o ducha.",
+     "motivo": "el extracto solo remite a la sección 6 sin indicar qué cambia en la sección mínima de conductores"
+    }
+   ],
+   "sinCita": 1,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 11140,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga. Si la pregunta es abierta (",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para alumbrado de viviendas en recintos con superficie mayor a 10 m2, con remisión a la sección 6 para salas de baños",
+      "respalda": "parcial",
+      "aplica": "si",
+      "motivo": "el extracto solo remite a la sección 6 sin indicar qué cambia en la sección mínima de conductores",
+      "donde": "Las instalaciones en salas de baños, deberán cumplir con lo indicado en la sección 6 del",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de alcance de la sección 6 para locales o recintos que contienen bañera o ducha",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6 LOCALES O RECINTOS QUE CONTIENEN UNA BAÑERA O DUCHA",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla de clasificación de volúmenes 0, 1, 2 y 3 para locales o recintos que contienen bañera o ducha",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.4.1 Clasificación de los volúmenes:",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "sección mínima de conductores para circuitos de alumbrado en un baño",
+   "puntos": [
+    {
+     "texto": "La sección 6 del RIC N°11 aplica a viviendas y otros locales que contengan bañera o ducha.",
+     "ref": "RIC N°11 · 6–6.1.2",
+     "numeral": "6.1.1",
+     "cita": "ok",
+     "frase": "Esta sección aplica a todas las instalaciones de consumo de energía eléctrica de viviendas, así como en la medida que pueda afectarles, a las de locales comerciales, de oficinas y a las de cualquier otro local destinado a fines análogos que contengan una bañera o una ducha o una ducha prefabricada o una bañera de hidromasaje o aparato para uso análogo.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "En el baño se clasifican los volúmenes 0, 1, 2 y 3 para determinar qué aparatos y protecciones se pueden instalar en cada zona.",
+     "ref": "RIC N°11 · 6.4.1–6.4.1.2",
+     "numeral": "6.4.1",
+     "cita": "ok",
+     "frase": "Para las instalaciones de estos locales se tendrán en cuenta los cuatro volúmenes 0, 1, 2 y 3 que se definen a continuación.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°11 · 8.5–8.5.1.3",
+    "RIC N°10 · 5.1.2.6–5.1.2.11",
+    "RIC N°10 · 5.2",
+    "RIC N°10 · 5.2",
+    "RIC N°11 · 6.4.1–6.4.1.2",
+    "RIC N°11 · 6.4.3",
+    "RIC N°11 · 6.4.3",
+    "RIC N°11 · 6–6.1.2",
+    "RIC N°10 · ANEXO 10.1",
+    "RIC N°10 · 2"
+   ]
+  },
+  {
+   "conv": "deriva",
+   "cat": "memoria",
+   "m": "¿y la protección?",
+   "esp": {
+    "tipo": "respuesta",
+    "contiene": [
+     "diferencial|30 ?mA"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Sí cambia: en el baño se exige protección diferencial de 30 mA para luces y enchufes en los volúmenes 0 a 3. Además, en los volúmenes 1, 2 y 3 se debe hacer conexión equipotencial local suplementaria que incluya las tomas de corriente.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°10 · 5.1.3.4–5.1.3.7",
+     "cita": "ok",
+     "numeral": "5.1.3.5",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°11 · 6.4.2–6.4.2.4",
+     "cita": "ok",
+     "numeral": "6.4.2.2",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "baño",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "protección por diferencial en instalaciones de baños volúmenes 0 a 3",
+    "protección termomagnética para circuitos de alumbrado y enchufes en baño"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Luces y enchufes en los volúmenes del baño solo se permiten si están protegidos por diferencial de 30 mA, transformador de aislamiento o tensión extra baja.",
+     "textual": "Se permiten centros como luces y enchufes solo si están protegidos bien por un transformador de aislamiento; o por sistema de tensiones extra bajas; o si su alimentación está protegida con un dispositivo de protección por corriente diferencial de valor no superior a los 30 mA.",
+     "n": "RIC N°11 · 5.7.4.6–5.7.4.7",
+     "motivo": "la frase citada no está escrita así en el extracto"
+    }
+   ],
+   "sinCita": 1,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 9819,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga. Si la pregunta es abierta (",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para todo circuito de alumbrado (iluminación y enchufes) en instalaciones de uso general",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.3.5 Todo circuito de alumbrado (iluminación y enchufes), deberá estar protegido por un protector diferencial, cuya sensibilidad no sea superior a 30 mA.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de locales o recintos que contienen una bañera o ducha: conexión equipotencial local suplementaria en volúmenes 1, 2 y 3",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.4.2.2 Una conexión equipotencial local suplementaria debe unir el conductor de protección asociado con las partes conductoras accesibles de los equipos de clase I en los volúmenes 1, 2 y 3, incluidas las tomas de corriente y las siguientes partes conductoras externas de los volúmenes 0, 1, 2 y 3:",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "protección eléctrica para circuitos de alumbrado y enchufes en un baño",
+   "puntos": [
+    {
+     "texto": "Sí cambia: en el baño se exige protección diferencial de 30 mA para luces y enchufes en los volúmenes 0 a 3.",
+     "ref": "RIC N°10 · 5.1.3.4–5.1.3.7",
+     "numeral": "5.1.3.5",
+     "cita": "ok",
+     "frase": "Todo circuito de alumbrado (iluminación y enchufes), deberá estar protegido por un protector diferencial, cuya sensibilidad no sea superior a 30 mA.",
+     "movido": true,
+     "numerosFuera": [
+      "0"
+     ],
+     "aplica": "si"
+    },
+    {
+     "texto": "Además, en los volúmenes 1, 2 y 3 se debe hacer conexión equipotencial local suplementaria que incluya las tomas de corriente.",
+     "ref": "RIC N°11 · 6.4.2–6.4.2.4",
+     "numeral": "6.4.2.2",
+     "cita": "ok",
+     "frase": "Una conexión equipotencial local suplementaria debe unir el conductor de protección asociado con las partes conductoras accesibles de los equipos de clase I en los volúmenes 1, 2 y 3, incluidas las tomas de corriente.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°11 · 6.4.3",
+    "RIC N°11 · 5.7.4.6–5.7.4.7",
+    "RIC N°11 · 6.4.3",
+    "RIC N°11 · 6.4.1–6.4.1.2",
+    "RIC N°11 · 6.4.2–6.4.2.4",
+    "RIC N°10 · 5.1.3.4–5.1.3.7",
+    "RIC N°7 · 7.4.4–7.5.1",
+    "RIC N°6 · 7.8",
+    "RIC N°7 · 5.6.2.6–5.6.2.10",
+    "RIC N°2 · 6.2.5–6.2.7",
+    "RIC N°11 · 2"
+   ]
+  },
+  {
+   "conv": "deriva",
+   "cat": "memoria",
+   "m": "Volviendo a lo primero, ¿entonces puedo usar 1,5 mm² en los enchufes?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°4 · 5.4"
+    ],
+    "contiene": [
+     "2,5"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "No, los circuitos de enchufes deben tener una sección mínima de 2,5 mm², por lo que no se pueden usar 1,5 mm².",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°4 · 5.4",
+     "cita": "ok",
+     "numeral": "5.4",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "baño",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "sección mínima de conductores para circuitos de enchufes RIC N°4 punto 5.4",
+    "exigencias de instalación en baños RIC N°11 sección 6 volúmenes 0 a 3"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "En un baño esta regla se mantiene, pero la instalación debe cumplir además la sección 6 del RIC N°11 con clasificación de volúmenes 0 a 3.",
+     "motivo": "el extracto solo clasifica volúmenes 0 a 3 y no dice que la sección mínima de 2,5 mm² se mantenga en el baño ni qué exige la sección 6 del RIC N°11 para enchufes."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 8655,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga. Si la pregunta es abierta (",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.4 La sección mínima de los conductores a utilizar serán las secciones milimétricas que se indican: Circuitos de enchufes 2,5 mm2",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de una zona o parte de … (volumen 2, tramo subterráneo)",
+      "respalda": "parcial",
+      "aplica": "dudoso",
+      "motivo": "el extracto solo clasifica volúmenes 0 a 3 y no dice que la sección mínima de 2,5 mm² se mantenga en el baño ni qué exige la sección 6 del RIC N°11 para enchufes.",
+      "donde": "6.4.1 Clasificación de los volúmenes: Para las instalaciones de estos locales se tendrán en cuenta los cuatro volúmenes 0, 1, 2 y 3 que se definen a continuación.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "sección mínima de conductores para circuitos de enchufes en un baño",
+   "puntos": [
+    {
+     "texto": "No, los circuitos de enchufes deben tener una sección mínima de 2,5 mm², por lo que no se pueden usar 1,5 mm².",
+     "ref": "RIC N°4 · 5.4",
+     "numeral": "5.4",
+     "cita": "ok",
+     "frase": "Circuitos de enchufes  2,5 mm2",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°4 · 5.4",
+    "RIC N°6 · 6.6–6.6.4",
+    "RIC N°7 · 7.3–7.3.4",
+    "RIC N°11 · 8.5–8.5.1.3",
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°11 · 6.4.1–6.4.1.2",
+    "RIC N°11 · 6.4.3",
+    "RIC N°10 · 5.3",
+    "RIC N°11 · 3.9.5.15",
+    "RIC N°10 · 5.2",
+    "RIC N°11 · 6.1.3",
+    "RIC N°3 · 6.4–6.4.2",
+    "RIC N°3 · 6.4.3"
+   ]
+  },
+  {
+   "conv": "proyecto",
+   "cat": "memoria",
+   "m": "Estoy haciendo la instalación de un local comercial, trifásico, de 30 kW.",
+   "esp": {
+    "tipo": "dato",
+    "ficha": {
+     "recinto": "local",
+     "sistema": "trif",
+     "potencia": "30"
+    }
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "dato",
+   "texto": "Anote local comercial, trifásico y 30 kW. ¿Qué necesita saber de la norma para esta instalación?",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "local comercial",
+    "sistema": "trifásico",
+    "tension": "",
+    "potencia": "30 kW",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "dato",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 1868,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "instalación eléctrica de un local comercial trifásico de 30 kW",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "proyecto",
+   "cat": "memoria",
+   "m": "¿Qué tipo de empalme me corresponde?",
+   "esp": {
+    "tipo": "respuesta",
+    "recupera": [
+     "RIC N°1 "
+    ],
+    "cita": [
+     "RIC N°1 "
+    ],
+    "noCita": [
+     "RIC N°5"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Para 30 kW trifásicos corresponde un empalme normalizado AR-48 o SR-48, con interruptor termomagnético de 50 A y potencia máxima de empalme de 32,91 kVA. La letra A indica empalme aéreo y S subterráneo; AR y SR son las mismas opciones con medidor reactivo. La capacidad del empalme se ajusta a valores normalizados del anexo 1.3 y nunca puede ser superior a la potencia total instalada.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°1 · ANEXO 1.3",
+     "cita": "tabla",
+     "numeral": "1.3",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°1 · ANEXO 1.3",
+     "cita": "ok",
+     "numeral": "1.3",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°1 · 5.1–5.4",
+     "cita": "ok",
+     "numeral": "5.3",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "local comercial",
+    "sistema": "trifásico",
+    "tension": "",
+    "potencia": "30 kW",
+    "otros": ""
+   },
+   "consultas": [
+    "empalme local comercial trifásico 30 kW",
+    "requisitos empalme comercial baja tensión",
+    "potencia máxima empalme monofásico trifásico"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "servicio"
+    ]
+   },
+   "ms": 16403,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "tipo de empalme para local comercial trifásico de 30 kW",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para empalmes trifásicos de instalaciones de consumo en baja tensión (casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "EMPALMES TRIFÁSICOS",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para empalmes trifásicos de instalaciones de consumo en baja tensión (casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "A: Aéreo / S: Subterráneo / AR: Aéreo con medidor reactivo / SR: Subterráneo con medidor reactivo",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para empalmes de instalaciones de consumo en baja tensión (casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.3 La capacidad del empalme se determinará en función de la potencia total instalada, en la comunicación de energización de la instalación de consumo efectuada ante la Superintendencia, ajustándola a valores normalizados en conformidad con lo indicado en el anexo 1.3, pudiendo ser igual o inferior a la potencia total instalada, pero nunca superior a ella, con excepción de lo",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "tipo de empalme para local comercial trifásico de 30 kW",
+   "puntos": [
+    {
+     "texto": "Para 30 kW trifásicos corresponde un empalme normalizado AR-48 o SR-48, con interruptor termomagnético de 50 A y potencia máxima de empalme de 32,91 kVA.",
+     "ref": "RIC N°1 · ANEXO 1.3",
+     "numeral": "1.3",
+     "cita": "tabla",
+     "frase": "50 30 32,91 AR-48 o SR-48 63 38 41,47 80 48 52,65 90 55 59,24 AR-75 o SR-75 100 61 65,82 125 76 82,27 AR-100 o SR-100 150 91 98,70 160 97 105,31 200 122 131,64 225 137 148,10 AR-150 o SR-150 AR-225 o SR-225 250 153 164,54 AR-250 o SR-250 320 195 210,62 AR-350 o SR-350 350 214 230,40 400 244 263,27 450 275 296,20 500 306 329,09 630 385 414,65 AR-750 o SR-750 800 489 526,54 1000 612 658,18 A: Aéreo / S: Subterráneo / AR: Aéreo con medidor reactivo / SR: Subterráneo con medidor reactivo EMPALMES TRIFÁSICOS Interruptor termomagnético (A) Pot. nominal o Pot. a contratar (kW) Pot. máxima de empalme (kVA) Tipo de empalme normalizado 6 3,6 3,95 10 6 6,58 16 9,7 10,53 A-16 20 12 13,16 AR-18 S18 25 15 16,45 SR-18 30 18 19,75 A-27 o AR-27 32 19 21,06 S-27 o SR-27 35 21 23,04 40 24 26,33 50 30 32,91 AR-48 o SR-48 63 38 41,47 80 48 52,65 90 55 59,24 AR-75 o SR-75 100 61 65,82 125 76 82,27 AR-100 o SR-100 150 91 98,70 160 97 105,31 200 122 131,64 225 137 148,10 AR-150 o SR-150 AR-225 o SR-225 250 153 164,54 AR-250 o SR-250 320 195 210,62 AR-350 o SR-350 350 214 230,40 400 244 263,27 450 275 296,20 500 306 329,09 630 385 414,65 AR-750 o SR-750 800 489 526,54 1000 612 658,18 A: Aéreo / S: Subterráneo / AR: Aéreo con medidor reactivo / SR: Subterráneo con medidor reactivo",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La letra A indica empalme aéreo y S subterráneo; AR y SR son las mismas opciones con medidor reactivo.",
+     "ref": "RIC N°1 · ANEXO 1.3",
+     "numeral": "1.3",
+     "cita": "ok",
+     "frase": "A: Aéreo / S: Subterráneo / AR: Aéreo con medidor reactivo / SR: Subterráneo con medidor reactivo",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La capacidad del empalme se ajusta a valores normalizados del anexo 1.3 y nunca puede ser superior a la potencia total instalada.",
+     "ref": "RIC N°1 · 5.1–5.4",
+     "numeral": "5.3",
+     "cita": "ok",
+     "frase": "La capacidad del empalme se determinará en función de la potencia total instalada, en la comunicación de energización de la instalación de consumo efectuada ante la Superintendencia, ajustándola a valores normalizados en conformidad con lo indicado en el anexo 1.3, pudiendo ser igual o inferior a la potencia total instalada, pero nunca superior a ella, con excepción de lo",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°1 · ANEXO 1.3",
+    "RIC N°10 · 5.3",
+    "RIC N°1 · 5.1–5.4",
+    "RIC N°10 · 5.3",
+    "RIC N°7 · 5.6.3–5.6.3.3",
+    "DS 327 · art. 330 (parte 1)",
+    "RPTD N°13 · 3.15–3.17",
+    "DS 327 · art. 120",
+    "RIC N°3 · 6.4–6.4.2",
+    "RIC N°15 · 7–7.1"
+   ]
+  },
+  {
+   "conv": "proyecto",
+   "cat": "memoria",
+   "m": "¿Y el tablero general qué debe llevar?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°2"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "El tablero general debe llevar un interruptor o disyuntor general de corte omnipolar que corte todos los conductores activos, incluido el neutro, y permita operar sobre toda la instalación simultáneamente. No se pueden colocar en el tablero general dispositivos de operación o protección para alimentadores de distintas tensiones.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°2 · 6.5.2–6.5.5",
+     "cita": "ok",
+     "numeral": "6.5.3",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°2 · 6.5.2–6.5.5",
+     "cita": "ok",
+     "numeral": "6.5.5",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "local comercial",
+    "sistema": "trifásico",
+    "tension": "",
+    "potencia": "30 kW",
+    "otros": ""
+   },
+   "consultas": [
+    "tablero general local comercial trifásico 30 kW interruptor termomagnético protector diferencial",
+    "cantidad de centros circuito tablero general local comercial",
+    "protector diferencial tablero general local comercial"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Si el tablero general funciona como tablero de distribución, no podrá tener más de 25 circuitos por cada protección general.",
+     "motivo": "el extracto regula tableros de distribución, no tableros generales, y el punto lo presenta como requisito del tablero general"
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 12522,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "tablero general para local comercial trifásico de 30 kW; qué debe llevar",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para todo tablero general que dependa de más de un alimentador en instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.5.3 Todo tablero general del cual dependa más de un alimentador deberá llevar un interruptor o disyuntor general que corte todos los conductores activos, incluyendo el neutro (corte omnipolar), que permita operar sobre toda la instalación en forma simultánea.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para todo tablero general en instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.5.5 En un tablero general no podrán colocarse dispositivos de operación o protección para alimentadores de distintas tensiones.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla para tableros de distribución, no para tableros generales",
+      "respalda": "no",
+      "aplica": "no",
+      "motivo": "el extracto regula tableros de distribución, no tableros generales, y el punto lo presenta como requisito del tablero general",
+      "donde": "6.6.1 En un tablero de distribución no se permitirá instalar más de 25 circuitos, por cada protección general según la clasificación del punto 4.25.1 del presente pliego técnico.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "tablero general para local comercial trifásico de 30 kW",
+   "puntos": [
+    {
+     "texto": "El tablero general debe llevar un interruptor o disyuntor general de corte omnipolar que corte todos los conductores activos, incluido el neutro, y permita operar sobre toda la instalación simultáneamente.",
+     "ref": "RIC N°2 · 6.5.2–6.5.5",
+     "numeral": "6.5.3",
+     "cita": "ok",
+     "frase": "Todo tablero general del cual dependa más de un alimentador deberá llevar un interruptor o disyuntor general que corte todos los conductores activos, incluyendo el neutro (corte omnipolar), que permita operar sobre toda la instalación en forma simultánea.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "No se pueden colocar en el tablero general dispositivos de operación o protección para alimentadores de distintas tensiones.",
+     "ref": "RIC N°2 · 6.5.2–6.5.5",
+     "numeral": "6.5.5",
+     "cita": "ok",
+     "frase": "En un tablero general no podrán colocarse dispositivos de operación o protección para alimentadores de distintas tensiones.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°10 · 5.1.3.4–5.1.3.7",
+    "RIC N°2 · 6.6–6.6.4.2",
+    "RIC N°10 · 5.3",
+    "RIC N°11 · 17.3.9–17.3.14",
+    "RIC N°2 · 4.22–4.25.1.3",
+    "RIC N°2 · 5–5.2.1",
+    "RIC N°10 · 5.1.3.8–5.1.4.4",
+    "RIC N°11 · 16.4.3–16.4.3.6",
+    "RIC N°11 · 19.1–19.3.3",
+    "RIC N°2 · 6.5.2–6.5.5",
+    "RIC N°2 · 2"
+   ]
+  },
+  {
+   "conv": "proyecto",
+   "cat": "memoria",
+   "m": "¿Tengo que declararla en la SEC?",
+   "esp": {
+    "tipo": "respuesta",
+    "citaAlguna": [
+     "RIC N°19",
+     "RIC N°18",
+     "DS 8"
+    ],
+    "contiene": [
+     "declar"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Sí, toda instalación nueva, ampliada o modificada debe declararse a la Superintendencia con 15 días hábiles de anticipación. La declaración la hace el instalador eléctrico autorizado a cargo de la ejecución, una vez terminada la instalación. El registro de la instalación sirve para solicitar el suministro a la distribuidora y los trámites municipales.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°19 · 9–9.1.2",
+     "cita": "ok",
+     "numeral": "9.1.1",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°19 · 9–9.1.2",
+     "cita": "ok",
+     "numeral": "9.1.2",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°19 · 9.2.9–9.2.12",
+     "cita": "ok",
+     "numeral": "9.2.11",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "local comercial",
+    "sistema": "trifásico",
+    "tension": "",
+    "potencia": "30 kW",
+    "otros": ""
+   },
+   "consultas": [
+    "declaración de puesta en servicio SEC instalaciones eléctricas",
+    "TE1 declaración de puesta en servicio local comercial 30 kW"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 10606,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para toda instalación de consumo de energía eléctrica nueva, ampliada o modificada",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "9.1.1 La comunicación de puesta en servicio de toda instalación de consumo de energía eléctrica nueva, ampliada o modificada deberá ser declarada con 15 días hábiles de anticipación a la Superintendencia",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para toda instalación de consumo de energía eléctrica nueva, ampliada o modificada",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "9.1.2 El instalador eléctrico autorizado, a cargo de la ejecución de la instalación eléctrica, deberá declarar la instalación una vez que ésta se encuentre completamente terminada.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para toda instalación de consumo de energía eléctrica nueva, ampliada o modificada",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "9.2.11 Una vez que la Superintendencia inscriba la declaración hecha por el instalador en el portal electrónico, se entregará un documento que acredite el registro de la instalación de consumo, el cual servirá para la posterior solicitud de suministro de energía eléctrica a la empresa distribuidora de la zona y efectuar los trámites municipales correspondientes.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "declaración de puesta en servicio de la instalación eléctrica del local comercial",
+   "puntos": [
+    {
+     "texto": "Sí, toda instalación nueva, ampliada o modificada debe declararse a la Superintendencia con 15 días hábiles de anticipación.",
+     "ref": "RIC N°19 · 9–9.1.2",
+     "numeral": "9.1.1",
+     "cita": "ok",
+     "frase": "La comunicación de puesta en servicio de toda instalación de consumo de energía eléctrica nueva, ampliada o modificada deberá ser declarada con 15 días hábiles de anticipación a la Superintendencia, acompañada de los antecedentes que correspondan.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La declaración la hace el instalador eléctrico autorizado a cargo de la ejecución, una vez terminada la instalación.",
+     "ref": "RIC N°19 · 9–9.1.2",
+     "numeral": "9.1.2",
+     "cita": "ok",
+     "frase": "El instalador eléctrico autorizado, a cargo de la ejecución de la instalación eléctrica, deberá declarar la instalación una vez que ésta se encuentre completamente terminada.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "El registro de la instalación sirve para solicitar el suministro a la distribuidora y los trámites municipales.",
+     "ref": "RIC N°19 · 9.2.9–9.2.12",
+     "numeral": "9.2.11",
+     "cita": "ok",
+     "frase": "Una vez que la Superintendencia inscriba la declaración hecha por el instalador en el portal electrónico, se entregará un documento que acredite el registro de la instalación de consumo, el cual servirá para la posterior solicitud de suministro de energía eléctrica a la empresa distribuidora de la zona y efectuar los trámites municipales correspondientes.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°19 · 9–9.1.2",
+    "RIC N°19 · 9.2.6–9.2.8.4",
+    "DS 8 · art. 16",
+    "RIC N°19 · 9.2.9–9.2.12",
+    "RIC N°19 · 9.2.1–9.2.2",
+    "RIC N°10 · 5.3",
+    "RIC N°10 · 5.3",
+    "RIC N°19 · 2",
+    "RIC N°11 · 20.1–20.3.3",
+    "RIC N°19 · 1"
+   ]
+  },
+  {
+   "conv": "proyecto",
+   "cat": "memoria",
+   "m": "¿Qué potencia te dije que tenía el local?",
+   "esp": {
+    "contiene": [
+     "30"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "resumen",
+   "texto": "La potencia del local es de 30 kW, trifásico.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "local comercial",
+    "sistema": "trifásico",
+    "tension": "",
+    "potencia": "30 kW",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "resumen",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1666,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "declaración de puesta en servicio de la instalación eléctrica del local comercial",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "circuitos",
+   "cat": "aclaración",
+   "m": "¿Cuántos circuitos necesito como mínimo?",
+   "esp": {
+    "tipo": "pide"
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "pide",
+   "texto": "¿De qué recinto se trata (casa, local comercial, industria, baño, etc.)?",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "¿De qué recinto se trata (casa, local comercial, industria, baño, etc.)?",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 1805,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "número mínimo de circuitos en una instalación eléctrica",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "circuitos",
+   "cat": "aclaración",
+   "m": "Es una casa de 80 m².",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°10 · 5.2"
+    ],
+    "contiene": [
+     "3|tres"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Para tu casa de 80 m² necesitas como mínimo 3 circuitos, porque supera los 30 m². Uno de esos circuitos debe ser exclusivo para enchufes de cocina y/o lavadero, con capacidad mínima de 16 A.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°10 · 5.2",
+     "cita": "ok",
+     "numeral": "5.2",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°10 · 5.2",
+     "cita": "ok",
+     "numeral": "5.2",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "casa",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "número mínimo de circuitos en una instalación eléctrica de una vivienda",
+    "cantidad de centros que es posible instalar en un circuito de alumbrado y de enchufes en una vivienda"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "aclaracion",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 9425,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "Si tienes horno o cocina eléctrica, se suma un circuito adicional independiente, también de al menos 16 A.",
+     "motivo": "la ficha no indica si la casa tiene horno o cocina eléctrica."
+    }
+   ],
+   "juez": {
+    "pide": "en una casa de 80 m², cuántos circuitos mínimos se requieren",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para viviendas de superficie igual o superior a 30 m²",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.2 Alumbrado de viviendas Las instalaciones de consumo de viviendas deberán disponer de un empalme eléctrico... Además, estas instalaciones deberán cumplir con las siguientes condiciones: b) Se deberá proyectar como mínimo 2 circuitos para la vivienda de superficie menor a 30 m2 y 3 circuitos para la vivienda de superficie iguales o superior a 30 m2.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para viviendas",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.2 Alumbrado de viviendas Las instalaciones de consumo de viviendas deberán disponer de un empalme eléctrico... Además, estas instalaciones deberán cumplir con las siguientes condiciones: d) Se deberá proyectar como mínimo un circuito exclusivo para enchufes de cocina y/o lavadero con una capacidad mínima de 16 A.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "condición para viviendas que cuentan con horno y/o cocina eléctrica",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "la ficha no indica si la casa tiene horno o cocina eléctrica.",
+      "donde": "5.2 Alumbrado de viviendas Las instalaciones de consumo de viviendas deberán disponer de un empalme eléctrico... Además, estas instalaciones deberán cumplir con las siguientes condiciones: e) En el caso de existir un horno eléctrico y/o cocina eléctrica deberá proyectarse un circuito adicional independiente de los circuitos señalados en la letra d) anterior, La capacidad del circuito dependerá de la potencia del equipo y su capacidad mínima será de 16 A",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "número mínimo de circuitos en una instalación eléctrica de una casa",
+   "puntos": [
+    {
+     "texto": "Para tu casa de 80 m² necesitas como mínimo 3 circuitos, porque supera los 30 m².",
+     "ref": "RIC N°10 · 5.2",
+     "numeral": "5.2",
+     "cita": "ok",
+     "frase": "Se deberá proyectar como mínimo 2 circuitos para la vivienda de superficie menor a 30 m2 y 3 circuitos para la vivienda de superficie iguales o superior a 30 m2.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Uno de esos circuitos debe ser exclusivo para enchufes de cocina y/o lavadero, con capacidad mínima de 16 A.",
+     "ref": "RIC N°10 · 5.2",
+     "numeral": "5.2",
+     "cita": "ok",
+     "frase": "Se deberá proyectar como mínimo un circuito exclusivo para enchufes de cocina y/o lavadero con una capacidad mínima de 16 A.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°10 · 5.2",
+    "RIC N°10 · 5.2",
+    "RIC N°11 · 8.5–8.5.1.3",
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°11 · 3.9.8–3.9.8.2",
+    "RIC N°10 · 5.1.3.8–5.1.4.4",
+    "RIC N°10 · 4.4–4.6",
+    "RIC N°7 · 7.3–7.3.4",
+    "RIC N°6 · 6.6–6.6.4",
+    "RIC N°4 · 7.5.5–7.6.1",
+    "RIC N°10 · 2"
+   ]
+  },
+  {
+   "conv": "alimentador",
+   "cat": "aclaración",
+   "m": "¿Qué sección de cable uso para el alimentador?",
+   "esp": {
+    "tipo": "pide"
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "pide",
+   "texto": "¿De qué recinto se trata y cuál es la potencia o la corriente del alimentador?",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "¿De qué recinto se trata y cuál es la potencia o la corriente del alimentador?",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 1922,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "sección del conductor del alimentador",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "alimentador",
+   "cat": "aclaración",
+   "m": "Es monofásico, 6 kW, a 25 metros del medidor.",
+   "esp": {
+    "tipo": "respuesta",
+    "calculo": true,
+    "citaAlguna": [
+     "RIC N°3",
+     "RIC N°4"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Usa como mínimo 4 mm² para el alimentador, porque esa es la sección mínima permisible que exige el RIC N°03 para alimentadores. Con 6 kW a 25 metros el cálculo da 30,3 A; para que la caída no supere el 3% de 220 V (6,6 V) se necesita 6 mm², ya que con 4 mm² da 3,1% y con 2,5 mm² da 5%.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°3 · 5–5.1.3",
+     "cita": "ok",
+     "numeral": "5.1.2",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°3 · 5–5.1.3",
+     "cita": "ok",
+     "numeral": "5.1.3",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "monofásico",
+    "tension": "",
+    "potencia": "6 kW",
+    "otros": "25 metros del medidor"
+   },
+   "consultas": [
+    "sección del conductor del alimentador",
+    "caída de tensión máxima admisible en alimentadores y conductores",
+    "caída de tensión máxima admisible en alimentador"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "El RIC N°04 también fija 4,0 mm² como sección mínima de los conductores de alimentadores, sin perjuicio de lo que exija la caída de tensión.",
+     "textual": "Alimentadores 4,0 mm2",
+     "n": "RIC N°4 · 5.4",
+     "motivo": "la frase citada no está escrita así en el extracto"
+    }
+   ],
+   "sinCita": 1,
+   "plan": {
+    "tipo": "calculo",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 11008,
+   "llamadas": 4,
+   "calc": true,
+   "omitidos": [],
+   "juez": {
+    "pide": "sección de cable para un alimentador monofásico de 6 kW a 25 metros del medidor",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para alimentadores y subalimentadores de instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.2 La sección de los conductores de los alimentadores y subalimentadores será, por lo menos, la suficiente para servir las cargas determinadas de acuerdo con la sección 6 de este pliego. En todo caso la sección mínima permisible será de 4 mm² para alimentadores y de 2,5 mm² para subalimentadores.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para alimentadores, subalimentadores y conductores de instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.3 La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "sección del conductor del alimentador",
+   "puntos": [
+    {
+     "texto": "Usa como mínimo 4 mm² para el alimentador, porque esa es la sección mínima permisible que exige el RIC N°03 para alimentadores.",
+     "ref": "RIC N°3 · 5–5.1.3",
+     "numeral": "5.1.2",
+     "cita": "ok",
+     "frase": "La sección de los conductores de los alimentadores y subalimentadores será, por lo menos, la suficiente para servir las cargas determinadas de acuerdo con la sección 6 de este pliego. En todo caso la sección mínima permisible será de 4 mm² para alimentadores y de 2,5 mm² para subalimentadores.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Con 6 kW a 25 metros el cálculo da 30,3 A; para que la caída no supere el 3% de 220 V (6,6 V) se necesita 6 mm², ya que con 4 mm² da 3,1% y con 2,5 mm² da 5%.",
+     "ref": "RIC N°3 · 5–5.1.3",
+     "numeral": "5.1.3",
+     "cita": "ok",
+     "frase": "La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+     "movido": true,
+     "numerosFuera": [
+      "6.6"
+     ],
+     "aplica": "si"
+    }
+   ],
+   "supuestos": [
+    "sistema monofásico de 220 V",
+    "factor de potencia 0,9 (supuesto: no se indicó)",
+    "conductor de cobre (0,018 Ω·mm²/m), tramo de 25 m, sin considerar reactancia"
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°3 · 5–5.1.3",
+    "RIC N°15 · 9–9.3",
+    "RIC N°4 · 5.4",
+    "RIC N°3 · 6.4–6.4.2",
+    "RIC N°1 · 4.1–4.7",
+    "RIC N°14 · 5–5.2.1",
+    "RIC N°19 · ANEXO 19.4",
+    "RIC N°19 · 7.9.1–7.11.2",
+    "RIC N°11 · 8.6–8.6.1",
+    "RIC N°3 · 3.3.1–3.5",
+    "RIC N°3 · 2"
+   ]
+  },
+  {
+   "conv": "diferencial",
+   "cat": "aclaración",
+   "m": "¿Qué diferencial pongo?",
+   "esp": {
+    "tipo": [
+     "pide",
+     "respuesta"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "El diferencial no basta por sí solo; debe complementarse con otra medida de protección contra contactos directos.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°5 · 7.8–7.8.2",
+     "cita": "ok",
+     "numeral": "7.8.1",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "protector diferencial en instalaciones interiores de baja tensión",
+    "protector diferencial en salas de baño",
+    "protector diferencial en circuitos de enchufes"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Para una instalación de consumo en baja tensión, el protector diferencial debe tener una sensibilidad asignada inferior o igual a 30 mA.",
+     "motivo": "El extracto lo presenta como medida complementaria, no como obligación general para toda instalación de consumo en baja tensión."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 10188,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "En esquema TN, el protector diferencial también debe ser de sensibilidad no superior a 30 mA.",
+     "motivo": "la ficha no indica que la instalación use esquema TN"
+    }
+   ],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para protección complementaria por protectores diferenciales en instalaciones de consumo en baja tensión",
+      "respalda": "no",
+      "aplica": "si",
+      "motivo": "El extracto lo presenta como medida complementaria, no como obligación general para toda instalación de consumo en baja tensión.",
+      "donde": "7.8.2 El empleo de protectores diferenciales, cuyo valor de corriente diferencial asignada de funcionamiento (sensibilidad) sea inferior o igual a 30 mA, se reconoce como medida de protección complementaria en caso de fallo de otra medida de protección contra los contactos directos o en caso de imprudencia de los usuarios.",
+      "clase": "condicion"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de dispositivos de protección contra contactos indirectos en esquema TN para instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "la ficha no indica que la instalación use esquema TN",
+      "donde": "8.7.6.3 En el esquema TN se deben utilizar los siguientes dispositivos de protección: b) Protectores diferenciales de sensibilidad no superior a 30 mA.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para protección complementaria por protectores diferenciales en instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "7.8.1 La utilización de los protectores diferenciales no constituye por sí mismo una medida de protección completa y requiere el empleo adicional de al menos una de las medidas de protección señaladas en las secciones 7.4 a 7.7 de este pliego.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "protector diferencial para una instalación",
+   "puntos": [
+    {
+     "texto": "El diferencial no basta por sí solo; debe complementarse con otra medida de protección contra contactos directos.",
+     "ref": "RIC N°5 · 7.8–7.8.2",
+     "numeral": "7.8.1",
+     "cita": "ok",
+     "frase": "La utilización de los protectores diferenciales no constituye por sí mismo una medida de protección completa y requiere el empleo adicional de al menos una de las medidas de protección señaladas en las secciones 7.4 a 7.7 de este pliego.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°5 · 8.7.6.3–8.7.6.9",
+    "RIC N°5 · 7.8–7.8.2",
+    "RIC N°11 · 5.7.4.6–5.7.4.7",
+    "RIC N°5 · 8.7.7.6–8.7.7.7",
+    "RIC N°5 · 7.8.3",
+    "RIC N°11 · 6.4.3",
+    "RIC N°10 · 5.3",
+    "RIC N°11 · 16.4.3–16.4.3.6",
+    "RIC N°11 · 4.3.2–4.3.5",
+    "RIC N°9 · 6.4–6.4.1",
+    "RIC N°5 · 2",
+    "RIC N°6 · 6.7–6.7.4"
+   ]
+  },
+  {
+   "conv": "diferencial",
+   "cat": "aclaración",
+   "m": "Es para una casa.",
+   "esp": {
+    "tipo": "respuesta",
+    "contiene": [
+     "30"
+    ],
+    "citaAlguna": [
+     "RIC N°10",
+     "RIC N°5"
+    ]
+   },
+   "pasa": false,
+   "fallas": [
+    "falta \"30\""
+   ],
+   "tipo": "respuesta",
+   "texto": "El diferencial no es protección completa por sí solo; se debe complementar con otra medida de protección contra contactos directos.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°5 · 7.8–7.8.2",
+     "cita": "ok",
+     "numeral": "7.8.1",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "casa",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "protector diferencial sensibilidad 30 mA vivienda",
+    "protección contra contactos directos vivienda medida complementaria",
+    "instalaciones eléctricas en vivienda requisitos diferencial"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "En una casa se debe instalar un protector diferencial con sensibilidad igual o inferior a 30 mA.",
+     "motivo": "el extracto lo presenta como protección complementaria en caso de fallo de otra medida o imprudencia, no como obligación general en una casa."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "aclaracion",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 12492,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "En esquema TN de una casa se requiere protector diferencial de sensibilidad no superior a 30 mA junto con protección de máxima corriente.",
+     "motivo": "no se indica que la casa use esquema TN"
+    },
+    {
+     "texto": "En esquema TT de una casa también se exige protector diferencial de sensibilidad no superior a 30 mA.",
+     "motivo": "no se indica que la casa use esquema TT"
+    }
+   ],
+   "juez": {
+    "pide": "en una casa, qué protector diferencial se debe instalar y qué se quiere saber",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "no",
+      "aplica": "si",
+      "motivo": "el extracto lo presenta como protección complementaria en caso de fallo de otra medida o imprudencia, no como obligación general en una casa.",
+      "donde": "7.8.2 El empleo de protectores diferenciales, cuyo valor de corriente diferencial asignada de funcionamiento (sensibilidad) sea inferior o igual a 30 mA, se reconoce como medida de protección complementaria en caso de fallo de otra medida de protección contra los contactos directos o en caso de imprudencia de los usuarios.",
+      "clase": "condicion"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "7.8.1 La utilización de los protectores diferenciales no constituye por sí mismo una medida de protección completa y requiere el empleo adicional de al menos una de las medidas de protección señaladas en las secciones 7.4 a 7.7 de este pliego.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla para esquemas TN de instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "no se indica que la casa use esquema TN",
+      "donde": "8.7.6.3 En el esquema TN se deben utilizar los siguientes dispositivos de protección: a) Dispositivos de protección de máxima corriente, tales como fusibles, interruptores automáticos. b) Protectores diferenciales de sensibilidad no superior a 30 mA.",
+      "clase": "regla"
+     },
+     {
+      "i": 4,
+      "caso_del_extracto": "regla para esquemas TT de instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "no se indica que la casa use esquema TT",
+      "donde": "8.7.7.4 En el esquema TT, se deben utilizar los siguientes dispositivos de protección: a) Protectores diferenciales de sensibilidad no superior a 30 mA. b) Dispositivos de protección de máxima corriente, tales como fusibles, interruptores automáticos. Estos dispositivos solamente son aplicables cuando la resistencia RA tiene un valor muy bajo.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "protector diferencial para una instalación en una casa",
+   "puntos": [
+    {
+     "texto": "El diferencial no es protección completa por sí solo; se debe complementar con otra medida de protección contra contactos directos.",
+     "ref": "RIC N°5 · 7.8–7.8.2",
+     "numeral": "7.8.1",
+     "cita": "ok",
+     "frase": "La utilización de los protectores diferenciales no constituye por sí mismo una medida de protección completa y requiere el empleo adicional de al menos una de las medidas de protección señaladas en las secciones 7.4 a 7.7 de este pliego.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°5 · 7.8–7.8.2",
+    "RIC N°5 · 4.9–4.12",
+    "RIC N°11 · 3.8.1–3.8.1.2",
+    "RIC N°5 · 8.7.6.3–8.7.6.9",
+    "RIC N°5 · 8.7.7–8.7.7.5",
+    "RIC N°5 · 7–7.1",
+    "RIC N°5 · 7.3–7.4.1",
+    "RIC N°10 · 5.2",
+    "RIC N°15 · 13.1–13.2.3",
+    "RIC N°4 · 7.5.5–7.6.1",
+    "RIC N°5 · 7.7–7.7.4",
+    "RIC N°6 · 6.7–6.7.4"
+   ]
+  },
+  {
+   "conv": "diferencial",
+   "cat": "aclaración",
+   "m": "¿De cuántos amperes?",
+   "esp": {
+    "tipo": "respuesta",
+    "citaAlguna": [
+     "RIC N°10 · 5.1",
+     "RIC N°2 · 6.2"
+    ],
+    "contiene": [
+     "igual o mayor|mayor o igual|aguas arriba"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "La corriente nominal del protector diferencial debe ser igual o mayor a la del termomagnético aguas arriba, o al menos igual a la suma de los termomagnéticos aguas abajo que dependan de él.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°10 · 5.1.3.4–5.1.3.7",
+     "cita": "ok",
+     "numeral": "5.1.3.6",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "casa",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "corriente nominal del protector diferencial en una instalación de una casa",
+    "sensibilidad del protector diferencial en una instalación de una casa"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Desde un mismo protector diferencial no se pueden derivar más de tres circuitos.",
+     "motivo": "el extracto trata del número máximo de circuitos por diferencial, no de su corriente nominal."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 10127,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "corriente nominal del protector diferencial para una instalación en una casa",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de uso general en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.3.6 Se deberá asegurar que todo protector diferencial quede protegido a la sobrecarga y al cortocircuito mediante una protección termomagnética. Para esto la corriente nominal de la protección diferencial deberá ser igual o mayor a la corriente nominal de la protección termomagnética instalada aguas arriba o se aceptará también, que la suma de las corrientes nominales de las protecciones termomagnéticas aguas abajo que dependan del diferencial, no sean mayor a la capacidad nominal de este.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para instalaciones de uso general en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "no",
+      "motivo": "el extracto trata del número máximo de circuitos por diferencial, no de su corriente nominal.",
+      "donde": "5.1.3.7 Desde una protección diferencial no se podrán derivar más de 3 circuitos, para lo cual deberá cumplirse con lo indicado en el punto 5.1.3.6 anterior.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "corriente nominal del protector diferencial para una instalación en una casa",
+   "puntos": [
+    {
+     "texto": "La corriente nominal del protector diferencial debe ser igual o mayor a la del termomagnético aguas arriba, o al menos igual a la suma de los termomagnéticos aguas abajo que dependan de él.",
+     "ref": "RIC N°10 · 5.1.3.4–5.1.3.7",
+     "numeral": "5.1.3.6",
+     "cita": "ok",
+     "frase": "la corriente nominal de la protección diferencial deberá ser igual o mayor a la corriente nominal de la protección termomagnética instalada aguas arriba o se aceptará también, que la suma de las corrientes nominales de las protecciones termomagnéticas aguas abajo que dependan del diferencial, no sean mayor a la capacidad nominal de este.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°10 · 5.1.3.4–5.1.3.7",
+    "RIC N°5 · 4.9–4.12",
+    "RIC N°5 · 8.7.7.6–8.7.7.7",
+    "RIC N°5 · 8.7.6.3–8.7.6.9",
+    "RIC N°5 · 7.8–7.8.2",
+    "RIC N°11 · 3.8.1–3.8.1.2",
+    "RIC N°2 · 4.16–4.21",
+    "RIC N°2 · 6.2.9–6.2.10",
+    "RIC N°4 · 6.2.3",
+    "RIC N°5 · 7.8.3",
+    "RIC N°5 · 2",
+    "RIC N°6 · 6.7–6.7.4"
+   ]
+  },
+  {
+   "conv": "terreno",
+   "cat": "vocabulario",
+   "m": "¿Cuántos enchufes puedo colgar de un automático de 10?",
+   "esp": {
+    "tipo": "respuesta",
+    "recupera": [
+     "RIC N°10 · 5.1"
+    ],
+    "cita": [
+     "RIC N°10 · 5.1"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Con un automático de 10 A, el 90% de su capacidad es 9 A, que a 220 V da 1980 W disponibles para los centros del circuito. Cada enchufe cuenta como 250 W, por lo que 1980 W entre 250 W da 7,92, es decir, un máximo de 7 enchufes simples por circuito. Si conoces la potencia real de los equipos que se conectarán, debes usar esa potencia en lugar de los 250 W por enchufe.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°10 · 5.1.3.8–5.1.4.4",
+     "cita": "ok",
+     "numeral": "5.1.4.4",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°10 · 5.1.4.5–5.1.5.3",
+     "cita": "aprox",
+     "numeral": "5.1.4.6",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°10 · 5.1.4.5–5.1.5.3",
+     "cita": "ok",
+     "numeral": "5.1.4.6",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "cantidad de centros que es posible instalar en un circuito",
+    "protección termomagnética de circuitos de enchufes",
+    "sección mínima de conductores para circuitos de enchufes"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 10968,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una instalación de uso general, cuántos enchufes se pueden conectar a un circuito protegido con un automático de 10 A",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para determinar la cantidad de centros en un circuito de alumbrado (iluminación y enchufes) de instalaciones de uso general",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.4.4 La cantidad de centros que es posible instalar en un circuito se determinará igualando la suma de las potencias unitarias de cada centro conectado a él con el 90% del valor nominal de la capacidad del circuito.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para la potencia unitaria de enchufes hembra en un circuito de alumbrado de instalaciones de uso general",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.4.6 La potencia unitaria de cada enchufe hembra en un circuito de alumbrado se considerará en 250 W. Los enchufes múltiples de hasta tres salidas por unidad se considerarán como minino, equivalente a un centro de 250 W. Si se conoce la potencia de la carga a conectar se debe considerar esta potencia, para efectos de cálculo.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para cuando se conoce la potencia de la carga a conectar en un circuito de alumbrado de instalaciones de uso general",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.4.6 La potencia unitaria de cada enchufe hembra en un circuito de alumbrado se considerará en 250 W. Los enchufes múltiples de hasta tres salidas por unidad se considerarán como minino, equivalente a un centro de 250 W. Si se conoce la potencia de la carga a conectar se debe considerar esta potencia, para efectos de cálculo.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "cantidad de enchufes por circuito protegido con interruptor termomagnético de 10 A",
+   "puntos": [
+    {
+     "texto": "Con un automático de 10 A, el 90% de su capacidad es 9 A, que a 220 V da 1980 W disponibles para los centros del circuito.",
+     "ref": "RIC N°10 · 5.1.3.8–5.1.4.4",
+     "numeral": "5.1.4.4",
+     "cita": "ok",
+     "frase": "La cantidad de centros que es posible instalar en un circuito se determinará igualando la suma de las potencias unitarias de cada centro conectado a él con el 90% del valor nominal de la capacidad del circuito.",
+     "movido": false,
+     "numerosFuera": [
+      "9",
+      "220",
+      "1980"
+     ],
+     "aplica": "si"
+    },
+    {
+     "texto": "Cada enchufe cuenta como 250 W, por lo que 1980 W entre 250 W da 7,92, es decir, un máximo de 7 enchufes simples por circuito.",
+     "ref": "RIC N°10 · 5.1.4.5–5.1.5.3",
+     "numeral": "5.1.4.6",
+     "cita": "aprox",
+     "frase": "La potencia unitaria de cada enchufe hembra en un circuito de alumbrado se considerará en 250 W. Los enchufes múltiples de hasta tres salidas por unidad se considerarán como minino, equivalente a un centro de 250 W",
+     "movido": false,
+     "numerosFuera": [
+      "1980",
+      "7.92",
+      "7"
+     ],
+     "aplica": "si"
+    },
+    {
+     "texto": "Si conoces la potencia real de los equipos que se conectarán, debes usar esa potencia en lugar de los 250 W por enchufe.",
+     "ref": "RIC N°10 · 5.1.4.5–5.1.5.3",
+     "numeral": "5.1.4.6",
+     "cita": "ok",
+     "frase": "Si se conoce la potencia de la carga a conectar se debe considerar esta potencia, para efectos de cálculo.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°10 · 5.1.3.8–5.1.4.4",
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°10 · 5.2",
+    "RIC N°11 · 3.5–3.5.3",
+    "RIC N°10 · 5.1–5.1.1.6",
+    "RIC N°7 · 7.4.4–7.5.1",
+    "RIC N°2 · 6.2.5–6.2.7",
+    "RIC N°4 · 5.4",
+    "RIC N°7 · 7.3–7.3.4",
+    "RIC N°11 · 3.9.5–3.9.5.7"
+   ]
+  },
+  {
+   "conv": "terreno",
+   "cat": "vocabulario",
+   "m": "¿A qué altura va el tablero?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°2 · 6.1"
+    ],
+    "contiene": [
+     "0,45",
+     "2,0"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "El tablero se monta con los dispositivos de comando o accionamiento entre 0,45 m y 2,0 m de altura, medidos desde el piso terminado hasta la base inferior de cada dispositivo. La regla no aplica a centros de control de motores, armarios, tableros de alumbrado público en postes ni tableros de recarga de vehículos eléctricos en bienes nacionales de uso público.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "cita": "ok",
+     "numeral": "6.1.22",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "cita": "ok",
+     "numeral": "6.1.22",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "altura de instalación del tablero eléctrico",
+    "tablero eléctrico altura centro"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 30227,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para la altura de montaje de dispositivos de comando o accionamiento en tableros eléctricos de instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "condición para acogerse a una excepción de la regla de altura de montaje de dispositivos de comando o accionamiento en tableros eléctricos",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo. Se exceptúa de este punto los centros de control de motores, los armarios, los tableros de alumbrado público montados en postes de distribución y los tableros para recarga de vehículos eléctricos ubicados en bienes nacionales de uso público.",
+      "clase": "condicion"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "altura de instalación del tablero eléctrico",
+   "puntos": [
+    {
+     "texto": "El tablero se monta con los dispositivos de comando o accionamiento entre 0,45 m y 2,0 m de altura, medidos desde el piso terminado hasta la base inferior de cada dispositivo.",
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "numeral": "6.1.22",
+     "cita": "ok",
+     "frase": "La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La regla no aplica a centros de control de motores, armarios, tableros de alumbrado público en postes ni tableros de recarga de vehículos eléctricos en bienes nacionales de uso público.",
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "numeral": "6.1.22",
+     "cita": "ok",
+     "frase": "Se exceptúa de este punto los centros de control de motores, los armarios, los tableros de alumbrado público montados en postes de distribución y los tableros para recarga de vehículos eléctricos ubicados en bienes nacionales de uso público.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°15 · 8.6",
+    "RIC N°2 · 6.1.21.5–6.1.24",
+    "RIC N°2 · 5.4.3–5.4.8",
+    "RIC N°2 · 4.22–4.25.1.3",
+    "RIC N°2 · 5–5.2.1",
+    "RIC N°7 · 5.1.4–5.1.5",
+    "RIC N°2 · 4.25.1.4–4.25.1.9",
+    "RIC N°2 · 6.7–6.7.5",
+    "RIC N°1 · ANEXO 1.2",
+    "RIC N°15 · 8–8.3",
+    "RIC N°2 · 2"
+   ]
+  },
+  {
+   "conv": "terreno",
+   "cat": "vocabulario",
+   "m": "¿Puedo pasar el cable de internet por el mismo tubo que los de fuerza?",
+   "esp": {
+    "tipo": [
+     "respuesta",
+     "sin_respaldo"
+    ],
+    "noCita": [
+     "RIC N°15"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Sí, puedes pasar el cable de internet por el mismo tubo que los de fuerza, ya que en un mismo conducto solo se podrán instalar canalizaciones eléctricas y de comunicación o control. Debes separar y distanciar adecuadamente ambos tipos de canalización dentro del tubo para evitar influencias electromagnéticas.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°4 · 7.1.4–7.1.7",
+     "cita": "ok",
+     "numeral": "7.1.6",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°4 · 7.1.4–7.1.7",
+     "cita": "ok",
+     "numeral": "7.1.7",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "circuitos de comunicaciones o de corrientes débiles en la misma canalización que circuitos de fuerza",
+    "separación mínima entre canalizaciones de fuerza y de comunicaciones"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 10354,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "Considera que el cable de comunicaciones puede verse afectado por fallas o interferencias de las instalaciones eléctricas al compartir el conducto.",
+     "motivo": "el extracto trata recintos de empalmes, no el compartimiento de un mismo tubo o conducto"
+    }
+   ],
+   "juez": {
+    "pide": "sobre un cable de internet compartiendo tubo con conductores de fuerza, si se puede hacer",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión sobre qué canalizaciones pueden instalarse en un mismo conducto, shaft o canal de una construcción",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "7.1.6 En un mismo conducto, shaft o canal de una construcción, solo se podrán instalar canalizaciones eléctricas y de comunicación o control.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión sobre separación y distanciamiento de canalizaciones eléctricas y de comunicación o control en un mismo conducto, shaft o canal",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "7.1.7 Las canalizaciones eléctricas y de comunicación o control, instaladas al interior de un mismo conducto, shaft o canal de una construcción, se deberán separar y distanciar adecuadamente para evitar influencias electromagnéticas.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla de diseño para recintos de empalmes eléctricos donde también se instalan empalmes de comunicaciones",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "el extracto trata recintos de empalmes, no el compartimiento de un mismo tubo o conducto",
+      "donde": "7.17 En los casos en que la canalización de otros servicios, tales como de comunicaciones o control, compartan recintos, canalizaciones o conductos con instalaciones eléctricas, aquella deberá ser proyectada e instalada teniendo en cuenta que podrán ser afectados por fallas o interferencias originadas en las instalaciones eléctricas.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "circuitos de comunicaciones compartiendo canalización con circuitos de fuerza",
+   "puntos": [
+    {
+     "texto": "Sí, puedes pasar el cable de internet por el mismo tubo que los de fuerza, ya que en un mismo conducto solo se podrán instalar canalizaciones eléctricas y de comunicación o control.",
+     "ref": "RIC N°4 · 7.1.4–7.1.7",
+     "numeral": "7.1.6",
+     "cita": "ok",
+     "frase": "En un mismo conducto, shaft o canal de una construcción, solo se podrán instalar canalizaciones eléctricas y de comunicación o control.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Debes separar y distanciar adecuadamente ambos tipos de canalización dentro del tubo para evitar influencias electromagnéticas.",
+     "ref": "RIC N°4 · 7.1.4–7.1.7",
+     "numeral": "7.1.7",
+     "cita": "ok",
+     "frase": "Las canalizaciones eléctricas y de comunicación o control, instaladas al interior de un mismo conducto, shaft o canal de una construcción, se deberán separar y distanciar adecuadamente para evitar influencias electromagnéticas.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°7 · 5–5.1.3",
+    "RIC N°4 · 7.11.10.2–7.11.16",
+    "RIC N°4 · 7.12.8–7.13.6",
+    "RIC N°7 · 5.2.8–5.3.1",
+    "RIC N°4 · 7.1.4–7.1.7",
+    "RIC N°4 · 12",
+    "RIC N°4 · 7.6.2–7.6.6",
+    "RIC N°4 · 12",
+    "RIC N°11 · 7.3.5–7.3.7",
+    "RIC N°1 · 7.16–7.20",
+    "RIC N°4 · 2"
+   ]
+  },
+  {
+   "conv": "motor",
+   "cat": "cálculo",
+   "m": "Tengo un motor trifásico de 15 kW a 380 V. ¿Qué sección de conductor necesito?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°7"
+    ],
+    "contiene": [
+     "1,25"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Necesitas como mínimo 2,5 mm² porque el motor de 15 kW supera los 3 HP. Como es un motor de régimen permanente, la capacidad de transporte debe ser al menos 1,25 veces la corriente de plena carga. Para 15 kW a 380 V, la tabla de la norma da 30 A a 3.000 rpm, 29 A a 1.500 rpm y 31,5 A a 1.000 rpm.",
+   "aviso": "Los extractos no incluyen la tabla de secciones aisladas por encima de 6 mm² ni el método de instalación real, por lo que no se puede afirmar una sección final que cumpla 39,4 A; se necesita la tabla Nº4.4 completa y el método de instalación.",
+   "citas": [
+    {
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "cita": "ok",
+     "numeral": "5.5.1",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "cita": "ok",
+     "numeral": "5.5.2",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°7 · ANEXO 7.1",
+     "cita": "ok",
+     "numeral": "7.1",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "trifásico",
+    "tension": "380 V",
+    "potencia": "15 kW",
+    "otros": "motor trifásico"
+   },
+   "consultas": [
+    "sección de conductor para motor trifásico",
+    "corriente nominal de motor trifásico 15 kW 380 V",
+    "caída de tensión máxima admisible en alimentador de motor"
+   ],
+   "saltos": 1,
+   "descartados": [
+    {
+     "texto": "Con 4 mm² en método A1 tienes 24 A, insuficiente para 1,25 × 31,5 A = 39,4 A; con 6 mm² tienes 31 A, también insuficiente.",
+     "textual": "4  -  24  28  31",
+     "n": "RIC N°4 · ANEXO 4.2–ANEXO 4.5",
+     "motivo": "la frase citada no está escrita así en el extracto"
+    }
+   ],
+   "sinCita": 1,
+   "plan": {
+    "tipo": "calculo",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 17498,
+   "llamadas": 6,
+   "calc": true,
+   "omitidos": [],
+   "juez": {
+    "pide": "sección de conductor para un motor trifásico de 15 kW a 380 V",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para motores fijos de potencia nominal mayor a 3 HP",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.5.1 La sección mínima de los conductores empleados para alimentar motores fijos de potencia nominal mayor a 3 HP será de 2,5 mm2.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para motores de régimen permanente",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.5.2 La sección de los conductores que alimenten a un motor de régimen permanente será tal que permita asegurar una capacidad de transporte, por lo menos, igual a 1,25 veces la corriente de plena carga del motor.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "tabla de corrientes nominales de motores usuales para 380 V",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "ANEXO 7.1 CARACTERÍSTICAS NOMINALES DE MOTORES USUALES PARA 380 V",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "sección de conductor para motor trifásico de 15 kW a 380 V",
+   "puntos": [
+    {
+     "texto": "Necesitas como mínimo 2,5 mm² porque el motor de 15 kW supera los 3 HP.",
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "numeral": "5.5.1",
+     "cita": "ok",
+     "frase": "La sección mínima de los conductores empleados para alimentar motores fijos de potencia nominal mayor a 3 HP será de 2,5 mm2.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Como es un motor de régimen permanente, la capacidad de transporte debe ser al menos 1,25 veces la corriente de plena carga.",
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "numeral": "5.5.2",
+     "cita": "ok",
+     "frase": "La sección de los conductores que alimenten a un motor de régimen permanente será tal que permita asegurar una capacidad de transporte, por lo menos, igual a 1,25 veces la corriente de plena carga del motor.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Para 15 kW a 380 V, la tabla de la norma da 30 A a 3.000 rpm, 29 A a 1.500 rpm y 31,5 A a 1.000 rpm.",
+     "ref": "RIC N°7 · ANEXO 7.1",
+     "numeral": "7.1",
+     "cita": "ok",
+     "frase": "15  20  88  89  88,5  30  29  31,5  7,7  8  5,7",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "supuestos": [
+    "sistema trifásico de 380 V",
+    "factor de potencia 0,9 (supuesto: no se indicó)"
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°7 · 5.5–5.5.2",
+    "RIC N°7 · ANEXO 7.1",
+    "RIC N°4 · 6.2.2",
+    "RIC N°4 · ANEXO 4.2–ANEXO 4.5",
+    "RIC N°4 · 6.2.3",
+    "RIC N°4 · 6.2.3",
+    "RIC N°4 · 7.6.7–7.7.1",
+    "RIC N°7 · 5.5.6",
+    "RIC N°4 · 6.2.5",
+    "RIC N°3 · 6.4–6.4.2",
+    "RIC N°4 · 5–5.3",
+    "RIC N°7 · 5.5.7–5.5.10",
+    "RIC N°11 · 8.5.2–8.5.2.4"
+   ]
+  },
+  {
+   "conv": "motor",
+   "cat": "cálculo",
+   "m": "¿Y si el tramo tiene 80 metros?",
+   "esp": {
+    "tipo": "respuesta",
+    "calculo": true,
+    "recupera": [
+     "RIC N°3 · 5"
+    ],
+    "cita": [
+     "RIC N°3 · 5"
+    ],
+    "contiene": [
+     "3 ?%"
+    ]
+   },
+   "pasa": false,
+   "fallas": [
+    "falta \"3 ?%\""
+   ],
+   "tipo": "respuesta",
+   "texto": "Con 80 metros de tramo, la sección mínima sigue siendo 2,5 mm² porque el motor de 15 kW supera los 3 HP. La capacidad de transporte debe ser al menos 1,25 veces la corriente de plena carga del motor. Con 80 metros, la caída de tensión total no debe exceder el 5% de la tensión nominal. La corriente de plena carga del motor de 15 kW a 380 V es de 30 A (3.000 rpm), 29 A (1.500 rpm) o 31,5 A (1.000 rpm).",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "cita": "ok",
+     "numeral": "5.5.1",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "cita": "ok",
+     "numeral": "5.5.2",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°3 · 5–5.1.3",
+     "cita": "ok",
+     "numeral": "5.1.3",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°7 · ANEXO 7.1",
+     "cita": "ok",
+     "numeral": "",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "trifásico",
+    "tension": "380 V",
+    "potencia": "15 kW",
+    "otros": "motor trifásico; tramo de 80 metros"
+   },
+   "consultas": [
+    "caída de tensión máxima admisible en circuitos de alimentación",
+    "caída de tensión máxima admisible en alimentadores y conductores",
+    "sección mínima de conductor para motores trifásicos de 15 kW a 380 V"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "calculo",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 12629,
+   "llamadas": 4,
+   "calc": true,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una instalación trifásica de 380 V con un motor trifásico de 15 kW y un tramo de 80 metros, qué sección de conductor se requiere",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para la sección mínima de conductores que alimentan motores fijos de potencia nominal mayor a 3 HP",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.5.1 La sección mínima de los conductores empleados para alimentar motores fijos de potencia nominal mayor a 3 HP será de 2,5 mm2.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para la sección de conductores que alimentan motores de régimen permanente",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.5.2 La sección de los conductores que alimenten a un motor de régimen permanente será tal que permita asegurar una capacidad de transporte, por lo menos, igual a 1,25 veces la corriente de plena carga del motor.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para la caída de tensión en alimentadores, subalimentadores y conductores de instalaciones de consumo en baja tensión",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.1.3 La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+      "clase": "regla"
+     },
+     {
+      "i": 4,
+      "caso_del_extracto": "tabla de corrientes nominales de motores usuales para 380 V según potencia y velocidad",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "ANEXO 7.1 CARACTERÍSTICAS NOMINALES DE MOTORES USUALES PARA 380 V",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "sección de conductor para motor trifásico de 15 kW a 380 V con tramo de 80 metros",
+   "puntos": [
+    {
+     "texto": "Con 80 metros de tramo, la sección mínima sigue siendo 2,5 mm² porque el motor de 15 kW supera los 3 HP.",
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "numeral": "5.5.1",
+     "cita": "ok",
+     "frase": "La sección mínima de los conductores empleados para alimentar motores fijos de potencia nominal mayor a 3 HP será de 2,5 mm2.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La capacidad de transporte debe ser al menos 1,25 veces la corriente de plena carga del motor.",
+     "ref": "RIC N°7 · 5.5–5.5.2",
+     "numeral": "5.5.2",
+     "cita": "ok",
+     "frase": "La sección de los conductores que alimenten a un motor de régimen permanente será tal que permita asegurar una capacidad de transporte, por lo menos, igual a 1,25 veces la corriente de plena carga del motor.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Con 80 metros, la caída de tensión total no debe exceder el 5% de la tensión nominal.",
+     "ref": "RIC N°3 · 5–5.1.3",
+     "numeral": "5.1.3",
+     "cita": "ok",
+     "frase": "La sección de los alimentadores, subalimentadores y conductores será tal que la caída de tensión provocada por la corriente máxima que circula por ellos determinada de acuerdo con el punto 6.1, no exceda del 3% de la tensión nominal de la alimentación y la caída de tensión total en el punto de la instalación más desfavorable no exceda del 5% de dicha tensión.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La corriente de plena carga del motor de 15 kW a 380 V es de 30 A (3.000 rpm), 29 A (1.500 rpm) o 31,5 A (1.000 rpm).",
+     "ref": "RIC N°7 · ANEXO 7.1",
+     "numeral": "",
+     "cita": "ok",
+     "frase": "15  20  88  89  88,5  30  29  31,5  7,7  8  5,7",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "supuestos": [
+    "sistema trifásico de 380 V",
+    "factor de potencia 0,9 (supuesto: no se indicó)",
+    "conductor de cobre (0,018 Ω·mm²/m), tramo de 80 m, sin considerar reactancia"
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°14 · 5–5.2.1",
+    "RIC N°3 · 5–5.1.3",
+    "RIC N°19 · ANEXO 19.4",
+    "RIC N°19 · 7.9.1–7.11.2",
+    "RIC N°10 · 5.1.4.5–5.1.5.3",
+    "RIC N°11 · 8.13.5–8.14",
+    "RIC N°3 · 5.1.7–5.1.7.5",
+    "RIC N°7 · 5.5–5.5.2",
+    "RIC N°7 · ANEXO 7.1",
+    "RIC N°4 · 7.13.11–7.13.17"
+   ]
+  },
+  {
+   "conv": "correccion",
+   "cat": "memoria",
+   "m": "¿A qué altura se instala un tablero?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°2 · 6.1"
+    ],
+    "contiene": [
+     "0,45",
+     "2,0"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Los dispositivos de comando o accionamiento del tablero se montan entre 0,45 m y 2,0 m de altura, medidos desde el nivel de piso terminado hasta la base inferior de cada dispositivo. No aplica esta regla a centros de control de motores, armarios, tableros de alumbrado público en postes de distribución ni tableros de recarga de vehículos eléctricos en bienes nacionales de uso público.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "cita": "ok",
+     "numeral": "6.1.22",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "cita": "ok",
+     "numeral": "6.1.22",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "altura de instalación del tablero eléctrico",
+    "tablero eléctrico altura centro"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 8685,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para la altura de montaje de dispositivos de comando o accionamiento colocados en un tablero eléctrico",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "condición para acogerse a una excepción o exención de la regla de altura de montaje de dispositivos de comando o accionamiento",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo. Se exceptúa de este punto los centros de control de motores, los armarios, los tableros de alumbrado público montados en postes de distribución y los tableros para recarga de vehículos eléctricos ubicados en bienes nacionales de uso público.",
+      "clase": "condicion"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "altura de instalación del tablero eléctrico",
+   "puntos": [
+    {
+     "texto": "Los dispositivos de comando o accionamiento del tablero se montan entre 0,45 m y 2,0 m de altura, medidos desde el nivel de piso terminado hasta la base inferior de cada dispositivo.",
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "numeral": "6.1.22",
+     "cita": "ok",
+     "frase": "La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "No aplica esta regla a centros de control de motores, armarios, tableros de alumbrado público en postes de distribución ni tableros de recarga de vehículos eléctricos en bienes nacionales de uso público.",
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "numeral": "6.1.22",
+     "cita": "ok",
+     "frase": "Se exceptúa de este punto los centros de control de motores, los armarios, los tableros de alumbrado público montados en postes de distribución y los tableros para recarga de vehículos eléctricos ubicados en bienes nacionales de uso público.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°15 · 8.6",
+    "RIC N°2 · 6.1.21.5–6.1.24",
+    "RIC N°2 · 5.4.3–5.4.8",
+    "RIC N°2 · 4.22–4.25.1.3",
+    "RIC N°2 · 5–5.2.1",
+    "RIC N°7 · 5.1.4–5.1.5",
+    "RIC N°2 · 4.25.1.4–4.25.1.9",
+    "RIC N°2 · 6.4–6.5.1",
+    "RIC N°15 · 8–8.3",
+    "RIC N°2 · 6.7–6.7.5",
+    "RIC N°2 · 2"
+   ]
+  },
+  {
+   "conv": "correccion",
+   "cat": "memoria",
+   "m": "No, eso no puede ser, yo siempre los he puesto a 1,8 m. ¿Estás seguro?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°2 · 6.1"
+    ],
+    "contiene": [
+     "2,0"
+    ]
+   },
+   "pasa": false,
+   "fallas": [
+    "tipo sin_respaldo, se esperaba respuesta",
+    "no cita RIC N°2 · 6.1",
+    "falta \"2,0\""
+   ],
+   "tipo": "sin_respaldo",
+   "texto": "No encontré en las normas cargadas una regla que responda eso con respaldo. Puede estar en una norma que no está en este corpus.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "dispositivos de comando altura instalación tablero eléctrico RIC N°2 punto 6.1.22",
+    "excepciones altura dispositivos de comando centros de control motores tableros alumbrado público recarga vehículos eléctricos"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "aclaracion",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 3003,
+   "llamadas": 3,
+   "calc": false,
+   "omitidos": [],
+   "juez": null,
+   "tema": "altura de instalación del tablero eléctrico",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°15 · 8.6",
+    "RIC N°2 · 6.1.21.5–6.1.24",
+    "RIC N°2 · 6.1.15–6.1.16.2",
+    "RIC N°2 · 6.2–6.2.3",
+    "RIC N°7 · 5.1.4–5.1.5",
+    "RIC N°1 · 7.21–7.23",
+    "RIC N°15 · 4.9–4.13.1",
+    "RIC N°1 · ANEXO 1.2",
+    "RIC N°1 · 7.8.4",
+    "RIC N°10 · 5.1.2.1–5.1.2.5",
+    "RIC N°2 · 2"
+   ]
+  },
+  {
+   "conv": "correccion",
+   "cat": "memoria",
+   "m": "¿En qué pliego y punto sale eso exactamente?",
+   "esp": {
+    "contiene": [
+     "RIC N°\\s*0?2",
+     "6\\.1\\.22"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Está en el pliego RIC N°2, punto 6.1.22.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "cita": "ok",
+     "numeral": "6.1.22",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "dispositivos de comando altura 0,45 m 2,0 m piso terminado pliego punto",
+    "punto 6.1.22 dispositivos de comando o accionamiento altura instalación",
+    "tablero eléctrico dispositivos de comando altura base inferior piso terminado"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "aclaracion",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 7217,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "pliego y punto exacto donde se regula la altura de instalación del tablero eléctrico",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para instalaciones de consumo en baja tensión (interior de casas, locales e industrias)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.1.22 La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "altura de instalación del tablero eléctrico: pliego y punto exacto",
+   "puntos": [
+    {
+     "texto": "Está en el pliego RIC N°2, punto 6.1.22.",
+     "ref": "RIC N°2 · 6.1.21.5–6.1.24",
+     "numeral": "6.1.22",
+     "cita": "ok",
+     "frase": "La altura mínima de montaje de los dispositivos de comando o accionamiento colocados en un tablero será de 0,45 m y la altura máxima será de 2,0 m, ambas distancias medidas respecto del nivel de piso terminado hasta la base inferior de cada dispositivo.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°15 · 8.6",
+    "RIC N°2 · 6.1.21.5–6.1.24",
+    "RIC N°10 · 5.1.2.1–5.1.2.5",
+    "RIC N°1 · 7.9.1–7.9.2",
+    "RIC N°1 · ANEXO 1.2",
+    "RIC N°7 · 7.4–7.4.3",
+    "RIC N°4 · 5.48–5.48.2",
+    "RIC N°2 · 6.1.15–6.1.16.2",
+    "RIC N°2 · 4.25.1.4–4.25.1.9",
+    "RIC N°18 · 3–3.1",
+    "RIC N°2 · 2"
+   ]
+  },
+  {
+   "conv": "meta",
+   "cat": "conversación",
+   "m": "Hola",
+   "esp": {
+    "tipo": "saludo"
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "saludo",
+   "texto": "Hola. Soy el asistente de normativa eléctrica chilena para instaladores. Puedes preguntarme sobre exigencias de la norma para instalaciones interiores, redes, licencias de instaladores, generación solar o trato con la distribuidora.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "saludo",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1608,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "saludo inicial",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "meta",
+   "cat": "conversación",
+   "m": "¿Qué puedes hacer?",
+   "esp": {
+    "tipo": "saludo"
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "saludo",
+   "texto": "Hola. Soy el asistente de normativa eléctrica chilena para instaladores. Puedes preguntarme sobre exigencias de la norma para instalaciones interiores, redes, licencias de instaladores, generación solar o trato con la distribuidora.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "saludo",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1586,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "saludo inicial",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "meta",
+   "cat": "conversación",
+   "m": "¿Qué diferencial lleva una piscina?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "RIC N°11 · 5.7"
+    ],
+    "contiene": [
+     "10 ?mA"
+    ]
+   },
+   "pasa": false,
+   "fallas": [
+    "falta \"10 ?mA\""
+   ],
+   "tipo": "respuesta",
+   "texto": "En volumen 2, los enchufes e interruptores se protegen con diferencial de 30 mA máximo, ubicado fuera de los volúmenes 0, 1 y 2.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RIC N°11 · 5.7.4.6–5.7.4.7",
+     "cita": "tabla",
+     "numeral": "5.7.4.6",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "piscina",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "protector diferencial instalaciones piscinas",
+    "volúmenes y protecciones eléctricas en piscinas",
+    "puesta a tierra piscinas"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "En piscinas pequeñas, si los enchufes se instalan fuera del volumen 1, deben protegerse con tensión extra baja o con diferencial de 10 mA máximo.",
+     "motivo": "la pregunta no especifica piscina pequeña ni ubicación fuera del alcance de la mano · La afirmación omite que es requisito de una excepción (instalación fuera del volumen 1 no posible) y presenta como obligación general lo que es una alternativa condicionada; además omite las condiciones de distancia y altura."
+    },
+    {
+     "texto": "En piscinas pequeñas, si los enchufes se instalan fuera del volumen 1, deben protegerse con tensión extra baja o con diferencial de 10 mA máximo.",
+     "motivo": "la pregunta no especifica piscina pequeña ni ubicación fuera del alcance de la mano · La afirmación omite que es requisito de una excepción (instalación fuera del volumen 1 no posible) y presenta como obligación general lo que es una alternativa condicionada; además omite las condiciones de distancia y altura."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "consumo"
+    ]
+   },
+   "ms": 15792,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una piscina, qué protección diferencial se requiere",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla para enchufes e interruptores instalados en el volumen 2 de instalaciones sumergidas",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "5.7.4.6 En el volumen 2 se podrán instalar enchufes e interruptores siempre que estén protegidos por una de las siguientes medidas: b) Protecciones que permitan corte automático de la alimentación mediante un protector diferencial de 30 mA máximo y que ellas estén ubicadas fuera de los volúmenes 0, 1 y 2.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "condición para admitir enchufes en piscinas pequeñas instalados fuera del volumen 1 y fuera del alcance de la mano",
+      "respalda": "no",
+      "aplica": "dudoso",
+      "motivo": "la pregunta no especifica piscina pequeña ni ubicación fuera del alcance de la mano · La afirmación omite que es requisito de una excepción (instalación fuera del volumen 1 no posible) y presenta como obligación general lo que es una alternativa condicionada; además omite las condiciones de distancia y altura.",
+      "donde": "5.7.4.5 Para las piscinas pequeñas, en las que la instalación de enchufes fuera del volumen 1 no sea posible, se admitirán enchufes, cuyas bases sean preferentemente no metálicas, si se instalan fuera del alcance de la mano (al menos a 1,25 m) a partir del límite del volumen 0 y al menos 0,3 m por encima del suelo, estando protegidas, además por una de las medidas siguientes: a) Protegidas por tensión extra baja, no superior a 25 V en corriente alterna o 60 V en corriente continua, estando instalada la fuente de seguridad fuera de los volúmenes 0 y 1; b) Protegidas por corte automático de la alimentación mediante un protector diferencial de 10 mA máximo; c) Alimentación por transformador de aislación y tendrá una pantalla entre primario y secundario, estando la fuente de alimentación fuera de los volúmenes 0 y 1.",
+      "clase": "condicion"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "condición para admitir enchufes en piscinas pequeñas instalados fuera del volumen 1 y fuera del alcance de la mano",
+      "respalda": "no",
+      "aplica": "dudoso",
+      "motivo": "la pregunta no especifica piscina pequeña ni ubicación fuera del alcance de la mano · La afirmación omite que es requisito de una excepción (instalación fuera del volumen 1 no posible) y presenta como obligación general lo que es una alternativa condicionada; además omite las condiciones de distancia y altura.",
+      "donde": "5.7.4.5 Para las piscinas pequeñas, en las que la instalación de enchufes fuera del volumen 1 no sea posible, se admitirán enchufes, cuyas bases sean preferentemente no metálicas, si se instalan fuera del alcance de la mano (al menos a 1,25 m) a partir del límite del volumen 0 y al menos 0,3 m por encima del suelo, estando protegidas, además por una de las medidas siguientes: a) Protegidas por tensión extra baja, no superior a 25 V en corriente alterna o 60 V en corriente continua, estando instalada la fuente de seguridad fuera de los volúmenes 0 y 1; b) Protegidas por corte automático de la alimentación mediante un protector diferencial de 10 mA máximo; c) Alimentación por transformador de aislación y tendrá una pantalla entre primario y secundario, estando la fuente de alimentación fuera de los volúmenes 0 y 1.",
+      "clase": "condicion"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "protección con diferencial para instalaciones de piscina",
+   "puntos": [
+    {
+     "texto": "En volumen 2, los enchufes e interruptores se protegen con diferencial de 30 mA máximo, ubicado fuera de los volúmenes 0, 1 y 2.",
+     "ref": "RIC N°11 · 5.7.4.6–5.7.4.7",
+     "numeral": "5.7.4.6",
+     "cita": "tabla",
+     "frase": "En el volumen 2 se podrán instalar enchufes e interruptores siempre que estén protegidos por una de las siguientes medidas: b) Protecciones que permitan corte automático de la alimentación mediante un protector diferencial de 30 mA máximo y que ellas estén ubicadas fuera de los volúmenes 0, 1 y 2.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RIC N°11 · 5.7.4.6–5.7.4.7",
+    "RIC N°5 · 7.8–7.8.2",
+    "RIC N°5 · 4.9–4.12",
+    "RIC N°5 · 8.7.6.3–8.7.6.9",
+    "RIC N°11 · 3.8.1–3.8.1.2",
+    "RIC N°11 · 5.7.2–5.7.2.1",
+    "RIC N°11 · 5.7.4–5.7.4.5",
+    "RIC N°11 · 14.3.2.4–14.3.3.3",
+    "RIC N°11 · 5.7.3–5.7.3.4",
+    "RIC N°11 · 22",
+    "RIC N°11 · 2",
+    "RIC N°6 · 6.7–6.7.4"
+   ]
+  },
+  {
+   "conv": "meta",
+   "cat": "conversación",
+   "m": "Resume lo que hemos visto hasta ahora",
+   "esp": {
+    "tipo": "resumen",
+    "contiene": [
+     "piscina"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "resumen",
+   "texto": "Hemos visto que en volumen 2 de una piscina, los enchufes e interruptores se protegen con un diferencial de 30 mA máximo, ubicado fuera de los volúmenes 0, 1 y 2. La consulta anterior fue sobre qué diferencial lleva una piscina, citando el RIC N°11 sección 5.7.4.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "piscina",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "resumen",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 2380,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "protección con diferencial para instalaciones de piscina",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "meta",
+   "cat": "conversación",
+   "m": "Gracias",
+   "esp": {
+    "tipo": "saludo"
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "saludo",
+   "texto": "De nada. Puedes preguntarme sobre exigencias de la norma eléctrica chilena para instalaciones interiores, redes, licencias de instaladores, generación solar o trato con la distribuidora.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "piscina",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "saludo",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1772,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "protección con diferencial para instalaciones de piscina",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "linea",
+   "cat": "normas nuevas",
+   "m": "¿Qué distancia de seguridad hay que respetar a una línea de media tensión?",
+   "esp": {
+    "tipo": [
+     "respuesta",
+     "pide"
+    ],
+    "noCita": [
+     "RIC N°11 · 12"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "La distancia de seguridad para una línea de media tensión de hasta 36 kV es de 2,00 m.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RPTD N°07 · 4.5",
+     "cita": "aprox",
+     "numeral": "3",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "distancia de seguridad líneas de media tensión",
+    "franja de seguridad líneas de media tensión",
+    "distancia mínima a líneas de media tensión"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "redes"
+    ]
+   },
+   "ms": 9169,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "Para luminarias en postes de distribución, la distancia mínima a líneas de media tensión de hasta 15 kV es de 0,7 m.",
+     "motivo": "no se sabe si la pregunta se refiere a luminarias en postes de distribución eléctrica"
+    }
+   ],
+   "juez": {
+    "pide": "en una línea de media tensión, qué distancia de seguridad hay que respetar",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para la determinación de la franja de seguridad de líneas y redes de media y alta tensión en calles y terrenos",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "4.5 La distancia de seguridad a considerar en la determinación de la franja de seguridad se obtiene de la Tabla N° 3, en función de la tensión máxima de la línea eléctrica: TABLA N° 3. Sobre 1 y hasta 36 2,00",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de distancias mínimas de seguridad para luminarias en postes de empresas de distribución eléctrica a líneas de media tensión",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "no se sabe si la pregunta se refiere a luminarias en postes de distribución eléctrica",
+      "donde": "7.2 Para luminarias instaladas en postes de empresas de distribución eléctrica, la distancia mínima del cabezal o cualquier parte de la luminaria, incluido el brazo de la misma, a líneas de media tensión, se determinará de acuerdo a la Tabla N° 9: TABLA N° 9. Mayor a 1 kV hasta 15 kV 0,7",
+      "clase": "regla"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "distancia de seguridad a líneas de media tensión",
+   "puntos": [
+    {
+     "texto": "La distancia de seguridad para una línea de media tensión de hasta 36 kV es de 2,00 m.",
+     "ref": "RPTD N°07 · 4.5",
+     "numeral": "3",
+     "cita": "aprox",
+     "frase": "Sobre 1 y hasta 36 2,00",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RPTD N°07 · 7–7.2",
+    "RPTD N°07 · 4.10",
+    "RPTD N°07 · 6",
+    "RPTD N°07 · 6",
+    "RPTD N°07 · 4.5",
+    "RPTD N°13 · 6.11",
+    "RPTD N°12 · 8",
+    "RPTD N°13 · 7.5",
+    "RPTD N°13 · 7.6",
+    "RPTD N°13 · 6.1",
+    "RPTD N°07 · 2"
+   ]
+  },
+  {
+   "conv": "linea",
+   "cat": "normas nuevas",
+   "m": "Es una línea de 23 kV que pasa al lado de una casa.",
+   "esp": {
+    "tipo": "respuesta",
+    "citaAlguna": [
+     "RPTD N°07",
+     "RPTD N°13"
+    ],
+    "noCita": [
+     "RIC N°11 · 12"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "La distancia de seguridad de la franja para una línea de 23 kV es de 2,00 m, porque esa tensión está comprendida entre 1 kV y 36 kV. Dentro de la franja de seguridad no se permiten construcciones de ninguna naturaleza, por lo que la casa no puede ocupar esa área de 2,00 m.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "RPTD N°07 · 4.5",
+     "cita": "aprox",
+     "numeral": "4.5",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "RPTD N°13 · 6.11",
+     "cita": "ok",
+     "numeral": "6.11.1",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "casa",
+    "sistema": "",
+    "tension": "23 kV",
+    "potencia": "",
+    "otros": "línea de media tensión al lado de la casa"
+   },
+   "consultas": [
+    "distancia de seguridad a líneas de media tensión hasta 36 kV RPTD",
+    "distancia de seguridad a líneas de media tensión cerca de viviendas RPTD"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Si la línea usa soportes fijos, la separación horizontal mínima entre conductores desnudos de media tensión superior a 15 kV hasta 23 kV es de 380 mm.",
+     "motivo": "el extracto trata separación entre conductores de la línea, no distancia de seguridad a edificaciones ni a la casa"
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "redes"
+    ]
+   },
+   "ms": 10440,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una línea de 23 kV al lado de una casa, cuál es la distancia de seguridad de la franja y si la casa puede ocupar esa área",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para determinar la distancia de seguridad de la franja de líneas y redes de media y alta tensión en calles y terrenos",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "4.5 La distancia de seguridad a considerar en la determinación de la franja de seguridad se obtiene de la Tabla N° 3, en función de la tensión máxima de la línea eléctrica:",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla de separación horizontal entre conductores desnudos en soportes fijos de líneas aéreas de tensión nominal igual o inferior a 23 kV",
+      "respalda": "si",
+      "aplica": "no",
+      "motivo": "el extracto trata separación entre conductores de la línea, no distancia de seguridad a edificaciones ni a la casa",
+      "donde": "6.1 Separación horizontal entre conductores de líneas aéreas",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general de prohibición de construcciones dentro del área de la franja de seguridad de líneas aéreas de servicio público",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "6.11.1 Para la protección del público y para la operación confiable de las líneas aéreas de servicio público, dentro del área que ocupa la franja de seguridad no deberán existir anuncios, obstáculos ni construcciones de ninguna naturaleza.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "distancia de seguridad a línea de media tensión de 23 kV junto a una casa",
+   "puntos": [
+    {
+     "texto": "La distancia de seguridad de la franja para una línea de 23 kV es de 2,00 m, porque esa tensión está comprendida entre 1 kV y 36 kV.",
+     "ref": "RPTD N°07 · 4.5",
+     "numeral": "4.5",
+     "cita": "aprox",
+     "frase": "Sobre 1 y hasta 36 2,00",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Dentro de la franja de seguridad no se permiten construcciones de ninguna naturaleza, por lo que la casa no puede ocupar esa área de 2,00 m.",
+     "ref": "RPTD N°13 · 6.11",
+     "numeral": "6.11.1",
+     "cita": "ok",
+     "frase": "dentro del área que ocupa la franja de seguridad no deberán existir anuncios, obstáculos ni construcciones de ninguna naturaleza.",
+     "movido": true,
+     "numerosFuera": [
+      "2"
+     ],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "RPTD N°07 · 4.5",
+    "RPTD N°07 · 7–7.2",
+    "RPTD N°07 · 6",
+    "RPTD N°07 · 4.10",
+    "RPTD N°07 · 6",
+    "RPTD N°13 · 6.11",
+    "RPTD N°13 · 7.5",
+    "RPTD N°11 · 5.7",
+    "RPTD N°07 · 4.14–4.16",
+    "RPTD N°07 · 5.5",
+    "RPTD N°07 · 2"
+   ]
+  },
+  {
+   "conv": "licencia",
+   "cat": "normas nuevas",
+   "m": "Soy instalador clase C. ¿Qué tipo de instalaciones puedo hacer?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "DS 92"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Con licencia clase C puedes proyectar, ejecutar y dirigir instalaciones eléctricas tipo D, E, F y G. No puedes hacer instalaciones tipo B ni C2, porque esas requieren licencia clase B o título de Técnico Electricista. Tampoco puedes hacer instalaciones tipo A, que exigen licencia clase A o título de ingeniero electricista.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "cita": "ok",
+     "numeral": "art. 7",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "cita": "ok",
+     "numeral": "art. 7",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "cita": "ok",
+     "numeral": "art. 7",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": "licencia clase C"
+   },
+   "consultas": [
+    "clase C instalaciones que puede realizar instalador",
+    "clase C instalaciones eléctricas alcance DS 92"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "instaladores"
+    ]
+   },
+   "ms": 14068,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para proyectar, ejecutar y dirigir instalaciones eléctricas tipo D, E, F y G",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "ARTICULO 7° Para proyectar, ejecutar y dirigir la construcción de cada tipo de instalación eléctrica que se indica a continuación será necesario: 3.- Instalaciones tipo \"D\",\"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase C o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para proyectar, ejecutar y dirigir instalaciones tipo B y C2",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "ARTICULO 7° Para proyectar, ejecutar y dirigir la construcción de cada tipo de instalación eléctrica que se indica a continuación será necesario: 2.- Instalaciones tipo \"B\", \"C2\", \"D\", \"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase B o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para proyectar, ejecutar y dirigir instalaciones tipo A y demás",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "ARTICULO 7° Para proyectar, ejecutar y dirigir la construcción de cada tipo de instalación eléctrica que se indica a continuación será necesario: 1.- Instalaciones tipo \"A\" y demás: Poseer licencia de instalador eléctrico clase A o ser titulado en alguna Universidad o Instituto Profesional autorizado de acuerdo a la norma legal vigente, en alguna de las siguientes profesiones: Ingeniero Civil Electricista, Ingeniero de Ejecución Electricista, o sus equivalentes respectivos, o que se les haya reconocido por expresa disposición legal la equivalencia de su título con alguno de los anteriores.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "alcance de la licencia de instalador clase C",
+   "puntos": [
+    {
+     "texto": "Con licencia clase C puedes proyectar, ejecutar y dirigir instalaciones eléctricas tipo D, E, F y G.",
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "numeral": "art. 7",
+     "cita": "ok",
+     "frase": "3.- Instalaciones tipo \"D\",\"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase C o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "No puedes hacer instalaciones tipo B ni C2, porque esas requieren licencia clase B o título de Técnico Electricista.",
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "numeral": "art. 7",
+     "cita": "ok",
+     "frase": "2.- Instalaciones tipo \"B\", \"C2\", \"D\", \"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase B o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Tampoco puedes hacer instalaciones tipo A, que exigen licencia clase A o título de ingeniero electricista.",
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "numeral": "art. 7",
+     "cita": "ok",
+     "frase": "1.- Instalaciones tipo \"A\" y demás: Poseer licencia de instalador eléctrico clase A o ser titulado en alguna Universidad o Instituto Profesional autorizado de acuerdo a la norma legal vigente, en alguna de las siguientes profesiones: Ingeniero Civil Electricista, Ingeniero de Ejecución Electricista, o sus equivalentes respectivos, o que se les haya reconocido por expresa disposición legal la equivalencia de su título con alguno de los anteriores.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "DS 92 · art. 7 (parte 1)",
+    "DS 92 · art. 9 (parte 1)",
+    "DS 92 · art. 7 (parte 2)",
+    "DS 92 · art. 9 (parte 2)",
+    "RIC N°13 · 6–6.1.2",
+    "RPTD N°03 · 2",
+    "RIC N°3 · 2",
+    "RIC N°15 · 5.13–5.14",
+    "RIC N°11 · 3.4–3.4.1.2",
+    "DS 8 · art. 8"
+   ]
+  },
+  {
+   "conv": "licencia",
+   "cat": "normas nuevas",
+   "m": "¿Y qué necesito para sacar la clase B?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "DS 92"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Para obtener la licencia clase B por egreso, debes ser titulado de Técnico Electricista o equivalente de alguna Universidad, Instituto o Escuela Técnica. Si vas por examen, debes aprobar las partes de conocimientos elementales, básicos y medios. Con la clase B puedes proyectar, ejecutar y dirigir instalaciones tipo B, C2, D, E, F y G.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "DS 92 · art. 9 (parte 1)",
+     "cita": "ok",
+     "numeral": "art. 9",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "DS 92 · art. 9 (parte 2)",
+     "cita": "ok",
+     "numeral": "art. 9",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "cita": "ok",
+     "numeral": "art. 7",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": "licencia clase C"
+   },
+   "consultas": [
+    "requisitos para obtener licencia de instalador clase B DS 92",
+    "instalaciones que puede hacer instalador clase B DS 92"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "instaladores"
+    ]
+   },
+   "ms": 10035,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para obtener licencias de instalador eléctrico por egreso de instituto de estudio",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "Clase B y C: para quienes sean egresados de la carrera de Técnico Electricista, o su equivalente, de alguna Universidad, Instituto o Escuela Técnica",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para obtener licencias de instalador eléctrico por examen de conocimiento",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "Clase B: para quienes aprueben los conocimientos elementales, básicos y medios.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para proyectar, ejecutar y dirigir instalaciones tipo B, C2, D, E, F y G con licencia clase B",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "2.- Instalaciones tipo \"B\", \"C2\", \"D\", \"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase B o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "requisitos para obtener licencia de instalador clase B",
+   "puntos": [
+    {
+     "texto": "Para obtener la licencia clase B por egreso, debes ser titulado de Técnico Electricista o equivalente de alguna Universidad, Instituto o Escuela Técnica.",
+     "ref": "DS 92 · art. 9 (parte 1)",
+     "numeral": "art. 9",
+     "cita": "ok",
+     "frase": "Clase B y C: para quienes sean egresados de la carrera de Técnico Electricista, o su equivalente, de alguna Universidad, Instituto o Escuela Técnica de conformidad con lo dispuesto en el artículo 7°, N°s.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Si vas por examen, debes aprobar las partes de conocimientos elementales, básicos y medios.",
+     "ref": "DS 92 · art. 9 (parte 2)",
+     "numeral": "art. 9",
+     "cita": "ok",
+     "frase": "Clase B: para quienes aprueben los conocimientos elementales, básicos y medios.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "Con la clase B puedes proyectar, ejecutar y dirigir instalaciones tipo B, C2, D, E, F y G.",
+     "ref": "DS 92 · art. 7 (parte 1)",
+     "numeral": "art. 7",
+     "cita": "ok",
+     "frase": "2.- Instalaciones tipo \"B\", \"C2\", \"D\", \"E\", \"F\" y \"G\": Poseer licencia de instalador eléctrico clase B o ser titulado de Técnico Electricista, o su equivalente, en alguna de las Universidades, Institutos y Escuelas Técnicas autorizadas de acuerdo a la normativa legal vigente y cuyo programa, para los efectos de este decreto, sea aprobado por el Ministerio de Economía, Fomento y Reconstrucción.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "DS 92 · art. 9 (parte 1)",
+    "DS 92 · art. 9 (parte 2)",
+    "DS 92 · art. 7 (parte 1)",
+    "DS 92 · art. 2",
+    "DS 8 · art. 8",
+    "RIC N°13 · 6–6.1.2",
+    "RIC N°11 · 3.4–3.4.1.2",
+    "RIC N°5 · 8.5–8.6",
+    "RIC N°5 · 7.8.3",
+    "RIC N°15 · 5.13–5.14"
+   ]
+  },
+  {
+   "conv": "solar",
+   "cat": "normas nuevas",
+   "m": "¿Qué necesito para conectar paneles solares a la red y vender la energía?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "DS 57"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Puedes acordar el traspaso de los excedentes directamente, por la distribuidora o por un tercero, y una copia autorizada del convenio debe entregarse al Coordinador. La Empresa Distribuidora te entregará anualmente un certificado con las inyecciones realizadas y te informará el monto agregado con cada facturación.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "DS 57 · art. 70",
+     "cita": "ok",
+     "numeral": "art. 70",
+     "respalda": "si",
+     "aplica": "si"
+    },
+    {
+     "ref": "DS 57 · art. 69",
+     "cita": "ok",
+     "numeral": "art. 69",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "paneles solares conectados a la red netbilling inyección de excedentes",
+    "requisitos para conectar generación solar a la red de distribución",
+    "potencia máxima permitida para generación distribuida en baja tensión"
+   ],
+   "saltos": 1,
+   "descartados": [
+    {
+     "texto": "Necesitas un contrato de conexión con la Empresa Distribuidora para inyectar y vender los excedentes de energía.",
+     "motivo": "El extracto solo permite convenir que la distribuidora traspase excedentes; no exige un contrato de conexión como requisito para inyectar y vender."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "generacion"
+    ]
+   },
+   "ms": 23508,
+   "llamadas": 6,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "Si la capacidad instalada informada en la SCR es menor o igual a la capacidad del empalme y se cumplen los criterios de seguridad operacional y de configuración de la red, no se requiere establecer la Capacidad Instalada Permitida ni la Inyección de Excedentes Permitida.",
+     "motivo": "la pregunta no indica si la capacidad instalada es menor o igual a la del empalme ni si se cumplen los criterios de seguridad operacional y configuración de red"
+    }
+   ],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para el traspaso de excedentes de energía renovable no convencional mediante inyección con un equipamiento de generación distribuida para autoconsumo (netbilling)",
+      "respalda": "no",
+      "aplica": "si",
+      "motivo": "El extracto solo permite convenir que la distribuidora traspase excedentes; no exige un contrato de conexión como requisito para inyectar y vender.",
+      "donde": "En el contrato de conexión a que se refiere el artículo 30º del presente reglamento, el Cliente podrá convenir con la Empresa Distribuidora, que esta última sea la encargada de traspasar estos excedentes a las empresas eléctricas obligadas al cumplimiento de la obligación establecida en el artículo 150 bis de la ley.",
+      "clase": "condicion"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general para el traspaso de excedentes de energía renovable no convencional mediante inyección con un equipamiento de generación distribuida para autoconsumo (netbilling)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "Artículo 70º.- El Cliente podrá convenir, directamente, a través de la Empresa Distribuidora o por otro tercero, el traspaso de las inyecciones consideradas en los certificados señalados en el artículo anterior, a cualquier empresa eléctrica que efectúe retiros en ese u otro sistema eléctrico. Una copia autorizada del respectivo convenio deberá entregarse al Coordinador para que se imputen tales inyecciones, como si se tratase de excedentes de cumplimiento de la obligación establecida en el artículo 150 bis de la ley.",
+      "clase": "regla"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "regla general para la entrega de certificados de inyecciones y el monto agregado por facturación en generación distribuida para autoconsumo (netbilling)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "Artículo 69º.- Para efecto del cumplimiento del artículo anterior, cada vez que sea solicitado, y, en todo caso, en forma anual, la Empresa Distribuidora que corresponda remitirá al Cliente un certificado que dé cuenta de las inyecciones realizadas por este último. Asimismo, la Empresa Distribuidora remitirá una copia de dichos certificados al Coordinador para su incorporación al registro a que se refiere el inciso sexto del artículo 150 bis de la ley, la que deberá enviarse 10 días antes de la fecha de cierre del balance preliminar de inyecciones mediante medios de generación renovables no convencionales, de conformidad a lo dispuesto en la normativa vigente. Conjuntamente con cada facturación, la Empresa Distribuidora deberá informar al Cliente el monto agregado de sus inyecciones realizadas desde la última emisión del certificado a que se refiere el inciso anterior.",
+      "clase": "regla"
+     },
+     {
+      "i": 4,
+      "caso_del_extracto": "condición para no requerir establecer Capacidad Instalada Permitida ni Inyección de Excedentes Permitida en generación distribuida para autoconsumo (netbilling)",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "la pregunta no indica si la capacidad instalada es menor o igual a la del empalme ni si se cumplen los criterios de seguridad operacional y configuración de red",
+      "donde": "Artículo 44º.- En caso de que la Capacidad Instalada del Equipamiento de Generación informada en la SCR sea menor o igual a la capacidad del empalme y se cumplan los criterios de seguridad operacional y de configuración de la red de distribución, conforme a lo establecido en la norma técnica, no se requerirá establecer la Capacidad Instalada Permitida ni la Inyección de Excedentes Permitida, de acuerdo a lo dispuesto en los artículos siguientes.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "conexión de paneles solares a la red y venta de energía excedente",
+   "puntos": [
+    {
+     "texto": "Puedes acordar el traspaso de los excedentes directamente, por la distribuidora o por un tercero, y una copia autorizada del convenio debe entregarse al Coordinador.",
+     "ref": "DS 57 · art. 70",
+     "numeral": "art. 70",
+     "cita": "ok",
+     "frase": "El Cliente podrá convenir, directamente, a través de la Empresa Distribuidora o por otro tercero, el traspaso de las inyecciones consideradas en los certificados señalados en el artículo anterior, a cualquier empresa eléctrica que efectúe retiros en ese u otro sistema eléctrico.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    },
+    {
+     "texto": "La Empresa Distribuidora te entregará anualmente un certificado con las inyecciones realizadas y te informará el monto agregado con cada facturación.",
+     "ref": "DS 57 · art. 69",
+     "numeral": "art. 69",
+     "cita": "ok",
+     "frase": "Para efecto del cumplimiento del artículo anterior, cada vez que sea solicitado, y, en todo caso, en forma anual, la Empresa Distribuidora que corresponda remitirá al Cliente un certificado que dé cuenta de las inyecciones realizadas por este último.",
+     "movido": true,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "DS 57 · art. 70",
+    "DS 57 · art. 4 (parte 5)",
+    "DS 57 · art. 47",
+    "DS 57 · art. 45",
+    "DS 57 · art. 44",
+    "DS 57 · art. 48 (parte 2)",
+    "RIC N°15 · 17.1–17.5",
+    "RIC N°15 · 4.26–4.30",
+    "RIC N°9 · 4.9–4.15",
+    "DS 57 · art. 69",
+    "RIC N°9 · 9.6",
+    "RIC N°9 · 9–9.2",
+    "RIC N°9 · 6.6.8–6.6.8.2"
+   ]
+  },
+  {
+   "conv": "solar",
+   "cat": "normas nuevas",
+   "m": "¿Hasta qué potencia puedo instalar?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "DS 57"
+    ],
+    "contiene": [
+     "300"
+    ],
+    "noContiene": [
+     "30 ?%",
+     "10 ?%"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "La capacidad instalada del equipamiento de generación no puede superar los 300 kilowatts.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "DS 57 · art. 2",
+     "cita": "ok",
+     "numeral": "art. 2",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "potencia máxima para generación distribuida con paneles solares DS 57",
+    "límite de potencia para inyección de excedentes a la red DS 57"
+   ],
+   "saltos": 0,
+   "descartados": [
+    {
+     "texto": "Si es una instalación domiciliaria con empalme en baja tensión de hasta 10 kW, la generación no debe superar el 30% de la capacidad del empalme.",
+     "motivo": "no se sabe si la instalación es domiciliaria ni si el empalme es de hasta 10 kW · La afirmación presenta el límite como obligación general sin decir que es requisito para eximirse de la protección de potencia inversa."
+    },
+    {
+     "texto": "Para otros casos, la potencia máxima es de 300 kW y la generación no debe superar el 10% de la capacidad del empalme.",
+     "motivo": "no se sabe si se trata de un sistema con inyección cero ni el tipo de instalación de consumo · La afirmación presenta el límite como regla general sin decir que es requisito para eximirse de la protección de potencia inversa."
+    }
+   ],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "generacion"
+    ]
+   },
+   "ms": 13420,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [],
+   "juez": {
+    "pide": "en una frase, de qué equipo o situación se pregunta y qué se quiere saber, sin agregar nada que la pregunta no diga",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para acogerse al Reglamento de generación distribuida para autoconsumo (netbilling)",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "Artículo 2º.- Las disposiciones del presente reglamento se aplicarán a: a) Los usuarios finales sujetos a fijación de precios, que dispongan para su propio consumo de equipamiento de generación de energía eléctrica por medios renovables no convencionales o de instalaciones de cogeneración eficiente de manera individual o colectiva, que hagan uso de su derecho a inyectar los excedentes de energía que de esta forma generen a la red de distribución a través de los respectivos empalmes, cuya capacidad instalada no supere los 300 kilowatts y cumplan los demás requisitos establecidos en la ley y en el presente reglamento;",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "condición para eximirse de la protección de potencia inversa en instalaciones domiciliarias con empalme en baja tensión de hasta 10 kW",
+      "respalda": "no",
+      "aplica": "dudoso",
+      "motivo": "no se sabe si la instalación es domiciliaria ni si el empalme es de hasta 10 kW · La afirmación presenta el límite como obligación general sin decir que es requisito para eximirse de la protección de potencia inversa.",
+      "donde": "6.6.8 Se eximirán de la protección inversa requerida en el punto 6.2.4, aquellos sistemas de autogeneración que cuenten con un sistema de inyección cero de potencia a la red y que cumplan con una de las siguientes condiciones: 6.6.8.2 Que en instalaciones domiciliarias con empalmes en baja tensión de hasta 10 kW, el o los equipos de generación tengan una potencia de generación que no supere el 30% de la capacidad del empalme de la instalación de consumo.",
+      "clase": "condicion"
+     },
+     {
+      "i": 3,
+      "caso_del_extracto": "condición para eximirse de la protección de potencia inversa en sistemas de autogeneración con inyección cero y potencia máxima menor o igual a 300 kW",
+      "respalda": "no",
+      "aplica": "dudoso",
+      "motivo": "no se sabe si se trata de un sistema con inyección cero ni el tipo de instalación de consumo · La afirmación presenta el límite como regla general sin decir que es requisito para eximirse de la protección de potencia inversa.",
+      "donde": "6.6.8 Se eximirán de la protección inversa requerida en el punto 6.2.4, aquellos sistemas de autogeneración que cuenten con un sistema de inyección cero de potencia a la red y que cumplan con una de las siguientes condiciones: 6.6.8.1 Que el o los equipos de generación tengan una potencia máxima menor o igual a 300 kW y que su potencia de generación no supere el 10% de la capacidad del empalme de la instalación de consumo.",
+      "clase": "condicion"
+     }
+    ],
+    "responde": "parcial",
+    "segundo_revisor": true
+   },
+   "tema": "conexión de paneles solares a la red y venta de energía excedente",
+   "puntos": [
+    {
+     "texto": "La capacidad instalada del equipamiento de generación no puede superar los 300 kilowatts.",
+     "ref": "DS 57 · art. 2",
+     "numeral": "art. 2",
+     "cita": "ok",
+     "frase": "cuya capacidad instalada no supere los 300 kilowatts y cumplan los demás requisitos establecidos en la ley y en el presente reglamento;",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "DS 57 · art. 4 (parte 2)",
+    "DS 57 · art. 1",
+    "DS 57 · art. 63",
+    "DS 57 · art. 49",
+    "RIC N°19 · 7.6.4",
+    "RIC N°9 · ANEXO N°9.5",
+    "DS 327 · art. 120",
+    "DS 92 · art. 6",
+    "RIC N°9 · ANEXO N°9.1",
+    "RIC N°9 · 6.6.8–6.6.8.2",
+    "DS 57 · art. 2"
+   ]
+  },
+  {
+   "conv": "corte",
+   "cat": "normas nuevas",
+   "m": "La compañía me quiere cortar la luz por una boleta atrasada. ¿Cuándo pueden cortar?",
+   "esp": {
+    "tipo": "respuesta",
+    "cita": [
+     "DS 327 · art. 147"
+    ],
+    "contiene": [
+     "45"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "respuesta",
+   "texto": "Pueden cortar el suministro solo después de 45 días desde el vencimiento de la primera boleta impaga y deben notificarte con al menos 5 días de anticipación.",
+   "aviso": "",
+   "citas": [
+    {
+     "ref": "DS 327 · art. 147 (parte 1)",
+     "cita": "ok",
+     "numeral": "art. 147",
+     "respalda": "si",
+     "aplica": "si"
+    }
+   ],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "consultas": [
+    "plazo para cortar el suministro por boleta atrasada",
+    "requisitos que debe cumplir la distribuidora antes de cortar el servicio"
+   ],
+   "saltos": 0,
+   "descartados": [],
+   "sinCita": 0,
+   "plan": {
+    "tipo": "pregunta",
+    "falta": "",
+    "ambitos": [
+     "servicio"
+    ]
+   },
+   "ms": 9694,
+   "llamadas": 4,
+   "calc": false,
+   "omitidos": [
+    {
+     "texto": "El plazo para pagar la boleta no puede ser menor a 10 días desde que te la despachan.",
+     "motivo": "no se pregunta por el plazo de pago, sino por el corte"
+    }
+   ],
+   "juez": {
+    "pide": "se pregunta sobre el corte del suministro eléctrico por una boleta atrasada y cuándo puede realizarse",
+    "veredictos": [
+     {
+      "i": 1,
+      "caso_del_extracto": "regla general para la suspensión del suministro por servicio impago en la relación entre clientes y empresa distribuidora",
+      "respalda": "si",
+      "aplica": "si",
+      "motivo": "",
+      "donde": "Artículo 147.- El concesionario podrá suspender el suministro en caso que un servicio se encuentre impago, previa notificación al usuario con, al menos, 5 días de anticipación. Este derecho sólo podrá ejercerse después de haber transcurrido 45 días desde el vencimiento de la primera boleta o factura impaga.",
+      "clase": "regla"
+     },
+     {
+      "i": 2,
+      "caso_del_extracto": "regla general sobre el plazo mínimo de pago de la boleta o factura en la relación entre clientes y empresa distribuidora",
+      "respalda": "si",
+      "aplica": "dudoso",
+      "motivo": "no se pregunta por el plazo de pago, sino por el corte",
+      "donde": "Artículo 146.- El usuario o cliente deberá pagar el suministro en el plazo señalado en la respectiva boleta o factura. Dicho plazo no podrá ser inferior a 10 días desde la fecha de su despacho al cliente.",
+      "clase": "regla"
+     }
+    ],
+    "responde": "si",
+    "segundo_revisor": true
+   },
+   "tema": "corte del suministro eléctrico por deuda",
+   "puntos": [
+    {
+     "texto": "Pueden cortar el suministro solo después de 45 días desde el vencimiento de la primera boleta impaga y deben notificarte con al menos 5 días de anticipación.",
+     "ref": "DS 327 · art. 147 (parte 1)",
+     "numeral": "art. 147",
+     "cita": "ok",
+     "frase": "El concesionario podrá suspender el suministro en caso que un servicio se encuentre impago, previa notificación al usuario con, al menos, 5 días de anticipación. Este derecho sólo podrá ejercerse después de haber transcurrido 45 días desde el vencimiento de la primera boleta o factura impaga.",
+     "movido": false,
+     "numerosFuera": [],
+     "aplica": "si"
+    }
+   ],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": [
+    "DS 327 · art. 147 (parte 1)",
+    "DS 327 · art. 147 (parte 2)",
+    "DS 327 · art. 146",
+    "DS 327 · art. 291",
+    "RIC N°9 · 5.18–5.18.3",
+    "DS 8 · art. 15",
+    "RIC N°19 · 4–4.4",
+    "RIC N°14 · 5.3.4–5.3.4.5",
+    "RIC N°9 · 5.18.4–5.18.6",
+    "RIC N°9 · 5.18.7"
+   ]
+  },
+  {
+   "conv": "fuera",
+   "cat": "fuera de las normas",
+   "m": "¿Cuál es la tarifa BT1 vigente por kWh?",
+   "esp": {
+    "tipo": [
+     "sin_respaldo",
+     "fuera"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "fuera",
+   "texto": "Eso no lo cubro: solo respondo sobre normativa eléctrica chilena.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "fuera",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1664,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "fuera",
+   "cat": "fuera de las normas",
+   "m": "¿Qué torque de apriete llevan los bornes de un interruptor termomagnético de 32 A?",
+   "esp": {
+    "tipo": [
+     "sin_respaldo",
+     "fuera"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "fuera",
+   "texto": "Eso no lo cubro: solo respondo sobre normativa eléctrica chilena.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "fuera",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1336,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "fuera",
+   "cat": "fuera de las normas",
+   "m": "¿Cada cuántos años hay que certificar un ascensor?",
+   "esp": {
+    "tipo": [
+     "sin_respaldo",
+     "fuera"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "fuera",
+   "texto": "Eso no lo cubro: solo respondo sobre normativa eléctrica chilena.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "fuera",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1385,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "fuera",
+   "cat": "fuera de las normas",
+   "m": "¿Qué categoría de ropa contra arco eléctrico exige la NFPA 70E para maniobrar un tablero de 380 V?",
+   "esp": {
+    "tipo": [
+     "sin_respaldo",
+     "fuera"
+    ]
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "fuera",
+   "texto": "Eso no lo cubro: solo respondo sobre normativa eléctrica chilena.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "fuera",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1422,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  },
+  {
+   "conv": "fuera",
+   "cat": "fuera de las normas",
+   "m": "¿Quién ganó el partido de ayer?",
+   "esp": {
+    "tipo": "fuera"
+   },
+   "pasa": true,
+   "fallas": [],
+   "tipo": "fuera",
+   "texto": "Eso no lo cubro: solo respondo sobre normativa eléctrica chilena.",
+   "aviso": "",
+   "citas": [],
+   "ficha": {
+    "recinto": "",
+    "sistema": "",
+    "tension": "",
+    "potencia": "",
+    "otros": ""
+   },
+   "plan": {
+    "tipo": "fuera",
+    "falta": "",
+    "ambitos": []
+   },
+   "ms": 1292,
+   "llamadas": 1,
+   "calc": false,
+   "tema": "ninguno",
+   "puntos": [],
+   "revisionParcial": false,
+   "reintento": false,
+   "segunda": false,
+   "candidatos": []
+  }
+ ]
+}
