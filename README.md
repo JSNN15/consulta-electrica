@@ -47,7 +47,7 @@ Los cálculos (corriente, caída de tensión) los hace el código con los datos 
 
 [evaluacion.md](evaluacion.md) tiene el detalle y lo que salió mal.
 
-- **Conversaciones**: 40 de 42 turnos en el set de desarrollo y 20 de 20 en el set reservado, corrido una vez. Ninguna respuesta con dato a preguntas que están fuera de las normas (0 de 9). Las 86 citas mostradas están en el texto oficial. Mediana de 8 a 9 segundos por turno.
+- **Conversaciones**, en tres corridas seguidas: 19 a 20 de 20 turnos en el set reservado y 38 a 40 de 42 en el de desarrollo. El resultado cambia de una corrida a otra; por eso va como rango. Las 9 preguntas que están fuera de las normas se rechazaron en las tres. Mediana de 9 a 10 segundos por turno.
 - **Lectura a mano del set reservado**: 16 respuestas correctas, 3 incompletas y 1 incorrecta que las pruebas automáticas no detectaron.
 - **El revisor**, con respuestas que llevan un error plantado: bloquea 17 de 18 en el set reservado y no bota ninguna de las 14 correctas.
 
@@ -56,7 +56,9 @@ No reemplaza la revisión de un instalador autorizado.
 ## Límites
 
 - No están el RPTD N°17, las instrucciones técnicas RGR, los oficios de la SEC ni las normas NCh.
-- Los artículos largos se cortan en partes y una parte puede empezar sin su encabezado. De ahí salió la respuesta incorrecta del set reservado.
+- Solo texto: no lee fotos ni planos. Recuerda lo conversado mientras la página está abierta; al recargar parte de cero.
+- El revisor a veces bota un punto correcto y la respuesta queda incompleta. Pasó en 1 de 8 corridas de la pregunta por la clase D (ver [evaluacion.md](evaluacion.md)).
+- «Explícamelo en simple» comprueba que no aparezcan números nuevos, no que el sentido sea idéntico. Vale la respuesta con citas.
 - El texto de las tablas sale desordenado de los PDF.
 - La clave de prueba de NVIDIA admite pocas consultas por minuto, compartidas entre todas las demos.
 
@@ -72,6 +74,8 @@ No reemplaza la revisión de un instalador autorizado.
 | `eval/evaluar.mjs`, `eval/desarrollo.json`, `eval/reservado.json` | Conversaciones de prueba y su evaluador. |
 | `eval/revisor.mjs`, `eval/revisor.json`, `eval/revisor_reservado.json` | Respuestas correctas y con error plantado para medir al revisor. |
 | `eval/*.res.json` | Resultados de las corridas publicadas. |
+| `eval/tres.sh`, `eval/tres/` | Los dos sets corridos tres veces seguidas y sus resultados. |
+| `eval/simple.mjs`, `eval/simple.res.json` | Prueba de «Explícamelo en simple» con ocho respuestas reales. |
 | `eval/busca.mjs` | Muestra qué fragmentos llegan al redactor para una consulta. |
 | `tools/build_corpus.py`, `tools/embed_corpus.py`, `tools/unir_corpus.py` | Fragmentan los RPTD (PDF de la SEC) y los decretos (XML de LeyChile), los vectorizan (`NVIDIA_API_KEY`) y arman el corpus junto al índice RIC de [normativa](https://github.com/JSNN15/normativa). |
 | `tools/cobertura_ric.py` | Mide cuánto del texto de cada PDF quedó en el corpus. |

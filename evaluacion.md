@@ -108,23 +108,36 @@ Parte del texto de cada documento oficial que quedó dentro de algún fragmento 
 
 - Las pruebas comprueban tipo de respuesta, norma citada y datos clave. No comprueban que la respuesta sea suficiente para ejecutar. Esa lectura la tiene que hacer un instalador autorizado, pregunta por pregunta.
 - Los sets son chicos (62 turnos, 45 casos del revisor) y los escribió quien construyó el sistema. Faltan preguntas de instaladores reales.
-- El error de la clase D no está resuelto: mejoró el fragmento, pero la respuesta todavía puede salir mal (ver «Segunda corrida»).
+- La pregunta por la clase D ya no da una respuesta falsa, pero en una de ocho corridas quedó incompleta (ver «Tres corridas»).
 - El revisor es más débil cuando el punto habla de otro equipo que el preguntado, y bota entre 0 y 2 de cada 14 respuestas correctas.
 - No están el RPTD N°17 (el PDF es una imagen), las instrucciones técnicas RGR, los oficios de la SEC ni las normas NCh.
 - Los tiempos se midieron en local contra la API, sin el intermediario de Cloudflare. La clave de prueba admite pocas consultas por minuto y la comparten todas las demos: una evaluación completa la agota.
 
-## Segunda corrida (15 de noviembre de 2026)
+## Tres corridas (15 de noviembre de 2026)
 
-**Qué cambió.** En 91 fragmentos de artículos largos partidos en varias partes: los cortes que caían en medio de una palabra se corrieron al inicio del numeral, y cada continuación parte ahora con el encabezado de su artículo. El corpus sigue teniendo 2.064 fragmentos, con los mismos rótulos. La pregunta por la clase D, que antes salía mal, quedó a medias. En la corrida local respondió bien: la clase D puede proyectar, ejecutar y dirigir instalaciones tipo F y G. En una prueba en producción el mismo día dio ese punto correcto junto con uno incorrecto, que le atribuye a la clase D las instalaciones tipo D, E, F y G; ese alcance es de la clase C. El modelo confunde «instalación tipo D» con «instalador clase D» y el revisor no siempre lo detiene.
+Las cifras del resumen de arriba salen de una sola corrida. Aquí están los mismos dos sets corridos tres veces seguidas, con el motor y el corpus de hoy.
 
-**Qué dio.** Las mismas conversaciones, una corrida:
+| Set | Corrida 1 | Corrida 2 | Corrida 3 | Corrida publicada antes |
+|---|---|---|---|---|
+| Reservado (20 turnos) | 20 | 19 | 19 | 20 |
+| Desarrollo (42 turnos) | 39 | 40 | 38 | 40 |
+| Mediana por turno | 9,9 s | 9,0 s | 9,7 s | |
 
-| Set | Corrida publicada | 15 de noviembre |
-|---|---|---|
-| Desarrollo (42 turnos) | 40 | 38 |
-| Reservado (20 turnos) | 20 | 18 |
+De los 62 turnos, 53 pasaron las tres veces, 9 pasaron unas veces y otras no, y ninguno falló siempre. El modelo no responde igual cada vez aunque nada cambie, y el servicio de prueba puede actualizarlo sin aviso. La lectura correcta es un rango: **19 a 20 de 20 en el set reservado y 38 a 40 de 42 en el de desarrollo.** `eval/tres.sh` repite la prueba.
 
-**Cómo leerlo.** Los turnos que fallaron esta vez no usan los fragmentos que cambiaron: uno falla en el planificador, antes de buscar en la norma, y los otros citan pliegos RIC y RPTD que no se tocaron. Al repetir dos veces las dos conversaciones del set reservado que fallaron, cada una pasó en una corrida y falló en otra. El resultado varía entre corridas aunque nada cambie: el modelo no responde siempre igual, y el servicio de prueba puede actualizarlo sin aviso. Las cifras de una sola corrida, incluidas las del resumen de arriba, deben leerse con un margen de dos turnos. Lo que corresponde es correr cada set tres veces y publicar el rango; está pendiente.
+Los turnos que más varían: la corrección del usuario sobre la altura de los enchufes y el diferencial de una piscina (fallaron 2 de 3 veces cada uno).
+
+Las 11 fallas de las tres corridas son de dos tipos: en 4 el chat dijo que no tenía respaldo cuando sí podía responder, y en 7 respondió pero le faltó el dato o la cita que la prueba esperaba. Las 9 preguntas que están fuera de las normas se rechazaron en las tres corridas (27 de 27). Los resultados completos están en `eval/tres/`.
+
+### Qué cambió ese día
+
+**Artículos largos.** En 91 fragmentos de artículos partidos en varias partes, los cortes que caían en medio de una palabra se corrieron al inicio del numeral, y cada continuación parte con el encabezado de su artículo (`tools/reparte.py`). El corpus sigue teniendo 2.064 fragmentos con los mismos rótulos.
+
+**Clases de licencia.** La pregunta «¿Qué instalaciones puede hacer un instalador clase D?» salía mal: el modelo confunde «instalación tipo D» con «instalador clase D» y el revisor no siempre lo detenía. Arreglar el fragmento no bastó; en una prueba en producción la respuesta todavía le atribuyó a la clase D el alcance de la clase C. Ahora hay una regla en el código, que no depende del revisor: si un punto nombra una clase de licencia, la frase citada tiene que nombrar esa misma clase; si no, el punto no se muestra.
+
+Con la regla, en ocho corridas de esa pregunta (cuatro sueltas, las tres de la tabla y una en producción) ninguna respuesta afirmó algo falso. Siete dijeron lo correcto: la clase D puede proyectar, ejecutar y dirigir instalaciones tipo F y G. Una quedó incompleta: dijo cosas ciertas sobre la clase D pero no llegó a nombrar los tipos F y G, porque el revisor botó ese punto con un motivo equivocado. El revisor sigue siendo el eslabón débil.
+
+**En simple.** Cada respuesta trae un botón «Explícamelo en simple». Un modelo reescribe la respuesta ya comprobada para alguien sin formación técnica; el código verifica que no aparezca ningún número que no estuviera en la respuesta original, y si aparece no la muestra. Probado con ocho respuestas reales de la corrida 1 (`eval/simple.mjs`): ocho sin números nuevos, entre 1,6 y 3,5 segundos. No comprueba que el sentido sea idéntico; por eso la versión simple se muestra debajo de la respuesta con citas y dice que la que vale es la de arriba.
 
 ## Repetir
 
